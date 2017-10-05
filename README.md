@@ -47,7 +47,7 @@ Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 
 ![b](/screenshots/backend_b_small.png)
 
-*Cookie Consent Neo Configuration - [parameters part 2](/screenshots/backend_a.png)*
+*Cookie Consent Neo Configuration - [parameters part 2](/screenshots/backend_b.png)*
 
 ## Future Tasks
 * better coverage of the Cookie Consent API parameters
