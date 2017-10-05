@@ -19,7 +19,7 @@ This project adds the [Cookie Consent Javascript API](https://github.com/insites
 5. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
 6. Configure the appearance according to your favor
 
-## Supported API Parameters
+## Supported API Parameters and Atom Options
 * Banner Message Text
 * Enable / Disable 'Learn More' link
 * URL for the 'Learn More' link
@@ -37,6 +37,11 @@ This project adds the [Cookie Consent Javascript API](https://github.com/insites
   * Text color
 * Compliance mode support
 * Adaptable Cookie Consent API Version
+* Server local CSS and JS loading
+* Disable CDN
+* JS Execution
+  * Asynchronous
+  * Deferred
 
 ## Showroom
 Insight of Cookie Consent Neo - Gantry Atom backend configuration:
@@ -53,7 +58,6 @@ Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 * better coverage of the Cookie Consent API parameters
 * maintain API changes
 * more themes
-* local vs CDN - JS and CSS integration
 * more TBA
 
 ## Known Issues
