@@ -1,0 +1,154 @@
+name: Cookie Consent Neo
+description: Configure Cookie Consent Neo atom.
+type: atom
+
+form:
+  fields:
+    enabled:
+      type: input.checkbox
+      label: Enabled
+      description: Globally enable the Cookie Consent Neo particles.
+      default: true
+      
+    message:
+      type: textarea.textarea
+      label: Message Text
+      description: The text message displayed for the banner.
+      placeholder: This website uses cookies to ensure you get the best experience on our website.
+
+    lmenable:
+      type: input.checkbox
+      label: Enable Learn More
+      description: Enable or disable the 'Learn more' link
+      default: 1
+      
+    lmtext:
+      type: input.text
+      label: Learn More Text
+      description: The text for the 'Learn more' link.
+      placeholder: Learn more
+
+    lmlink:
+      type: input.text
+      label: Learn More Link
+      description: The URL assigned to the 'Learn more' link.
+      placeholder: http://example.com/cookiepolicy
+
+    lmtarget:
+      type: select.selectize
+      label: Learn More Target
+      description: The target browser window when 'Learn more' link is clicked
+      default: _blank
+      options:
+          _blank: Blank
+          _self: Self
+          _parent: Parent
+          _top: Top
+
+    dmtext:
+      type: input.text
+      label: Dismiss Button Text
+      description: The text for the dismiss button.
+      placeholder: Got it!
+      
+    position:
+      type: select.selectize
+      label: Banner Position
+      description: The position of the banner on the screen
+      default: bottom
+      options:
+          bottom: Banner bottom
+          top: Banner top
+          top_p: Banner top (push)
+          float_bl: Floating bottom left
+          float_br: Floating bottom right
+          float_tl: Floating top left
+          float_tr: Floating top right
+          
+    layout:
+      type: select.selectize
+      label: Banner Layout
+      description: The layout of the banner and its contained elements
+      default: block
+      options:
+          block: Block
+          classic: Classic
+          edgeless: Edgeless
+          wire: Wire
+    
+    palette:
+      type: select.selectize
+      label: Banner Palette
+      description: The palette for the banner and its contained elements
+      default: p1
+      options:
+          p1: black-yellow
+          p2: baby-blue
+          p3: dark-blue
+          p4: black-toxic
+          p5: blue-pink
+          p6: lilac-pink
+          p7: blue-white
+          p8: redish
+          p9: violet-yellow
+          p10: turquise-green
+          p11: gray-blue
+          p12: dark-blue-pink
+          p13: greenish
+          p14: violet-green
+          p15: orange-yellow
+          p16: gray-green
+          
+    enablecpalette:
+      type: input.checkbox
+      label: Enable Custom Palette
+      description: Enable or disable the custom color palette
+      default: 0
+      
+    popupbg:
+      type: input.colorpicker
+      label: Popup Background
+      description: Custom color for the popup background
+      default: "#000000"
+      
+    popuptext:
+      type: input.colorpicker
+      label: Popup Text
+      description: Custom color for the popup text
+      default:
+      
+    popuplink:
+      type: input.colorpicker
+      label: Popup Link
+      description: Custom color for the popup link
+      default:    
+      
+    buttonbg:
+      type: input.colorpicker
+      label: Button Background
+      description: Custom color for the button background
+      default: "#f1d600"
+      
+    buttontext:
+      type: input.colorpicker
+      label: Button Text
+      description: Custom color for the button text
+      default:
+
+    compliance:
+      type: select.selectize
+      label: Compliance Mode
+      description: The compliance mode used for consent cookies
+      default: info
+      options:
+          info: Information Only
+          opt-out: Opt-out
+          opt-in: Opt-in
+          
+          
+    ccversion:
+      type: input.text
+      label: Cookie Consent Version
+      description: The Cookie Consent Version.
+      placeholder: 3.0.3
+      default: 3.0.3
