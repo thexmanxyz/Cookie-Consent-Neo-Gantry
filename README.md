@@ -9,8 +9,8 @@ This project adds the [Cookie Consent Javascript API](https://github.com/insites
 * Gantry 5 Templating Framework and Theme
 * Cookie Consent API 3.x.x
 
-## Installation
-1. Download the Gantry Atom Package
+## Download / Installation
+1. [Download](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.0/ccn.atom.only.v1.0.zip) the Gantry Atom Package
 2. Extract the files
 3. Copy the **html.twig** and the **yaml** file to your particle folder 
    * the target folder for Joomla would be **/templates/{gantry_theme}/particles**
