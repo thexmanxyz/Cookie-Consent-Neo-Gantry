@@ -64,7 +64,7 @@ Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 None
 
 ## Dependencies
-[Cookie Consent API](https://cookieconsent.insites.com/)
+[Cookie Consent API](https://cookieconsent.insites.com/documentation/javascript-api/)
 
 [Gantry 5 Framework](http://gantry.org/)
 
