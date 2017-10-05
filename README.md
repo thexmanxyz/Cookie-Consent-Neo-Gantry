@@ -17,6 +17,7 @@ This project adds the [Cookie Consent Javascript API](https://github.com/insites
    * the folder(s) for Wordpress and Grav may vary
 4. Go to your Gantry templating backend (e.g. Extensions/Templates)
 5. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
+6. Configure the appearance according to your favor
 
 ## Supported API Parameters
 * Banner Message Text
