@@ -14,6 +14,8 @@ This project adds the [Cookie Consent Javascript API](https://github.com/insites
 2. Extract the files
 3. Copy the .html.twig and the .yaml file to your particle folder 
    * for Joomla the target would be **/templates/{gantry_theme}/particles**
+4. Go to the Gantry templating backend
+5. Switch to Page Settings and add the new appearing Atom called 'Cookie Consent Neo' either globally **base outline** to your site or to a specific template or page
 
 ## Supported API Parameters
 
