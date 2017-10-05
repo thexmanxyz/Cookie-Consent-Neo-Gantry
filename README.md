@@ -22,13 +22,10 @@ This project adds the [Cookie Consent Javascript API](https://github.com/insites
 
 
 ## Showroom
-Insight of the Gantry Atom backend configuration:
+Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 
-![Cookie Consent Neo Configuration a)](/screenshots/backend_a.png)
-Parameter Configuration a)
-
-![Cookie Consent Neo Configuration a)](/screenshots/backend_b.png)
-Parameter Configuration b)
+![](/screenshots/backend_small_a.png)
+![](/screenshots/backend_small_b.png)
 
 ## Future Tasks
 * better coverage of the Cookie Consent API parameters
