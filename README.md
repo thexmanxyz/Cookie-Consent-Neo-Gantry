@@ -51,6 +51,8 @@ Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 ## Future Tasks
 * better coverage of the Cookie Consent API parameters
 * maintain API changes
+* more themes
+* local vs CDN - JS and CSS integration
 * more TBA
 
 ## Known Issues
