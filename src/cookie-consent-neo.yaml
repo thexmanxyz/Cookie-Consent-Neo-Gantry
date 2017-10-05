@@ -1,3 +1,14 @@
+###################################################
+# Cookie Consent Neo - Atom for Gantry 5          #
+#                                                 #
+# Purpose: This project adds the Cookie Consent   #
+#          Javascript API functionality to the    #
+#          Gantry templating framework.           #
+#                                                 #
+# Author: Andreas Kar                             #
+# Contact: andreas.kar@gmx.at                     #
+###################################################
+
 name: Cookie Consent Neo
 description: Configure Cookie Consent Neo atom.
 type: atom
