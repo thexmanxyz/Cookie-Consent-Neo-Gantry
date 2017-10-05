@@ -62,7 +62,7 @@ None
 [Gantry 5 Framework](http://gantry.org/)
 
 ## Credits
-Thanks to the [Insites](https://insites.com/) for the Cookie Consent API and the Gantry 5 Framework team.
+Thanks to [Insites](https://insites.com/) for the Cookie Consent API and the Gantry 5 Framework team for providing a modern templating framework.
 
 ## by [thex](https://github.com/thexmanxyz)
 Copyright (c) 2017, free to use in personal and commercial software as per the [license](/LICENSE.md).
