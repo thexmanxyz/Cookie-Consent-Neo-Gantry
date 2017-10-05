@@ -35,9 +35,10 @@ form:
       placeholder: http://example.com/cookiepolicy
 
     lmtarget:
-      type: select.selectize
+      type: select.select
       label: Learn More Target
       description: The target browser window when 'Learn more' link is clicked
+      placeholder: 'Select...'
       default: _blank
       options:
           _blank: Blank
@@ -52,9 +53,10 @@ form:
       placeholder: Got it!
       
     position:
-      type: select.selectize
+      type: select.select
       label: Banner Position
       description: The position of the banner on the screen
+      placeholder: 'Select...'
       default: bottom
       options:
           bottom: Banner bottom
@@ -66,9 +68,10 @@ form:
           float_tr: Floating top right
           
     layout:
-      type: select.selectize
+      type: select.select
       label: Banner Layout
       description: The layout of the banner and its contained elements
+      placeholder: 'Select...'
       default: block
       options:
           block: Block
@@ -77,9 +80,10 @@ form:
           wire: Wire
     
     palette:
-      type: select.selectize
+      type: select.select
       label: Banner Palette
       description: The palette for the banner and its contained elements
+      placeholder: 'Select...'
       default: p1
       options:
           p1: black-yellow
@@ -99,56 +103,91 @@ form:
           p15: orange-yellow
           p16: gray-green
           
-    enablecpalette:
+    enableccolor:
       type: input.checkbox
-      label: Enable Custom Palette
+      label: Enable Custom Colors
       description: Enable or disable the custom color palette
       default: 0
       
     popupbg:
       type: input.colorpicker
-      label: Popup Background
+      label: Popup Bg Color
       description: Custom color for the popup background
       default: "#000000"
       
     popuptext:
       type: input.colorpicker
-      label: Popup Text
+      label: Popup Text Color
       description: Custom color for the popup text
       default:
       
     popuplink:
       type: input.colorpicker
-      label: Popup Link
+      label: Popup Link Color
       description: Custom color for the popup link
       default:    
       
     buttonbg:
       type: input.colorpicker
-      label: Button Background
+      label: Button Bg Color
       description: Custom color for the button background
       default: "#f1d600"
       
     buttontext:
       type: input.colorpicker
-      label: Button Text
+      label: Button Text Color
       description: Custom color for the button text
       default:
 
     compliance:
-      type: select.selectize
+      type: select.select
       label: Compliance Mode
       description: The compliance mode used for consent cookies
+      placeholder: 'Select...'
       default: info
       options:
           info: Information Only
           opt-out: Opt-out
           opt-in: Opt-in
           
-          
     ccversion:
       type: input.text
       label: Cookie Consent Version
-      description: The Cookie Consent Version.
-      placeholder: 3.0.3
-      default: 3.0.3
+      description: The Cookie Consent Version (only for CDN).
+      placeholder: 3.0.4
+      default: 3.0.4
+         
+    enablelocalcss:
+      type: input.checkbox
+      label: Enable local CSS
+      description: Enable or disable the use of local CSS file, instead of CDN
+      default: 0
+    
+    localcsspath:
+      type: input.text
+      label: Local CSS Path
+      description: Path to the Cookie Consent CSS file on this server (relative to root)
+      default:
+
+    enablelocaljs:
+      type: input.checkbox
+      label: Enable local JS
+      description: Enable or disable the use of local JS file, instead of CDN
+      default: 0
+      
+    localjspath:
+      type: input.text
+      label: Local JS Path
+      description: Path to the Cookie Consent JS file on this server (relative to root)
+      default:
+      
+    jsexecution:
+      type: select.select
+      label: JS Execution
+      description: The used execution method for the loaded JS
+      placeholder: 'Select...'
+      default: none
+      options:
+          none: None
+          async: Asynchronous
+          defer: Deferred

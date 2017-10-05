@@ -3,14 +3,17 @@
 {% block stylesheets %}
     {% if particle.enabled %}
         {{ parent() }}
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.css" />
+        {% if particle.enablelocalcss and particle.localcsspath is not empty %}
+            <link rel="stylesheet" type="text/css" href="{{particle.localcsspath}}" />
+        {% else %}
+            <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.css" />
+        {% endif %}
     {% endif %}
 {% endblock %}
 
 {% block javascript_footer %}
     {% if particle.enabled %}
         {{ parent() }}
-        
         
         {% set bannerMsg = particle.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
         {% set bannerStatic = false %}
@@ -41,7 +44,6 @@
             {% set bannerStatic = true %}
         {% endif %}
             
-        
         {% if particle.layout == 'block' or particle.layout == 'wire' %}
             {% set bannerLayout = '' %}
         {% elseif particle.layout == 'classic' %}
@@ -54,11 +56,9 @@
         
         {% set bannerPopText = '' %}
         {% set bannerBtnText = '' %}
-        {% set bannerHLText = '' %}
         {% set bannerPopLink = '' %}
-        {% set bannerHLBg = '' %}
         
-        {% if not particle.enablecpalette %}
+        {% if not particle.enableccolor %}
             
             {% if particle.palette == 'p1' %}
                 {% set bannerPopBg = '#000' %}
@@ -160,7 +160,16 @@
         {% set linkHref = particle.lmlink|default('https://cookiesandyou.com') %}
         {% set dismissText = particle.dmtext|default('Got it!') %}
         
-        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.js"></script>
+        {% set jsexecution = '' %}
+        {% if particle.jsexecution != 'none' and particle.jsexecution is not empty %}
+            {% set jsexecution = particle.jsexecution ~ '"' ~ particle.jsexecution  ~ '" ' %}
+        {% endif %}
+        
+        {% if particle.enablelocaljs and particle.localjspath is not empty %}
+            <script {{jsexecution}}src="{{particle.localjspath}}"></script>
+        {% else %}
+            <script {{jsexecution}}src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.js"></script>
+        {% endif %}
         <script>
             window.addEventListener("load", function(){
                 window.cookieconsent.initialise({
