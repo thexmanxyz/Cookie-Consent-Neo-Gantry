@@ -25,6 +25,7 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 * URL for the 'Learn More' link
 * Target for the 'Learn More' link
 * Dismiss button text
+* Revoke button text
 * Banner position
 * Banner layout
 * Banner palette (sixteen default styles, taken from [Cookie Consent](https://cookieconsent.insites.com/download/))
@@ -36,6 +37,11 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
   * Background color
   * Text color
 * Compliance mode support
+* Revokable supported
+* Scrolling and Timeout supported
+* White-/Blacklisting
+* Cookie Configuration
+* Location Configuration (endpoints, timeout, country, law)
 * Adaptable Cookie Consent API Version
 * Server local CSS and JS loading
 * Disable CDN
@@ -46,13 +52,29 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 ## Showroom
 Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 
-![a](/screenshots/backend_a_small.png)
+![1](/screenshots/backend_labeling.png)
 
-*Cookie Consent Neo Configuration - [parameters part 1](/screenshots/backend_a.png)*
+*Cookie Consent - [Labeling](/screenshots/backend_labeling.png)*
 
-![b](/screenshots/backend_b_small.png)
+![2](/screenshots/backend_labeling.png)
 
-*Cookie Consent Neo Configuration - [parameters part 2](/screenshots/backend_b.png)*
+*Cookie Consent - [Appearance](/screenshots/backend_appearance.png)*
+
+![3](/screenshots/backend_behaviour.png)
+
+*Cookie Consent - [Behaviour](/screenshots/backend_behaviour.png)*
+
+![4](/screenshots/backend_cookie.png)
+
+*Cookie Consent - [Cookie](/screenshots/backend_cookie.png)*
+
+![5](/screenshots/backend_location.png)
+
+*Cookie Consent - [Location](/screenshots/backend_location.png)*
+
+![6](/screenshots/backend_api.png)
+
+*Cookie Consent - [API](/screenshots/backend_api.png)*
 
 ## Future Tasks
 * better coverage of the Cookie Consent API parameters
