@@ -43,7 +43,13 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 * Scrolling and Timeout supported
 * White-/Blacklisting
 * Cookie Configuration
-* Location Configuration (endpoints, timeout, country, law)
+  * Server and Path
+  * Cookie Name
+  * Expiry
+* Location Configuration
+  * Service Endpoints
+  * Service Timeout
+  * Country Code
 * Adaptable Cookie Consent API Version
 * Server local CSS and JS loading
 * Disable CDN
