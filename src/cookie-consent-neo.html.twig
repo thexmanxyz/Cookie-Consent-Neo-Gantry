@@ -1,256 +1,348 @@
-{###################################################}
-{# Cookie Consent Neo - Atom for Gantry 5          #}
-{#                                                 #}
-{# Purpose: This project adds the Cookie Consent   #}
-{#          Javascript API functionality to the    #}
-{#          Gantry templating framework.           #}
-{#                                                 #}
-{# Author: Andreas Kar                             #}
-{# Contact: andreas.kar@gmx.at                     #}
-{###################################################}
+{#####################################################}
+{#                                                   #}
+{#   Cookie Consent Neo - Atom for Gantry 5          #}
+{#                                                   #}
+{#   Purpose: This project adds the Cookie Consent   #}
+{#            Javascript API functionality to the    #}
+{#            Gantry templating framework.           #}
+{#                                                   #}
+{#   Author: thexmanxy (Andreas Kar)                 #}
+{#   Contact: andreas.kar@gmx.at                     #}
+{#                                                   #}
+{#####################################################}
 
 {% extends '@nucleus/partials/particle.html.twig' %}
 
-{% block stylesheets %}
-    {% if particle.enabled %}
-        {{ parent() }}
-        {% if particle.enablelocalcss and particle.localcsspath is not empty %}
-            <link rel="stylesheet" type="text/css" href="{{particle.localcsspath}}" />
-        {% else %}
-            <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.css" />
-        {% endif %}
-    {% endif %}
-{% endblock %}
+{% set bannerMsg = particle.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
+{% set bannerStatic = false %}
 
-{% block javascript_footer %}
-    {% if particle.enabled %}
+{% if particle.compliance != 'info' and particle.compliance is not empty %}
+    {% set compType = particle.compliance %}
+    {% set optText = particle.opttext %}
+{% else %}
+    {% set compType = '' %}
+    {% set optText = '' %}
+{% endif %}
+
+{% if particle.position == 'bottom' %}
+    {% set bannerPos = '' %}
+{% elseif particle.position == 'top' %}
+    {% set bannerPos = 'top' %}
+{% elseif particle.position == 'float_bl' %}
+    {% set bannerPos = 'bottom-left' %}
+{% elseif particle.position == 'float_br' %}
+    {% set bannerPos = 'bottom-right' %}
+{% elseif particle.position == 'float_tl' %}
+    {% set bannerPos = 'top-left' %}
+{% elseif particle.position == 'float_tr' %}
+    {% set bannerPos = 'top-right' %}
+{% else %}
+    {% set bannerPos = '' %}
+{% endif %}
+
+{% if particle.position == 'top_p'%}
+    {% set bannerStatic = true %}
+{% endif %}
+
+{% if particle.layout == 'block' or particle.layout == 'wire' %}
+    {% set bannerLayout = '' %}
+{% elseif particle.layout == 'classic' %}
+    {% set bannerLayout = 'classic' %}
+{% elseif particle.layout == 'edgeless' %}
+    {% set bannerLayout = 'edgeless' %}
+{% elseif particle.layout == 'wire' %}
+    {% set bannerLayout = '' %}
+{% endif %}
+
+{% set bannerPopText = '' %}
+{% set bannerBtnText = '' %}
+{% set bannerPopLink = '' %}
+
+{% if not particle.enableccolor %}
+    {% if particle.palette == 'p1' %}
+        {% set bannerPopBg = '#000' %}
+        {% set bannerBtnBg = '#f1d600' %}
+    {% elseif particle.palette == 'p2' %}
+        {% set bannerPopBg = '#eaf7f7' %}
+        {% set bannerPopText = '#5c7291' %}
+        {% set bannerBtnBg = '#56cbdb' %}
+        {% set bannerBtnText = '#ffffff' %}
+    {% elseif particle.palette == 'p3' %}
+        {% set bannerPopBg = '#252e39' %}
+        {% set bannerBtnBg = '#14a7d0' %}
+    {% elseif particle.palette == 'p4' %}
+        {% set bannerPopBg = '#000' %}
+        {% set bannerPopText = '#0f0' %}
+        {% set bannerBtnBg = '#0f0' %}
+    {% elseif particle.palette == 'p5' %}
+        {% set bannerPopBg = '#3937a3' %}
+        {% set bannerBtnBg = '#e62576' %}
+    {% elseif particle.palette == 'p6' %}
+        {% set bannerPopBg = '#64386b' %}
+        {% set bannerPopText = '#ffcdfd' %}
+        {% set bannerBtnBg = '#f8a8ff' %}
+        {% set bannerBtnText = '#3f0045' %}
+    {% elseif particle.palette == 'p7' %}
+        {% set bannerPopBg = '#237afc' %}
+        {% set bannerBtnBg = '#fff' %}
+        {% set bannerBtnText = '#237afc' %}
+    {% elseif particle.palette == 'p8' %}
+        {% set bannerPopBg = '#aa0000' %}
+        {% set bannerPopText = '#ffdddd' %}
+        {% set bannerBtnBg = '#ff0000' %}
+    {% elseif particle.palette == 'p9' %}
+        {% set bannerPopBg = '#383b75' %}
+        {% set bannerBtnBg = '#f1d600' %}
+    {% elseif particle.palette == 'p10' %}
+        {% set bannerPopBg = '#1d8a8a' %}
+        {% set bannerBtnBg = '#62ffaa' %}
+    {% elseif particle.palette == 'p11' %}
+        {% set bannerPopBg = '#edeff5' %}
+        {% set bannerPopText = '#838391' %}
+        {% set bannerBtnBg = '#4b81e8' %}
+    {% elseif particle.palette == 'p12' %}
+        {% set bannerPopBg = '#343c66' %}
+        {% set bannerPopText = '#cfcfe8' %}
+        {% set bannerBtnBg = '#f71559' %}
+    {% elseif particle.palette == 'p13' %}
+        {% set bannerPopBg = '#216942' %}
+        {% set bannerPopText = '#b2d192' %}
+        {% set bannerBtnBg = '#afed71' %}
+    {% elseif particle.palette == 'p14' %}
+        {% set bannerPopBg = '#3c404d' %}
+        {% set bannerPopText = '#d6d6d6' %}
+        {% set bannerBtnBg = '#8bed4f' %}
+    {% elseif particle.palette == 'p15' %}
+        {% set bannerPopBg = '#eb6c44' %}
+        {% set bannerPopText = '#ffffff' %}
+        {% set bannerBtnBg = '#f5d948' %}
+    {% elseif particle.palette == 'p16' %}
+        {% set bannerPopBg = '#efefef' %}
+        {% set bannerPopText = '#404040' %}
+        {% set bannerBtnBg = '#8ec760' %}
+        {% set bannerBtnText = '#ffffff' %}
+    {% else %}
+        {% set bannerPopBg = '#000' %}
+        {% set bannerBtnBg = '#f1d600' %}
+    {% endif %}
+{% else %}
+    {% if particle.popupbg is not empty %}
+        {% set bannerPopBg = particle.popupbg %}
+    {% else %}
+        {% set bannerPopBg = '#000' %}
+    {% endif %}
+    {% if particle.buttonbg is not empty %}
+        {% set bannerBtnBg = particle.buttonbg %}
+    {% else %}
+        {% set bannerBtnBg = '#f1d600' %}    
+    {% endif %}
+    {% if particle.popuptext is not empty %}
+        {% set bannerPopText = particle.popuptext %}
+    {% endif %}
+    {% if particle.buttontext is not empty %}
+        {% set bannerBtnText = particle.buttontext %}
+    {% endif %}
+    {% if particle.popuplink is not empty %}
+        {% set bannerPopLink = particle.popuplink %}
+    {% endif %}
+{% endif %}
+
+{% set linkText = particle.lmtext|default('Read more') %}
+{% set linkTarget = particle.lmtarget|default('_blank') %}
+{% set linkHref = particle.lmlink|default('https://cookiesandyou.com') %}
+{% set dismissText = particle.dmtext|default('Got it!') %}
+
+{% set jsexecution = '' %}
+{% if particle.jsexecution != 'none' and particle.jsexecution is not empty %}
+    {% set jsexecution = particle.jsexecution ~ '="' ~ particle.jsexecution  ~ '" ' %}
+{% endif %}
+
+{%- block stylesheets -%}
+    {%- if particle.enabled -%}
+        {{- parent() -}}
+        {%- if particle.enablelocalcss and particle.localcsspath is not empty -%}
+            <link rel="stylesheet" type="text/css" href="{{particle.localcsspath}}" />
+        {%- else -%}
+            <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.css" />
+        {%- endif -%}
+    {%- endif -%}
+{%- endblock -%}
+{%- block javascript_footer -%}
+    {%- if particle.enabled -%}
         {{ parent() }}
-        
-        {% set bannerMsg = particle.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
-        {% set bannerStatic = false %}
-        
-        {% if particle.compliance != 'info' and particle.compliance is not empty %}
-            {% set compType = particle.compliance %}
-        {% else %}
-            {% set compType = '' %}
-        {% endif %}
-        
-        {% if particle.position == 'bottom' %}
-            {% set bannerPos = '' %}
-        {% elseif particle.position == 'top' %}
-            {% set bannerPos = 'top' %}
-        {% elseif particle.position == 'float_bl' %}
-            {% set bannerPos = 'bottom-left' %}
-        {% elseif particle.position == 'float_br' %}
-            {% set bannerPos = 'bottom-right' %}
-        {% elseif particle.position == 'float_tl' %}
-            {% set bannerPos = 'top-left' %}
-        {% elseif particle.position == 'float_tr' %}
-            {% set bannerPos = 'top-right' %}
-        {% else %}
-            {% set bannerPos = '' %}
-        {% endif %}
-        
-        {% if particle.position == 'top_p'%}
-            {% set bannerStatic = true %}
-        {% endif %}
-            
-        {% if particle.layout == 'block' or particle.layout == 'wire' %}
-            {% set bannerLayout = '' %}
-        {% elseif particle.layout == 'classic' %}
-            {% set bannerLayout = 'classic' %}
-        {% elseif particle.layout == 'edgeless' %}
-            {% set bannerLayout = 'edgeless' %}
-        {% elseif particle.layout == 'wire' %}
-            {% set bannerLayout = '' %}
-        {% endif %}
-        
-        {% set bannerPopText = '' %}
-        {% set bannerBtnText = '' %}
-        {% set bannerPopLink = '' %}
-        
-        {% if not particle.enableccolor %}
-            
-            {% if particle.palette == 'p1' %}
-                {% set bannerPopBg = '#000' %}
-                {% set bannerBtnBg = '#f1d600' %}
-            {% elseif particle.palette == 'p2' %}
-                {% set bannerPopBg = '#eaf7f7' %}
-                {% set bannerPopText = '#5c7291' %}
-                {% set bannerBtnBg = '#56cbdb' %}
-                {% set bannerBtnText = '#ffffff' %}
-            {% elseif particle.palette == 'p3' %}
-                {% set bannerPopBg = '#252e39' %}
-                {% set bannerBtnBg = '#14a7d0' %}
-            {% elseif particle.palette == 'p4' %}
-                {% set bannerPopBg = '#000' %}
-                {% set bannerPopText = '#0f0' %}
-                {% set bannerBtnBg = '#0f0' %}
-            {% elseif particle.palette == 'p5' %}
-                {% set bannerPopBg = '#3937a3' %}
-                {% set bannerBtnBg = '#e62576' %}
-            {% elseif particle.palette == 'p6' %}
-                {% set bannerPopBg = '#64386b' %}
-                {% set bannerPopText = '#ffcdfd' %}
-                {% set bannerBtnBg = '#f8a8ff' %}
-                {% set bannerBtnText = '#3f0045' %}
-            {% elseif particle.palette == 'p7' %}
-                {% set bannerPopBg = '#237afc' %}
-                {% set bannerBtnBg = '#fff' %}
-                {% set bannerBtnText = '#237afc' %}
-            {% elseif particle.palette == 'p8' %}
-                {% set bannerPopBg = '#aa0000' %}
-                {% set bannerPopText = '#ffdddd' %}
-                {% set bannerBtnBg = '#ff0000' %}
-            {% elseif particle.palette == 'p9' %}
-                {% set bannerPopBg = '#383b75' %}
-                {% set bannerBtnBg = '#f1d600' %}
-            {% elseif particle.palette == 'p10' %}
-                {% set bannerPopBg = '#1d8a8a' %}
-                {% set bannerBtnBg = '#62ffaa' %}
-            {% elseif particle.palette == 'p11' %}
-                {% set bannerPopBg = '#edeff5' %}
-                {% set bannerPopText = '#838391' %}
-                {% set bannerBtnBg = '#4b81e8' %}
-            {% elseif particle.palette == 'p12' %}
-                {% set bannerPopBg = '#343c66' %}
-                {% set bannerPopText = '#cfcfe8' %}
-                {% set bannerBtnBg = '#f71559' %}
-            {% elseif particle.palette == 'p13' %}
-                {% set bannerPopBg = '#216942' %}
-                {% set bannerPopText = '#b2d192' %}
-                {% set bannerBtnBg = '#afed71' %}
-            {% elseif particle.palette == 'p14' %}
-                {% set bannerPopBg = '#3c404d' %}
-                {% set bannerPopText = '#d6d6d6' %}
-                {% set bannerBtnBg = '#8bed4f' %}
-            {% elseif particle.palette == 'p15' %}
-                {% set bannerPopBg = '#eb6c44' %}
-                {% set bannerPopText = '#ffffff' %}
-                {% set bannerBtnBg = '#f5d948' %}
-            {% elseif particle.palette == 'p16' %}
-                {% set bannerPopBg = '#efefef' %}
-                {% set bannerPopText = '#404040' %}
-                {% set bannerBtnBg = '#8ec760' %}
-                {% set bannerBtnText = '#ffffff' %}
-            {% else %}
-                {% set bannerPopBg = '#000' %}
-                {% set bannerBtnBg = '#f1d600' %}
-            {% endif %}
-            
-        {% else %}
-            
-            {% if particle.popupbg is not empty %}
-                {% set bannerPopBg = particle.popupbg %}
-            {% else %}
-                {% set bannerPopBg = '#000' %}
-            {% endif %}
-                 
-            {% if particle.buttonbg is not empty %}
-                {% set bannerBtnBg = particle.buttonbg %}
-            {% else %}
-                {% set bannerBtnBg = '#f1d600' %}    
-            {% endif %}
-            
-            {% if particle.popuptext is not empty %}
-                {% set bannerPopText = particle.popuptext %}
-            {% endif %}
-                
-            {% if particle.buttontext is not empty %}
-                {% set bannerBtnText = particle.buttontext %}
-            {% endif %}
-            
-            {% if particle.popuplink is not empty %}
-                {% set bannerPopLink = particle.popuplink %}
-            {% endif %}
-            
-        {% endif %}
-            
-        {% set linkText = particle.lmtext|default('Read more') %}
-        {% set linkTarget = particle.lmtarget|default('_blank') %}
-        {% set linkHref = particle.lmlink|default('https://cookiesandyou.com') %}
-        {% set dismissText = particle.dmtext|default('Got it!') %}
-        
-        {% set jsexecution = '' %}
-        {% if particle.jsexecution != 'none' and particle.jsexecution is not empty %}
-            {% set jsexecution = particle.jsexecution ~ '"' ~ particle.jsexecution  ~ '" ' %}
-        {% endif %}
-        
-        {% if particle.enablelocaljs and particle.localjspath is not empty %}
+        {%- if particle.enablelocaljs and particle.localjspath is not empty -%}
             <script {{jsexecution}}src="{{particle.localjspath}}"></script>
-        {% else %}
+        {%- else -%}
             <script {{jsexecution}}src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.js"></script>
-        {% endif %}
+        {%- endif -%}
         <script>
             window.addEventListener("load", function(){
                 window.cookieconsent.initialise({
                     palette: {
                         popup: {
                             background: "{{bannerPopBg|e('js')}}",
-                            {% if bannerPopText is not empty %}
+                            {%- if bannerPopText is not empty -%}
                                 text: "{{bannerPopText|e('js')}}"
-                            {% endif %}
-                            {% if bannerPopLink is not empty %}
+                            {%- endif -%}
+
+                            {%- if bannerPopLink is not empty -%}
                                 link: "{{bannerPopLink|e('js')}}"
-                            {% endif %}
+                            {%- endif -%}
                         },
                         button: {
-                            {% if particle.layout == 'wire' %}
+                            {%- if particle.layout == 'wire' -%}
                                 background: "transparent",
                                 text: "{{bannerBtnBg|e('js')}}",
                                 border: "{{bannerBtnBg|e('js')}}",
-                            {% else %}
+                            {%- else -%}
                                 background: "{{bannerBtnBg|e('js')}}",
-                                {% if bannerPopText is not empty %}
+                                {%- if bannerPopText is not empty -%}
                                     text: "{{bannerBtnText|e('js')}}"
-                                {% endif %}
-                            {% endif %}
+                                {%- endif -%}
+                            {%- endif -%}
                         }
                     },
-            
-                    {% if not particle.lmenable %}
+
+                    {%- if not particle.lmenable -%}
                         showLink: false,
-                    {% endif %}
+                    {%- endif -%}
                     
-                    {% if bannerPos is not empty %}
+                    {%- if bannerPos is not empty -%}
                         position: "{{bannerPos|e('js')}}",
-                    {% endif %}
+                    {%- endif -%}
                     
-                    {% if bannerLayout is not empty %}
+                    {%- if bannerLayout is not empty -%}
                         theme: "{{bannerLayout|e('js')}}",
-                    {% endif %}
+                    {%- endif -%}
                     
-                    {% if bannerStatic == true %}
+                    {%- if bannerStatic == true -%}
                         static: true,
-                    {% endif %}
+                    {%- endif -%}
                     
+                    {%- if particle.autoopen == 0 -%}
+                        autoOpen: false,
+                    {%- endif -%}
+                    
+                    {%- if particle.revokable -%}
+                        revokable: true,
+                    {%- endif -%}
+                    
+                    {%- if particle.arevokable == 0 -%}
+                        animateRevokable: false,
+                    {%- endif -%}
+                    
+                    {%- if particle.revoketext is not empty -%}
+                        {%- set revokeText = '<div class="cc-revoke {{classes}}">' ~ particle.revoketext ~ '</div>' -%}
+                        revokeBtn: "{{revokeText|e('js')}}",
+                    {%- endif -%}
+                    
+                    {%- if particle.cname is not empty or particle.cpath is not empty or particle.cdomain is not empty or particle.cexpirydays is not empty -%}  
+                        cookie: {
+                            {%- if particle.cname is not empty -%}
+                                name: "{{particle.cname|e('js')}}",
+                            {%- endif -%}
+                            {%- if particle.cpath is not empty -%}
+                                path: "{{particle.cpath|e('js')}}",
+                            {%- endif -%}
+                            {%- if particle.cdomain is not empty -%}
+                                domain: "{{particle.cdomain|e('js')}}",
+                            {%- endif -%}
+                            {%- if particle.cexpirydays is not empty -%}
+                                expiryDays: {{particle.cexpirydays}}
+                            {%- endif -%}
+                        },
+                    {%- endif -%}
+                            
+                    {%- if particle.location == 'on' -%}
+                        location: true,
+                    {%- elseif particle.location == 'custom' -%}
+                        {%- if particle.ltimeout is not empty or particle.lservice|length > 0 -%}
+                            location: {
+                                {%- if particle.lservice|length > 0 -%}
+                                    services: {{ _self.renderJSArray(particle.lservice, 'id') }},
+                                {%- endif -%}
+                                {%- if particle.ltimeout is not empty -%}
+                                    timeout: {{particle.ltimeout}}
+                                {%- endif -%}
+                            },
+                        {%- endif -%}
+                    {%- endif -%}
+                            
+                    {%- if particle.regionallaw == 0 or particle.countrycode is not empty -%}
+                        law: {
+                            {%- if particle.regionallaw == 0 -%}
+                                regionalLaw: false,
+                            {%- endif -%}
+
+                            {%- if particle.countrycode is not empty -%}
+                                countryCode: "{{particle.countrycode|e('js')}}"
+                            {%- endif -%}
+                        },
+                    {%- endif -%}
+
                     content: {
                         message: "{{bannerMsg|e('js')}}",
                         link: "{{linkText|e('js')}}",
                         dismiss: "{{dismissText|e('js')}}",
+
+                        {%- if optText is not empty -%}
+                            {%- if particle.compliance == 'opt-out' -%}
+                                deny: "{{optText|e('js')}}",
+                            {%- elseif particle.compliance == 'opt-in' -%}
+                                allow: "{{optText|e('js')}}",
+                            {%- endif -%}
+                        {%- endif -%}
                         
-                        {% if particle.lmenable %}
-                            href: "{{linkHref|raw}}" 
-                        {% endif %}
+                        {%- if particle.lmenable -%}
+                            href: "{{linkHref|raw}}",
+                        {%- endif -%}
                     },
-                    
-                    {% if compType is not empty %}
+
+                    {%- if compType is not empty -%}
                         type: "{{compType}}",
-                    {% endif %}
-                        
-                    {% set msgLink = '<span id="cookieconsent:desc" class="cc-message">' %}
-                    {% set msgLink = msgLink ~ '{{message}}' %}
-                    {% if particle.lmenable %}
-                        {% set msgLink = msgLink ~ ' <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="' %}
-                        {% set msgLink = msgLink ~ linkHref|raw %}
-                        {% set msgLink = msgLink ~ '" target="' ~ linkTarget ~ '">{{link}}</a>' %}
-                    {% endif %}   
-                    {% set msgLink = msgLink ~ '</span>' %}
+                    {%- endif -%}
+
+                    {%- if particle.dmonscroll is not empty -%}
+                        dismissOnScroll: {{particle.dmonscroll}},
+                    {%- endif -%}
+
+                    {%- if particle.dmontimeout is not empty -%}
+                        dismissOnTimeout: {{particle.dmontimeout}},
+                    {%- endif -%}
+
+                    {%- if particle.blpages|length > 0 -%}
+                        blacklistPage: {{ _self.renderJSArray(particle.blpages, 'path') }},
+                    {%- endif -%}
+                    
+                    {%- if particle.wlpages|length > 0 -%}
+                        whitelistPage: {{ _self.renderJSArray(particle.wlpages, 'path') }},
+                    {%- endif -%}
+
+                    {%- set msgLink = '<span id="cookieconsent:desc" class="cc-message">' -%}
+                    {%- set msgLink = msgLink ~ '{{message}}' -%}
+                    {%- if particle.lmenable -%}
+                        {%- set msgLink = msgLink ~ ' <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="' -%}
+                        {%- set msgLink = msgLink ~ linkHref|raw ~ '"' -%}
+                        {%- if linkTarget != 'none' -%}
+                            {%- set msgLink = msgLink ~ ' target="' ~ linkTarget ~ '"' -%}
+                        {%- endif -%}
+                        {%- set msgLink = msgLink ~ '>{{link}}</a>' -%}
+                    {%- endif -%}   
+                    {%- set msgLink = msgLink ~ '</span>' -%}
+                    
                     elements: {
                         messagelink: "{{msgLink|e('js')}}"
-                    }
-                        
-                })});
+                    }})});
         </script>
-    {% endif %}
-{% endblock %}
+    {%- endif -%}
+{%- endblock -%}
+{%- macro renderJSArray(array, attr) -%}
+    {%- set arrStr = "[" -%}
+    {%- for item in array -%}
+        {%- if item[attr] is not empty -%}
+            {%- set arrStr = arrStr ~ '"' ~ item[attr]|e('js') ~ '",' -%}
+        {%- endif -%}
+    {%- endfor -%}
+    {%- set arrStr = arrStr|slice(0,arrStr|length-1) ~ "]" -%}
+    {{- arrStr|raw -}}
+{%- endmacro -%}

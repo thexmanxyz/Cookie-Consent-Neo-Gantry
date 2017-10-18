@@ -1,13 +1,15 @@
-###################################################
-# Cookie Consent Neo - Atom for Gantry 5          #
-#                                                 #
-# Purpose: This project adds the Cookie Consent   #
-#          Javascript API functionality to the    #
-#          Gantry templating framework.           #
-#                                                 #
-# Author: Andreas Kar                             #
-# Contact: andreas.kar@gmx.at                     #
-###################################################
+#####################################################
+#                                                   #
+#   Cookie Consent Neo - Atom for Gantry 5          #
+#                                                   #
+#   Purpose: This project adds the Cookie Consent   #
+#            Javascript API functionality to the    #
+#            Gantry templating framework.           #
+#                                                   #
+#   Author: thexmanxyz (Andreas Kar)                #
+#   Contact: andreas.kar@gmx.at                     #
+#                                                   #
+#####################################################
 
 name: Cookie Consent Neo
 description: Configure Cookie Consent Neo atom.
@@ -20,185 +22,371 @@ form:
       label: Enabled
       description: Globally enable the Cookie Consent Neo particles.
       default: true
-      
-    message:
-      type: textarea.textarea
-      label: Message Text
-      description: The text message displayed for the banner.
-      placeholder: This website uses cookies to ensure you get the best experience on our website.
-
-    lmenable:
-      type: input.checkbox
-      label: Enable Learn More
-      description: Enable or disable the 'Learn more' link
-      default: 1
-      
-    lmtext:
-      type: input.text
-      label: Learn More Text
-      description: The text for the 'Learn more' link.
-      placeholder: Learn more
-
-    lmlink:
-      type: input.text
-      label: Learn More Link
-      description: The URL assigned to the 'Learn more' link.
-      placeholder: http://example.com/cookiepolicy
-
-    lmtarget:
-      type: select.select
-      label: Learn More Target
-      description: The target browser window when 'Learn more' link is clicked
-      placeholder: 'Select...'
-      default: _blank
-      options:
-          _blank: Blank
-          _self: Self
-          _parent: Parent
-          _top: Top
-
-    dmtext:
-      type: input.text
-      label: Dismiss Button Text
-      description: The text for the dismiss button.
-      placeholder: Got it!
-      
-    position:
-      type: select.select
-      label: Banner Position
-      description: The position of the banner on the screen
-      placeholder: 'Select...'
-      default: bottom
-      options:
-          bottom: Banner bottom
-          top: Banner top
-          top_p: Banner top (push)
-          float_bl: Floating bottom left
-          float_br: Floating bottom right
-          float_tl: Floating top left
-          float_tr: Floating top right
-          
-    layout:
-      type: select.select
-      label: Banner Layout
-      description: The layout of the banner and its contained elements
-      placeholder: 'Select...'
-      default: block
-      options:
-          block: Block
-          classic: Classic
-          edgeless: Edgeless
-          wire: Wire
-    
-    palette:
-      type: select.select
-      label: Banner Palette
-      description: The palette for the banner and its contained elements
-      placeholder: 'Select...'
-      default: p1
-      options:
-          p1: black-yellow
-          p2: baby-blue
-          p3: dark-blue
-          p4: black-toxic
-          p5: blue-pink
-          p6: lilac-pink
-          p7: blue-white
-          p8: redish
-          p9: violet-yellow
-          p10: turquise-green
-          p11: gray-blue
-          p12: dark-blue-pink
-          p13: greenish
-          p14: violet-green
-          p15: orange-yellow
-          p16: gray-green
-          
-    enableccolor:
-      type: input.checkbox
-      label: Enable Custom Colors
-      description: Enable or disable the custom color palette
-      default: 0
-      
-    popupbg:
-      type: input.colorpicker
-      label: Popup Bg Color
-      description: Custom color for the popup background
-      default: "#000000"
-      
-    popuptext:
-      type: input.colorpicker
-      label: Popup Text Color
-      description: Custom color for the popup text
-      default:
-      
-    popuplink:
-      type: input.colorpicker
-      label: Popup Link Color
-      description: Custom color for the popup link
-      default:    
-      
-    buttonbg:
-      type: input.colorpicker
-      label: Button Bg Color
-      description: Custom color for the button background
-      default: "#f1d600"
-      
-    buttontext:
-      type: input.colorpicker
-      label: Button Text Color
-      description: Custom color for the button text
-      default:
-
-    compliance:
-      type: select.select
-      label: Compliance Mode
-      description: The compliance mode used for consent cookies
-      placeholder: 'Select...'
-      default: info
-      options:
-          info: Information Only
-          opt-out: Opt-out
-          opt-in: Opt-in
-          
-    ccversion:
-      type: input.text
-      label: Cookie Consent Version
-      description: The Cookie Consent Version (only for CDN).
-      placeholder: 3.0.4
-      default: 3.0.4
          
-    enablelocalcss:
-      type: input.checkbox
-      label: Enable local CSS
-      description: Enable or disable the use of local CSS file, instead of CDN
-      default: 0
-    
-    localcsspath:
-      type: input.text
-      label: Local CSS Path
-      description: Path to the Cookie Consent CSS file on this server (relative to root)
-      default:
+    tabs:
+      type: container.tabs
+      fields:
+        tab_labeling:
+            label: Labeling
+            fields:
+                message:
+                  type: textarea.textarea
+                  label: Message Text
+                  description: The text message displayed for the banner.
+                  placeholder: This website uses cookies to ensure you get the best experience on our website.
 
-    enablelocaljs:
-      type: input.checkbox
-      label: Enable local JS
-      description: Enable or disable the use of local JS file, instead of CDN
-      default: 0
-      
-    localjspath:
-      type: input.text
-      label: Local JS Path
-      description: Path to the Cookie Consent JS file on this server (relative to root)
-      default:
-      
-    jsexecution:
-      type: select.select
-      label: JS Execution
-      description: The used execution method for the loaded JS
-      placeholder: 'Select...'
-      default: none
-      options:
-          none: None
-          async: Asynchronous
-          defer: Deferred
+                lmenable:
+                  type: input.checkbox
+                  label: Enable Learn More
+                  description: Enable or disable the 'Learn more' link.
+                  default: 1
+
+                lmtext:
+                  type: input.text
+                  label: Learn More Text
+                  description: The text for the 'Learn more' link.
+                  placeholder: Learn more
+
+                lmlink:
+                  type: input.text
+                  label: Learn More Link
+                  description: The URL assigned to the 'Learn more' link.
+                  placeholder: http://example.com/cookiepolicy
+
+                lmtarget:
+                  type: select.select
+                  label: Learn More Target
+                  description: The target browser window when 'Learn more' link is clicked.
+                  placeholder: 'Select...'
+                  default: none
+                  options:
+                      none: None
+                      _blank: Blank
+                      _self: Self
+                      _parent: Parent
+                      _top: Top
+
+                dmtext:
+                  type: input.text
+                  label: Dismiss Button Text
+                  description: The text for the dismiss button.
+                  placeholder: Got it!
+                  
+                opttext:
+                  type: input.text
+                  label: Opt-in / Opt-out Text
+                  description: The text for either the Opt-in / Opt-out button, depending on selection.
+                  placeholder: Allow Cookies / Decline
+                  default:
+                  
+                compliance:
+                  type: select.select
+                  label: Compliance Mode
+                  description: The compliance mode used for Consent Cookies.
+                  placeholder: 'Select...'
+                  default: info
+                  options:
+                      info: Information Only
+                      opt-in: Opt-in
+                      opt-out: Opt-out
+                      
+                revoketext:
+                  type: input.text
+                  label: Revoke Button Text
+                  description: The text for the revoke button.
+                  placeholder: Cookie Policy
+                  default:
+
+        tab_appearance:
+            label: Appearance
+            fields:
+                position:
+                  type: select.select
+                  label: Banner Position
+                  description: The position of the banner on the screen.
+                  placeholder: 'Select...'
+                  default: bottom
+                  options:
+                      bottom: Banner bottom
+                      top: Banner top
+                      top_p: Banner top (push)
+                      float_bl: Floating bottom left
+                      float_br: Floating bottom right
+                      float_tl: Floating top left
+                      float_tr: Floating top right
+
+                layout:
+                  type: select.select
+                  label: Banner Layout
+                  description: The layout of the banner and its contained elements.
+                  placeholder: 'Select...'
+                  default: block
+                  options:
+                      block: Block
+                      classic: Classic
+                      edgeless: Edgeless
+                      wire: Wire
+
+                palette:
+                  type: select.select
+                  label: Banner Palette
+                  description: The palette for the banner and its contained elements.
+                  placeholder: 'Select...'
+                  default: p1
+                  options:
+                      p1: black-yellow
+                      p2: baby-blue
+                      p3: dark-blue
+                      p4: black-toxic
+                      p5: blue-pink
+                      p6: lilac-pink
+                      p7: blue-white
+                      p8: redish
+                      p9: violet-yellow
+                      p10: turquise-green
+                      p11: gray-blue
+                      p12: dark-blue-pink
+                      p13: greenish
+                      p14: violet-green
+                      p15: orange-yellow
+                      p16: gray-green
+
+                enableccolor:
+                  type: input.checkbox
+                  label: Enable Custom Colors
+                  description: Enable or disable the custom color palette.
+                  default: 0
+
+                popupbg:
+                  type: input.colorpicker
+                  label: Popup Bg Color
+                  description: Custom color for the popup background.
+                  default: "#000000"
+
+                popuptext:
+                  type: input.colorpicker
+                  label: Popup Text Color
+                  description: Custom color for the popup text.
+                  default:
+
+                popuplink:
+                  type: input.colorpicker
+                  label: Popup Link Color
+                  description: Custom color for the popup link.
+                  default:    
+
+                buttonbg:
+                  type: input.colorpicker
+                  label: Button Bg Color
+                  description: Custom color for the button background.
+                  default: "#f1d600"
+
+                buttontext:
+                  type: input.colorpicker
+                  label: Button Text Color
+                  description: Custom color for the button text.
+                  default:
+
+        tab_behaviour:
+            label: Behaviour
+            fields:
+                autoopen:
+                  type: input.checkbox
+                  label: Auto Open
+                  description: Enable or disable the auto open of the banner.
+                  default: 1
+                
+                revokable:
+                  type: input.checkbox
+                  label: Revokable
+                  description: If checked, revoke button is displayed every time. 
+                  default: 0
+                  
+                arevokable:
+                  type: input.checkbox
+                  label: Animate Revokable
+                  description: If checked, the revokable button will transition in and out.
+                  default: 1
+                  
+                dmonscroll:
+                  type: input.text
+                  label: Dismiss on Scroll
+                  description: Value for scroll range, 'false' or empty to disable. Broken in CC API 3.0.3 and 3.0.4 (#170).
+                  placeholder: boolean, empty or value
+                  default: false
+
+                dmontimeout:
+                  type: input.text
+                  label: Dismiss on Timeout
+                  description: Time value in milliseconds to auto dismiss. 'false' or empty to disable. Broken in CC API 3.0.3 and 3.0.4 (#170).
+                  placeholder: boolean, empty or value
+                  default: false
+                  
+                blpages:
+                  type: collection.list
+                  array: true
+                  label: Blacklist Pages
+                  description: Create a new item for every site which should be blacklisted.
+                  value: title
+                  ajax: true
+                  fields:
+                    .title:
+                      type: input.text
+                      description: Name of the blacklist item.
+                      label: Title
+
+                    .path:
+                      type: input.text
+                      description: Use relative path or RegEx.
+                      placeholder: path or RegEx
+                      label: Path
+
+                wlpages:
+                  type: collection.list
+                  array: true
+                  label: Whitelist Pages
+                  description: Create a new item for every site which should be whitelisted.
+                  value: title
+                  ajax: true
+                  fields:
+                    .title:
+                      type: input.text
+                      description: Name of the whitelist item.
+                      label: Title
+
+                    .path:
+                      type: input.text
+                      description: Use relative path or RegEx.
+                      placeholder: path or RegEx
+                      label: Path
+
+        tab_cookie:
+            label: Cookie
+            fields:
+                cname:
+                  type: input.text
+                  label: Cookie Name
+                  description: Name of the cookie that keeps track of an users choice. Default 'cookieconsent_status'.
+                  placeholder: cookieconsent_status
+                  default: 
+                  
+                cpath:
+                  type: input.text
+                  label: Cookie Path
+                  description: The URL path the Cookie belongs to.
+                  placeholder: /
+                  default: 
+                  
+                cdomain:
+                  type: input.text
+                  label: Cookie Domain
+                  description: The domain the Cookie belongs to. Cookie can only be read on this domain.
+                  placeholder: .domain.com
+                  default: 
+                  
+                cexpirydays:
+                  type: input.text
+                  label: Cookie Expiry
+                  description: The cookies expiry, specified in days (specify -1 for no expiry).
+                  placeholder: 365
+                  default:
+       
+        tab_law_location:
+            label: Location
+            fields:    
+                location:
+                  type: select.select
+                  label: Location Service
+                  description: Location service is by default disabled. For service customization fill the at least one of the next two fields.
+                  placeholder: 'Select...'
+                  default: off
+                  options:
+                      off: Disabled
+                      on: Enabled
+                      custom: Custom
+                      
+                ltimeout:
+                  type: input.text
+                  label: Location Timeout
+                  description: If the service does not answer after interval, try the next service.
+                  placeholder: 5000
+                  default:
+                
+                lservice:
+                  type: collection.list
+                  array: true
+                  label: Location Endpoints
+                  description: Create a new item for every location service. They are requested one after another (if a timeout occurs). Default: [freegeoip, ipinfo, maxmind].
+                  value: title
+                  ajax: true
+                  fields:
+                    .title:
+                      type: input.text
+                      description: Name of the service item.
+                      label: Service Title
+
+                    .id:
+                      type: input.text
+                      description: The service name or identifier.
+                      placeholder: service
+                      label: Service Identifier
+                      
+                countrycode:
+                  type: input.text
+                  label: Country Code
+                  description: Rather than getting the country code from the location service(s), you can hard code it here.
+                  placeholder: e.g. US
+                  default:
+                  
+                regionallaw:
+                  type: input.checkbox
+                  label: Regional Law
+                  description: If unchecked, then the popup is only enabled if the country has the cookie law. 'Location Service' MUST be enabled to take effect.
+                  default: 1
+                      
+        tab_api:
+            label: API
+            fields:
+                ccversion:
+                  type: input.text
+                  label: Cookie Consent Version
+                  description: The Cookie Consent Version (only for CDN).
+                  placeholder: 3.0.4
+                  default: 3.0.4
+
+                enablelocalcss:
+                  type: input.checkbox
+                  label: Enable local CSS
+                  description: Enable or disable the use of local CSS file, instead of CDN.
+                  default: 0
+
+                localcsspath:
+                  type: input.text
+                  label: Local CSS Path
+                  description: Path to the Cookie Consent CSS file on this server (relative to root).
+                  placeholder: path/to/css
+                  default:
+
+                enablelocaljs:
+                  type: input.checkbox
+                  label: Enable local JS
+                  description: Enable or disable the use of local JS file, instead of CDN.
+                  default: 0
+
+                localjspath:
+                  type: input.text
+                  label: Local JS Path
+                  description: Path to the Cookie Consent JS file on this server (relative to root).
+                  placeholder: path/to/js
+                  default:
+
+                jsexecution:
+                  type: select.select
+                  label: JS Execution
+                  description: The used execution method for the loaded JS.
+                  placeholder: 'Select...'
+                  default: none
+                  options:
+                      none: None
+                      async: Asynchronous
+                      defer: Deferred
