@@ -19,7 +19,7 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 4. Go to your Gantry templating backend (e.g. Extensions/Templates)
 5. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
 6. Configure the appearance according to your favor
-7. [Optional] The download package contains a modified version of the Cookie Consent JS file which fixes the timeout and scrolling bug
+7. [Optional] The download package contains a modified version of the Cookie Consent JS file which fixes the timeout and scrolling bug [#170](https://github.com/insites/cookieconsent/issues/170)
 
 ## Supported API Parameters and Atom Options
 * Banner Message Text
