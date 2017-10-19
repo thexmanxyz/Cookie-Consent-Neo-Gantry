@@ -64,7 +64,7 @@ Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 
 *Cookie Consent - [Labeling](/screenshots/backend_labeling.png)*
 
-![2](/screenshots/backend_labeling.png)
+![2](/screenshots/backend_appearance.png)
 
 *Cookie Consent - [Appearance](/screenshots/backend_appearance.png)*
 
