@@ -60,29 +60,29 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 ## Showroom
 Insight of Cookie Consent Neo - Gantry Atom backend configuration:
 
+**Backend (1)** - *[Labeling](/screenshots/backend_labeling.png)*
+
 ![1](/screenshots/backend_labeling.png)
 
-*Cookie Consent - [Labeling](/screenshots/backend_labeling.png)*
+**Backend (2)** - *[Appearance](/screenshots/backend_appearance.png)*
 
 ![2](/screenshots/backend_appearance.png)
 
-*Cookie Consent - [Appearance](/screenshots/backend_appearance.png)*
+**Backend (3)** - *[Behaviour](/screenshots/backend_behaviour.png)*
 
 ![3](/screenshots/backend_behaviour.png)
 
-*Cookie Consent - [Behaviour](/screenshots/backend_behaviour.png)*
+**Backend (4)** - *[Cookie](/screenshots/backend_cookie.png)*
 
 ![4](/screenshots/backend_cookie.png)
 
-*Cookie Consent - [Cookie](/screenshots/backend_cookie.png)*
+**Backend (5)** - *[Location](/screenshots/backend_location.png)*
 
 ![5](/screenshots/backend_location.png)
 
-*Cookie Consent - [Location](/screenshots/backend_location.png)*
+**Backend (6)** - *[API](/screenshots/backend_api.png)*
 
 ![6](/screenshots/backend_api.png)
-
-*Cookie Consent - [API](/screenshots/backend_api.png)*
 
 ## Future Tasks
 * better coverage of the Cookie Consent API parameters
