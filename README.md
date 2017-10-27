@@ -58,7 +58,7 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
   * Deferred
 
 ## Showroom
-Insight of Cookie Consent Neo - Gantry Atom backend configuration:
+Insight of Cookie Consent Neo - Gantry Atom configuration:
 
 **Backend (1)** - *[Labeling](/screenshots/backend_labeling.png)*
 
