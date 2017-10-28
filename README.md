@@ -84,6 +84,20 @@ Insight of Cookie Consent Neo - Gantry Atom configuration:
 
 ![6](/screenshots/backend_api.png)
 
+Examples for different Cookie Consent layouts:
+
+**Frontend (1)** - *[Floating](/screenshots/frontend_1.png)*
+
+![7](/screenshots/frontend_1.png)
+
+**Frontend (2)** - *[Wire](/screenshots/frontend_2.png)*
+
+![8](/screenshots/frontend_2.png)
+
+**Frontend (3)** - *[Banner](/screenshots/frontend_3.png)*
+
+![9](/screenshots/frontend_3.png)
+
 ## Future Tasks
 * better coverage of the Cookie Consent API parameters
 * maintain API changes
