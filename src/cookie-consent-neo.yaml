@@ -9,6 +9,7 @@
 #   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #
 #                                                     #
 #######################################################
+
 name: Cookie Consent Neo
 description: Configure Cookie Consent Neo atom.
 type: atom
@@ -73,14 +74,14 @@ form:
                   label: Dismiss Button Text
                   description: The text for the dismiss button.
                   placeholder: Got it!
-                  
+
                 opttext:
                   type: input.text
                   label: Opt-in / Opt-out Text
                   description: The text for either the Opt-in / Opt-out button, depending on selection.
                   placeholder: Allow Cookies / Decline
                   default:
-                  
+
                 compliance:
                   type: select.select
                   label: Compliance Mode
@@ -91,7 +92,7 @@ form:
                       info: Information Only
                       opt-in: Opt-in
                       opt-out: Opt-out
-                      
+
                 revoketext:
                   type: input.text
                   label: Revoke Button Text
@@ -278,7 +279,7 @@ form:
                   description: The URL path the Cookie belongs to.
                   placeholder: /
                   default: 
-                  
+
                 cdomain:
                   type: input.text
                   label: Cookie Domain
@@ -292,7 +293,7 @@ form:
                   description: The cookies expiry, specified in days (specify -1 for no expiry).
                   placeholder: 365
                   default:
-       
+
         tab_law_location:
             label: Location
             fields:    
@@ -306,14 +307,14 @@ form:
                       off: Disabled
                       on: Enabled
                       custom: Custom
-                      
+
                 ltimeout:
                   type: input.text
                   label: Location Timeout
                   description: If the service does not answer after interval, try the next service.
                   placeholder: 5000
                   default:
-                
+
                 lservice:
                   type: collection.list
                   array: true
@@ -332,20 +333,20 @@ form:
                       description: The service name or identifier.
                       placeholder: service
                       label: Service Identifier
-                      
+
                 countrycode:
                   type: input.text
                   label: Country Code
                   description: Rather than getting the country code from the location service(s), you can hard code it here.
                   placeholder: e.g. US
                   default:
-                  
+
                 regionallaw:
                   type: input.checkbox
                   label: Regional Law
                   description: If unchecked, then the popup is only enabled if the country has the cookie law. 'Location Service' MUST be enabled to take effect.
                   default: 1
-                      
+
         tab_api:
             label: API
             fields:
