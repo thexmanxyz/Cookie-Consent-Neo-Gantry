@@ -9,8 +9,31 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 * Gantry 5 Templating Framework and Theme
 * Cookie Consent API 3.x.x
 
-## Download / Installation
-1. [Download v1.2](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.2/ccn.atom.only.v1.2.zip) of the Cookie Consent Neo Atom Package
+## Download
+Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry 5 themes - Helium and Hydrogen. The latest particle version is **v1.3.0**.
+
+**Default Particle:**
+[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.DE.v1.3.0.zip)
+
+**Legacy Particle - Gantry <5.3.2:**
+[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.DE.v1.3.0.zip)
+
+**Joomla Plugin - Hydrogen:**
+[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.DE.v1.3.0.zip)
+
+**Joomla Plugin - Helium:**
+[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.helium.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.helium.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.helium.DE.v1.3.0.zip)
+
+## Automatic Installation (Joomla only)
+1. Download the Plugin of the Cookie Consent Neo Atom **for Hydrogen or Helium**
+2. Install over the Joomla Plugin System
+3. Go to your Gantry templating backend (e.g. Extensions/Templates)
+4. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
+5. Configure the appearance according to your favor
+6. [Optional] The download package contains a modified version of the Cookie Consent JS file which fixes the timeout and scrolling bug [#170](https://github.com/insites/cookieconsent/issues/170)
+
+## Manual Installation
+1. Download the correct version of the Cookie Consent Neo Atom Package
 2. Extract the files
 3. Copy the **html.twig** and the **yaml** file to your particle folder 
    * the target folder for Joomla would be **/templates/{gantry_theme}/custom/particles**
