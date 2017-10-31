@@ -17,7 +17,7 @@
     <fileset>
         <files folder="particles" target="templates/g5_hydrogen/custom/particles">
 			<filename>cookie-consent-neo.html.twig</filename>
-			<filename>cookie-consent-neo</filename>
+			<filename>cookie-consent-neo.yaml</filename>
 		</files>
     </fileset>
 </extension>
