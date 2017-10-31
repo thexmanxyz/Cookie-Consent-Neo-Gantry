@@ -13,16 +13,16 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry 5 themes - Helium and Hydrogen. The latest Atom version is **v1.3.0**.
 
 **Default Atom:**
-[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.DE.v1.3.0.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.atom.only.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.atom.only.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.atom.only.DE.v1.3.0.zip)
 
 **Legacy Atom - Gantry <5.3.2:**
-[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.DE.v1.3.0.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.DE.v1.3.0.zip)
 
 **Joomla Plugin - Hydrogen:**
-[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.DE.v1.3.0.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.j3.hydrogen.DE.v1.3.0.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.helium.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.helium.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.j3.helium.DE.v1.3.0.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.j3.helium.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.j3.helium.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.0/ccn.j3.helium.DE.v1.3.0.zip)
 
 ## Automatic Installation (Joomla only)
 1. Download the Plugin of the Cookie Consent Neo Atom **for Hydrogen or Helium**
