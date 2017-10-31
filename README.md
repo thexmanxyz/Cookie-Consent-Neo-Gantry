@@ -10,12 +10,12 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 * Cookie Consent API 3.x.x
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry 5 themes - Helium and Hydrogen. The latest particle version is **v1.3.0**.
+Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry 5 themes - Helium and Hydrogen. The latest Atom version is **v1.3.0**.
 
-**Default Particle:**
+**Default Atom:**
 [English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.DE.v1.3.0.zip)
 
-**Legacy Particle - Gantry <5.3.2:**
+**Legacy Atom - Gantry <5.3.2:**
 [English](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.EN.v1.3.0.zip) / [Italian](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.IT.v1.3.0.zip) / [German](https://github.com/thexmanxyz/Google-Plus-Badge-Gantry/releases/download/v1.3.0/ccn.atom.only.legacy.DE.v1.3.0.zip)
 
 **Joomla Plugin - Hydrogen:**
