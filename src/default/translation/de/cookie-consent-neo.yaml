@@ -1,0 +1,403 @@
+#######################################################
+#                                                     #
+#   Cookie Consent Neo - Atom for Gantry 5            #
+#                                                     #
+#   Purpose: This project adds the Cookie Consent     #
+#            Javascript API functionality to the      #
+#            Gantry templating framework.             #
+#                                                     #
+#   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #
+#                                                     #
+#######################################################
+
+name: Cookie Consent Neo
+description: Configure Cookie Consent Neo Atom.
+type: atom
+
+#configuration:
+#  caching:
+#    type: static
+
+form:
+  fields:
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: Mehr Informationen zur Cookie Consent API finden Sie <a href="https://cookieconsent.insites.com/documentation/about-cookie-consent/" target="_blank">hier</a>
+      
+    enabled:
+      type: input.checkbox
+      label: Aktiviert
+      description: Globale Aktivierung von Cookie Consent Neo.
+      default: true
+
+    tabs:
+      type: container.tabs
+      fields:
+        tab_labeling:
+            label: Beschriftung
+            fields:
+                message:
+                  type: textarea.textarea
+                  label: Nachrichtentext
+                  description: Der Text der auf dem Banner angezeigt wird.
+                  placeholder: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
+                  default: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
+
+                lmenable:
+                  type: input.checkbox
+                  label: Aktiviere Mehr darüber
+                  description: Aktiviert oder deaktiviert den 'Mehr darüber' Link.
+                  default: 1
+
+                lmtext:
+                  type: input.text
+                  label: Mehr darüber Text
+                  description: Der Text für den 'Mehr darüber' Link.
+                  placeholder: Mehr darüber
+                  default: Mehr darüber
+
+                lmlink:
+                  type: input.text
+                  label: Mehr darüber Link
+                  description: Die URL die dem 'Mehr darüber' link zugewiesen wird.
+                  placeholder: http://example.com/cookiepolicy
+
+                lmtarget:
+                  type: select.select
+                  label: Mehr darüber Target
+                  description: Das Browser Zielfenster wenn der 'Mehr darüber' Link angeklickt wird.
+                  placeholder: 'Auswahl...'
+                  default: none
+                  options:
+                      none: Kein
+                      _blank: Blank
+                      _self: Self
+                      _parent: Parent
+                      _top: Top
+
+                dmtext:
+                  type: input.text
+                  label: Verwerfen Button Text
+                  description: Der Text für den Verwerfen Button.
+                  placeholder: Verstanden!
+                  default: Verstanden!
+
+                opttext:
+                  type: input.text
+                  label: Opt-in / Opt-out Text
+                  description: Der Text für entweder den Opt-in oder Opt-out Button, je nach Auswahl.
+                  placeholder: Erlaube Cookies / Ablehnen
+                  default:
+
+                compliance:
+                  type: select.select
+                  label: Plugin Modus
+                  description: Der Modus in dem Cookie Consent betrieben wird.
+                  placeholder: 'Auswahl...'
+                  default: info
+                  options:
+                      info: Nur Information
+                      opt-in: Opt-in
+                      opt-out: Opt-out
+
+                revoketext:
+                  type: input.text
+                  label: Widerruf Button Text
+                  description: Der Text für den Widerruf Button.
+                  placeholder: Cookie Policy
+                  default:
+
+        tab_appearance:
+            label: Aussehen
+            fields:
+                position:
+                  type: select.select
+                  label: Banner Position
+                  description: Die Position des Banners auf dem Bildschirm
+                  placeholder: 'Auswahl...'
+                  default: bottom
+                  options:
+                      bottom: Banner unten
+                      top: Banner oben
+                      top_p: Banner oben (push)
+                      float_bl: Floating unten links
+                      float_br: Floating unten rechts
+                      float_tl: Floating oben links
+                      float_tr: Floating oben rechts
+
+                layout:
+                  type: select.select
+                  label: Banner Layout
+                  description: Das Layout des Bannern und der darauf platzierten Elemente.
+                  placeholder: 'Auswahl...'
+                  default: block
+                  options:
+                      block: Block
+                      classic: Classic
+                      edgeless: Edgeless
+                      wire: Wire
+
+                palette:
+                  type: select.select
+                  label: Banner Farbpalette
+                  description: Die Farbpalette des Banners und der darauf platzierten Elemente.
+                  placeholder: 'Select...'
+                  default: p1
+                  options:
+                      p1: Schwarz-Gelb
+                      p2: Babyblau
+                      p3: Dunkelblau
+                      p4: Schwarz-Toxic
+                      p5: Blau-Pink
+                      p6: Lila-Pink
+                      p7: Schwarz-Weiß
+                      p8: Rötlich
+                      p9: Violett-Gelb
+                      p10: Turquise-Grün
+                      p11: Grau-Blau
+                      p12: Dunkelblau-Pink
+                      p13: Grünlich
+                      p14: Violett-Grün
+                      p15: Orange-Geld
+                      p16: Grau-Grün
+
+                enableccolor:
+                  type: input.checkbox
+                  label: Aktiviere Farbauswahl
+                  description: Aktiviert oder deaktiviert die benutzerdefinierte Auswahl der Farbpalette.
+                  default: 0
+
+                popupbg:
+                  type: input.colorpicker
+                  label: Popup Hintergrund
+                  description: Benutzerdefinierte Farbe für den Popup Hintergrund.
+                  default: "#000000"
+
+                popuptext:
+                  type: input.colorpicker
+                  label: Popup Textfarbe
+                  description: Benutzerdefinierte Farbe für den Popup Text.
+                  default:
+
+                popuplink:
+                  type: input.colorpicker
+                  label: Popup Linkfarbe
+                  description: Benutzerdefinierte Farbe für den Popup Link.
+                  default:    
+
+                buttonbg:
+                  type: input.colorpicker
+                  label: Button Hintergrund
+                  description: Benutzerdefinierte Farbe für den Button Hintergrund.
+                  default: "#f1d600"
+
+                buttontext:
+                  type: input.colorpicker
+                  label: Button Textfarbe
+                  description: Benutzerdefinierte Farbe für den Button Text.
+                  default:
+
+        tab_behaviour:
+            label: Verhalten
+            fields:
+                autoopen:
+                  type: input.checkbox
+                  label: Automatisch öffnen
+                  description: Aktiviert oder deaktiviert das automatische Öffnen des Banners.
+                  default: 1
+                
+                revokable:
+                  type: input.checkbox
+                  label: Widerruf
+                  description: Wenn ausgewählt, wird der Widerruf Button jedes mal angezeigt. 
+                  default: 0
+                  
+                arevokable:
+                  type: input.checkbox
+                  label: Animiere Widerruf
+                  description: Wenn ausgewählt, wird der Widerruf Button beim Hover mit einem Übergang animiert.
+                  default: 1
+                  
+                dmonscroll:
+                  type: input.text
+                  label: Beim Scrollen schließen
+                  description: Wert für die Scrolldistanz und das automatische Schließen, 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 und 3.0.4 (#170).
+                  placeholder: boolean, leer oder Wert
+                  default: false
+
+                dmontimeout:
+                  type: input.text
+                  label: Nach Timeout schließen
+                  description: Zeitwert in Millisekunden für das automatische Schließen. 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 und 3.0.4 (#170).
+                  placeholder: boolean, leer oder Wert
+                  default: false
+                  
+                blpages:
+                  type: collection.list
+                  array: true
+                  label: Blacklist Seiten
+                  description: Erzeugen Sie ein neues Element für jede Seite die auf die Blacklist gesetzt werden soll.
+                  value: title
+                  ajax: true
+                  fields:
+                    .title:
+                      type: input.text
+                      description: Bezeichner für ein Blacklist Element.
+                      label: Titel
+
+                    .path:
+                      type: input.text
+                      description: Relativer Pfad oder RegEx.
+                      placeholder: Pfad oder RegEx
+                      label: Pfad
+
+                wlpages:
+                  type: collection.list
+                  array: true
+                  label: Whitelist Seiten
+                  description: Erzeugen Sie ein neues Element für jede Seite die auf die Whitelist gesetzt werden soll.
+                  value: title
+                  ajax: true
+                  fields:
+                    .title:
+                      type: input.text
+                      description: Bezeichner für ein Whitelist Element.
+                      label: Titel
+
+                    .path:
+                      type: input.text
+                      description: Relativer Pfad oder RegEx.
+                      placeholder: Pfad oder RegEx
+                      label: Path
+
+        tab_cookie:
+            label: Cookie
+            fields:
+                cname:
+                  type: input.text
+                  label: Cookie Name
+                  description: Der Name des Cookies welches sich die Benutzerentscheidung merkt. Standard 'cookieconsent_status'.
+                  placeholder: cookieconsent_status
+                  default: 
+                  
+                cpath:
+                  type: input.text
+                  label: Cookie Pfad
+                  description: Die URL der das Cookie zugeordnet wird.
+                  placeholder: /
+                  default: 
+
+                cdomain:
+                  type: input.text
+                  label: Cookie Domain
+                  description: Die Domain der das Cookie zugeordnet wird. Cookie kann nur innerhalb dieser Domain gelesen werden.
+                  placeholder: .domain.com
+                  default: 
+                  
+                cexpirydays:
+                  type: input.text
+                  label: Cookie Gültigkeit
+                  description: Die Cookie Gültigkeit wird in Tagen festgelegt (setzen Sie diesen Wert auf -1 damit das Cookie nicht abläuft).
+                  placeholder: 365
+                  default:
+
+        tab_law_location:
+            label: Standort
+            fields:    
+                location:
+                  type: select.select
+                  label: Standort Service
+                  description: Der Standort Service ist standardmäßig deaktiviert. Für eine benutzerdefinierte Servicekonfiguration füllen Sie zumindest eines der zwei nachfolgenden Felder aus.
+                  placeholder: 'Auswahl...'
+                  default: off
+                  options:
+                      off: Deaktiviert
+                      on: Aktiviert
+                      custom: Benutzerdefiniert
+
+                ltimeout:
+                  type: input.text
+                  label: Standort Timeout
+                  description:  Wenn das Service nicht in der angegeben Zeit antwortet, wird Kontakt mit dem nächsten Service aufgenommen.
+                  placeholder: 5000
+                  default:
+
+                lservice:
+                  type: collection.list
+                  array: true
+                  label: Standort Endpunkte
+                  description: Erzeugen Sie ein neues Element für jeden zu verwendenden Standort Service. Diese werden bei einem Timeout nacheinander abgearbeitet. Standard Reihenfolge: [freegeoip, ipinfo, maxmind].
+                  value: title
+                  ajax: true
+                  fields:
+                    .title:
+                      type: input.text
+                      description: Name für den Standort Service.
+                      label: Service Titel
+
+                    .id:
+                      type: input.text
+                      description: Der Servicename oder dessen Kennzeichnung.
+                      placeholder: Service
+                      label: Service Kennzeichnung
+
+                countrycode:
+                  type: input.text
+                  label: Ländercode
+                  description: Man kann mit diesem Wert das Atom so konfigurieren, dass die Benutzerposition nicht automatisch ermittelt wird, sondern an Hand des definierten Ländercodes fest vorgeschrieben wird.
+                  placeholder: z.B.: DE
+                  default:
+
+                regionallaw:
+                  type: input.checkbox
+                  label: Regionales Gesetz
+                  description: Wenn nicht ausgewählt wurde, wird das Popup nur dann angezeigt, wenn das Zielland vom Cookie Gesetz betroffen ist. 'Standort Service' MUSS aktiviert worden sein, damit sich diese Einstellung auf das Banner auswirkt.
+                  default: 1
+
+        tab_api:
+            label: API
+            fields:
+                ccversion:
+                  type: input.text
+                  label: Cookie Consent Version
+                  description: Die Cookie Consent Version (nur für CDN).
+                  placeholder: 3.0.4
+                  default: 3.0.4
+
+                enablelocalcss:
+                  type: input.checkbox
+                  label: Aktiviere lokales CSS
+                  description: Aktiviert oder deaktiviert die Verwendung einer lokalen CSS Datei, statt CDN.
+                  default: 0
+
+                localcsspath:
+                  type: input.text
+                  label: Lokaler CSS Pfad
+                  description: Pfad zur Cookie Consent CSS Datei auf diesem Server (relativ zum Root).
+                  placeholder: Pfad/zum/CSS
+                  default:
+
+                enablelocaljs:
+                  type: input.checkbox
+                  label: Aktiviere locales JS
+                  description: Aktiviert oder deaktiviert die Verwendung einer lokalen JS Datei, statt CDN.
+                  default: 0
+
+                localjspath:
+                  type: input.text
+                  label: Lokaler JS Pfad
+                  description: Pfad zur Cookie Consent JS Datei auf diesem Server (relativ zum Root).
+                  placeholder: Pfad/zum/JS
+                  default:
+
+                jsexecution:
+                  type: select.select
+                  label: JS Ausführung
+                  description: Die verwendet Ausführungsmethode für die zu ladende JS Datei.
+                  placeholder: 'Auswahl...'
+                  default: none
+                  options:
+                      none: Keine
+                      async: Asynchron
+                      defer: Verzögert

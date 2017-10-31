@@ -11,7 +11,7 @@
 #######################################################
 
 name: Cookie Consent Neo
-description: Configure Cookie Consent Neo atom.
+description: Configure Cookie Consent Neo Atom.
 type: atom
 
 #configuration:
@@ -20,6 +20,11 @@ type: atom
 
 form:
   fields:
+    _info:
+      type: separator.note
+      class: alert alert-info
+      content: More information about the Cookie Consent API can be found <a href="https://cookieconsent.insites.com/documentation/about-cookie-consent/" target="_blank">here</a>
+      
     enabled:
       type: input.checkbox
       label: Enabled
@@ -35,6 +40,7 @@ form:
           label: Message Text
           description: The text message displayed for the banner.
           placeholder: This website uses cookies to ensure you get the best experience on our website.
+          default: This website uses cookies to ensure you get the best experience on our website.
 
         lmenable:
           type: input.checkbox
@@ -47,6 +53,7 @@ form:
           label: Learn More Text
           description: The text for the 'Learn more' link.
           placeholder: Learn more
+          default: Learn more
 
         lmlink:
           type: input.text
@@ -72,11 +79,12 @@ form:
           label: Dismiss Button Text
           description: The text for the dismiss button.
           placeholder: Got it!
+          default: Got it!
 
         opttext:
           type: input.text
           label: Opt-in / Opt-out Text
-          description: The text for either the Opt-in / Opt-out button, depending on selection.
+          description: The text for either the Opt-in or Opt-out button, depending on selection.
           placeholder: Allow Cookies / Decline
           default: 
 
@@ -210,15 +218,15 @@ form:
           label: Animate Revokable
           description: If checked, the revokable button will transition in and out.
           default: 1
-                  
-       dmonscroll:
-         type: input.text
-         label: Dismiss on Scroll
-         description: Value for scroll range, 'false' or empty to disable. Broken in CC API 3.0.3 and 3.0.4 (#170).
-         placeholder: boolean, empty or value
-         default: false
 
-       dmontimeout:
+        dmonscroll:
+          type: input.text
+          label: Dismiss on Scroll
+          description: Value for scroll range, 'false' or empty to disable. Broken in CC API 3.0.3 and 3.0.4 (#170).
+          placeholder: boolean, empty or value
+          default: false
+
+        dmontimeout:
          type: input.text
          label: Dismiss on Timeout
          description: Time value in milliseconds to auto dismiss. 'false' or empty to disable. Broken in CC API 3.0.3 and 3.0.4 (#170).
@@ -370,7 +378,7 @@ form:
           type: input.text
           label: Local CSS Path
           description: Path to the Cookie Consent CSS file on this server (relative to root).
-          placeholder: path/to/css
+          placeholder: path/to/CSS
           default:
 
         enablelocaljs:
@@ -383,7 +391,7 @@ form:
           type: input.text
           label: Local JS Path
           description: Path to the Cookie Consent JS file on this server (relative to root).
-          placeholder: path/to/js
+          placeholder: path/to/JS
           default:
 
         jsexecution:
