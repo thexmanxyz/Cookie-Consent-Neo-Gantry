@@ -12,7 +12,7 @@ REM #                                                     #
 REM #######################################################
 
 REM --- Script Variables ---
-set remove_folders=0
+set remove_folders=1
 set log_files=0
 
 REM --- Packaging Variables ---
@@ -22,7 +22,7 @@ set default_lang=EN
 set prj_id=ccn
 set prj_rev=v1.3.2
 set prj_name=cookie-consent-neo
-set prj_fullname= Cookie Consent Neo - Atom
+set prj_fullname=Cookie Consent Neo - Atom
 
 set pkg_part_only=atom.only
 set pkg_leg=legacy
@@ -45,22 +45,26 @@ set folder_trans=translation
 set folder_part=particles
 set folder_temp=temp
 set folder_release=release
+set folder_releases=releases
 set folder_def=default
 set folder_leg=legacy
 set folder_jsfix=jsfix
 set folder_helium=%pkg_j3%_%pkg_helium%
 set folder_hydro=%pkg_j3%_%pkg_hydro%
 set folder_src_jsfix=src\%folder_jsfix%
+set folder_release_dest=%folder_root%\%folder_releases%\%prj_rev%
 
 REM --- Message Variables ---
-set msg_start=Start packaging process for creating release.
-set msg_finished=Successful finished packaging process.
+set msg_start=Start build process for creating release.
+set msg_finished=Successful finished build process.
 set msg_success=successfully created.
+set msg_release_success=Successful created Release "%prj_rev%". Packages moved to destination folder.
+set msg_release_failed=Could not move packages to release folder "%prj_rev%", already exists.
 
 REM --- Start Script ---
 echo.
 echo -----------------------------
-echo  %prj_fullname% #
+echo # %prj_fullname% #
 echo -----------------------------
 echo.
 echo %msg_start%
@@ -79,15 +83,24 @@ REM --- Call Hydrogen / Helium Package Creation ----
 call :create_j3plugin "%folder_hydro%" "%pkg_hydro%"
 call :create_j3plugin "%folder_helium%" "%pkg_helium%"
 
-REM --- Stop Script and Cleanup ---
+REM --- Move Packages to Release Folder ---
+IF "%log_files%" == "0" ( echo. )
 cd..
+IF NOT EXIST %folder_release_dest% ( 
+	mkdir %folder_release_dest%
+	call :copy_folder_content "%folder_release%" "%folder_release_dest%"
+	IF "%log_files%" == "1" ( echo ------------------------- )
+	echo %msg_release_success%
+) ELSE (
+	echo %msg_release_failed%
+)
+
+REM --- Stop Script and Cleanup ---
 IF %remove_folders% == 1 (
 	rmdir "%folder_temp%" /S /Q
-	REM rmdir "%folder_release%" /S /Q
+	rmdir "%folder_release%" /S /Q
 )
-IF "%log_files%" == "0" ( echo. )
 echo %msg_finished%
-echo.
 goto:EOF
 
 REM --- Create Particle Only Package(s) for different languages ---
@@ -106,7 +119,7 @@ REM --- Parameters: %~1 = destination folder particle, %~2 = archive name, %~3 =
 		
 		(for %%f in (%part_def_files%) do ( call :copy_general_files "%folder_root%\%%f" "!folder_out!"	))
 		(for %%e in (%file_ext%) do ( call :copy_particle_files "%%e" "!lang!" "%~3" "!folder_out!" ))
-		call :copy_folder_content "%folder_root%\%folder_src_jsfix%" "!folder_out_jsfix!"
+		call :copy_folder_content_ow "%folder_root%\%folder_src_jsfix%" "!folder_out_jsfix!"
 		call :create_archives "!package_name!" "!folder_out!" "1" "1"
 
 		IF %remove_folders% == 1 ( rmdir "!folder_out!" /S /Q )
@@ -191,10 +204,16 @@ REM --- Parameters: %~1 = language, %~2 = platform folder, %~3 = template name, 
 	)
 goto :EOF
 
-REM --- Copies content of a folder
+REM --- Copies content of a folder and overwrites content
+REM --- Parameters: %~1 = Source Folder, %~2 = Destination Folder
+:copy_folder_content_ow
+	IF "%log_files%" == "1" ( xcopy /s /Y %~1 %~2 ) ELSE ( xcopy /s /Y %~1 %~2 >Nul )
+goto :EOF
+
+REM --- Copies content of a folder without overwrite
 REM --- Parameters: %~1 = Source Folder, %~2 = Destination Folder
 :copy_folder_content
-	IF "%log_files%" == "1" ( xcopy /s /Y %~1 %~2 ) ELSE ( xcopy /s /Y %~1 %~2 >Nul )
+	IF "%log_files%" == "1" ( xcopy /s %~1 %~2 ) ELSE ( xcopy /s %~1 %~2 >Nul )
 goto :EOF
 
 REM --- Creates Release Archives ---
@@ -216,5 +235,3 @@ REM --- Parameters: %~1 = package name, %~2 = output folder, %~3 = create zip, %
 		del !tar_dest!
 	)
 goto :EOF
-		
-		
