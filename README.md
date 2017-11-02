@@ -25,7 +25,7 @@ Choose the correct download for your target platform. Joomla Plugin System suppo
 [English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.2/ccn.j3.helium.EN.v1.3.2.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.2/ccn.j3.helium.IT.v1.3.2.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.3.2/ccn.j3.helium.DE.v1.3.2.zip)
 
 ## Automatic Installation (Joomla only)
-1. Download the Plugin of the Cookie Consent Neo Atom **for Hydrogen or Helium**
+1. Download the Plugin of the Cookie Consent Neo Atom for **Hydrogen or Helium**
 2. Install over the Joomla Plugin System
 
 ## Manual Installation
