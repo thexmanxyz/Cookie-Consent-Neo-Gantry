@@ -204,7 +204,7 @@
     {%- if particle.enabled -%}
         {{- parent() -}}
         {% styles with { priority: cssPrior } %}
-            <link rel="stylesheet" type="{{styleType}}" href="{{cssPath}}" />
+            <link rel="stylesheet" type="{{styleType}}" href="{{url(cssPath)}}" />
         {% endstyles -%}
     {%- endif -%}
 {%- endblock -%}
@@ -212,7 +212,7 @@
     {%- if particle.enabled -%}
         {{ parent() }}
         {%- scripts in jsPlace with { priority: jsPrior } -%}
-            <script type="{{scriptType}}" src="{{jsPath}}"{{jsExec}}></script>
+            <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExec}}></script>
         {%- endscripts -%}
         <script>
             window.addEventListener("load", function(){
@@ -333,7 +333,7 @@
                         {%- endif -%}
                         
                         {%- if particle.banner.learn_more.enabled -%}
-                            href: "{{linkHref|raw}}",
+                            href: "{{url(linkHref)|raw}}",
                         {%- endif -%}
                     },
 
@@ -361,7 +361,7 @@
                     {%- set msgLink = msgLink ~ '{{message}}' -%}
                     {%- if particle.banner.learn_more.enabled -%}
                         {%- set msgLink = msgLink ~ ' <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="' -%}
-                        {%- set msgLink = msgLink ~ linkHref|raw ~ '"' -%}
+                        {%- set msgLink = msgLink ~ url(linkHref)|raw ~ '"' -%}
                         {%- if linkTarget != 'none' -%}
                             {%- set msgLink = msgLink ~ ' target="' ~ linkTarget ~ '"' -%}
                         {%- endif -%}
