@@ -72,7 +72,7 @@ Choose the correct download for your target platform. Joomla Plugin System suppo
   * Service Timeout
   * Country Code
 * Adaptable Cookie Consent API Version
-* CSS and JSS configuration
+* JS and CSS configuration
   * Remote, Local and Default
   * Priority and Position (head or footer)
 * JS Execution
