@@ -72,8 +72,9 @@ Choose the correct download for your target platform. Joomla Plugin System suppo
   * Service Timeout
   * Country Code
 * Adaptable Cookie Consent API Version
-* Server local CSS and JS loading
-* Disable CDN
+* CSS and JSS configuration
+  * Remote, Local and Default
+  * Priority and Position
 * JS Execution
   * Asynchronous
   * Deferred
@@ -123,7 +124,6 @@ Examples for different Cookie Consent layouts / positions:
 * better coverage of the Cookie Consent API parameters
 * maintain API changes
 * more themes
-* more TBA
 
 ## Known Issues
 None
