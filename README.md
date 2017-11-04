@@ -47,19 +47,19 @@ Choose the correct download for your target platform. Joomla Plugin System suppo
 * Enable / Disable 'Learn More' link
 * URL for the 'Learn More' link
 * Target for the 'Learn More' link
-* Dismiss button text
-* Revoke button text
-* Banner position
-* Banner layout
-* Banner palette (sixteen default styles, taken from [Cookie Consent](https://cookieconsent.insites.com/download/))
-* Custom popup/banner palette
-  * Background color
-  * Text color
-  * Link color
-* Custom button palette
-  * Background color
-  * Text color
-* Compliance mode support
+* Dismiss Button Text
+* Revoke Button Text
+* Banner Position
+* Banner Layout
+* Banner Palette (sixteen default styles, taken from [Cookie Consent](https://cookieconsent.insites.com/download/))
+* Custom Popup/Banner Palette
+  * Background Color
+  * Text Color
+  * Link Color
+* Custom Button Palette
+  * Background Color
+  * Text Color
+* Compliance Mode supported
 * Revokable supported
 * Scrolling and Timeout supported
 * White-/Blacklisting
@@ -72,7 +72,7 @@ Choose the correct download for your target platform. Joomla Plugin System suppo
   * Service Timeout
   * Country Code
 * Adaptable Cookie Consent API Version
-* JS and CSS configuration
+* JS and CSS Configuration
   * Remote, Local and Default
   * Priority and Position (head or footer)
 * JS Execution
