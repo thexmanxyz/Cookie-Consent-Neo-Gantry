@@ -74,7 +74,7 @@ Choose the correct download for your target platform. Joomla Plugin System suppo
 * Adaptable Cookie Consent API Version
 * CSS and JSS configuration
   * Remote, Local and Default
-  * Priority and Position
+  * Priority and Position (head or footer)
 * JS Execution
   * Asynchronous
   * Deferred
