@@ -24,7 +24,7 @@ form:
       type: separator.note
       class: alert alert-info
       content: Mehr Informationen zur Cookie Consent API finden Sie <a href="https://cookieconsent.insites.com/documentation/about-cookie-consent/" target="_blank">hier</a>
-      
+
     enabled:
       type: input.checkbox
       label: Enabled
@@ -35,33 +35,33 @@ form:
       type: container.set
       label: Beschriftung
       fields:
-        message:
+        banner.message:
           type: textarea.textarea
           label: Nachrichtentext
           description: Der Text der auf dem Banner angezeigt wird.
           placeholder: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
           default: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
 
-        lmenable:
+        banner.learn_more.enabled:
           type: input.checkbox
           label: Aktiviere Mehr darüber
           description: Aktiviert oder deaktiviert den 'Mehr darüber' Link.
           default: 1
 
-        lmtext:
+        banner.learn_more.text:
           type: input.text
           label: Mehr darüber Text
           description: Der Text für den 'Mehr darüber' Link.
           placeholder: Mehr darüber
           default: Mehr darüber
 
-        lmlink:
+        banner.learn_more.link:
           type: input.text
           label: Mehr darüber Link
           description: Die URL die dem 'Mehr darüber' link zugewiesen wird.
           placeholder: http://example.com/cookiepolicy
 
-        lmtarget:
+        banner.learn_more.target:
           type: select.select
           label: Mehr darüber Target
           description: Das Browser Zielfenster wenn der 'Mehr darüber' Link angeklickt wird.
@@ -74,21 +74,21 @@ form:
               _parent: Parent
               _top: Top
 
-        dmtext:
+        banner.dismiss.text:
           type: input.text
           label: Verwerfen Button Text
           description: Der Text für den Verwerfen Button.
           placeholder: Verstanden!
           default: Verstanden!
 
-        opttext:
+        banner.opt.text:
           type: input.text
           label: Opt-in / Opt-out Text
           description: Der Text für entweder den Opt-in oder Opt-out Button, je nach Auswahl.
           placeholder: Erlaube Cookies / Ablehnen
           default:
 
-        compliance:
+        banner.compliance:
           type: select.select
           label: Plugin Modus
           description: Der Modus in dem Cookie Consent betrieben wird.
@@ -99,7 +99,7 @@ form:
               opt-in: Opt-in
               opt-out: Opt-out
 
-        revoketext:
+        banner.revoke.text:
           type: input.text
           label: Widerruf Button Text
           description: Der Text für den Widerruf Button.
@@ -110,7 +110,7 @@ form:
       type: container.set
       label: Aussehen
       fields:
-        position:
+        banner.position:
           type: select.select
           label: Banner Position
           description: Die Position des Banners auf dem Bildschirm
@@ -125,7 +125,7 @@ form:
               float_tl: Floating oben links
               float_tr: Floating oben rechts
 
-        layout:
+        banner.layout:
           type: select.select
           label: Banner Layout
           description: Das Layout des Bannern und der darauf platzierten Elemente.
@@ -137,7 +137,7 @@ form:
               edgeless: Edgeless
               wire: Wire
 
-        palette:
+        banner.palette:
           type: select.select
           label: Banner Farbpalette
           description: Die Farbpalette des Banners und der darauf platzierten Elemente.
@@ -161,79 +161,79 @@ form:
               p15: Orange-Geld
               p16: Grau-Grün
 
-        enableccolor:
+        banner.custom_color.enable:
           type: input.checkbox
           label: Aktiviere Farbauswahl
           description: Aktiviert oder deaktiviert die benutzerdefinierte Auswahl der Farbpalette.
           default: 0
 
-        popupbg:
+        banner.popup.bg:
           type: input.colorpicker
           label: Popup Hintergrund
           description: Benutzerdefinierte Farbe für den Popup Hintergrund.
           default: "#000000"
 
-        popuptext:
+        banner.popup.text:
           type: input.colorpicker
           label: Popup Textfarbe
           description: Benutzerdefinierte Farbe für den Popup Text.
           default:
 
-        popuplink:
+        banner.popup.link:
           type: input.colorpicker
           label: Popup Linkfarbe
           description: Benutzerdefinierte Farbe für den Popup Link.
-          default:    
+          default:
 
-        buttonbg:
+        banner.button.bg:
           type: input.colorpicker
           label: Button Hintergrund
           description: Benutzerdefinierte Farbe für den Button Hintergrund.
           default: "#f1d600"
 
-        buttontext:
+        banner.button.text:
           type: input.colorpicker
           label: Button Textfarbe
           description: Benutzerdefinierte Farbe für den Button Text.
-          default:        
+          default:
 
     set_behaviour:
       type: container.set
       label: Verhalten
       fields:
-        autoopen:
+        banner.auto_open:
           type: input.checkbox
           label: Automatisch öffnen
           description: Aktiviert oder deaktiviert das automatische Öffnen des Banners.
           default: 1
-        
-        revokable:
+
+        banner.revokable.enabled:
           type: input.checkbox
           label: Widerruf
           description: Wenn ausgewählt, wird der Widerruf Button jedes mal angezeigt. 
           default: 0
-          
-        arevokable:
+
+        banner.revokable.animate:
           type: input.checkbox
           label: Animiere Widerruf
           description: Wenn ausgewählt, wird der Widerruf Button beim Hover mit einem Übergang animiert.
           default: 1
-          
-        dmonscroll:
+
+        banner.on_scroll.dismiss:
           type: input.text
           label: Beim Scrollen schließen
           description: Wert für die Scrolldistanz und das automatische Schließen, 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 und 3.0.4 (#170).
           placeholder: boolean, leer oder Wert
           default: false
 
-        dmontimeout:
+        banner.timeout.dismiss:
           type: input.text
           label: Nach Timeout schließen
           description: Zeitwert in Millisekunden für das automatische Schließen. 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 und 3.0.4 (#170).
           placeholder: boolean, leer oder Wert
           default: false
-          
-        blpages:
+
+        blacklist_pages:
           type: collection.list
           array: true
           label: Blacklist Seiten
@@ -243,7 +243,7 @@ form:
           fields:
             .title:
               type: input.text
-              description: Bezeichner für ein Blacklist Element.
+              description: Bezeichner für das Blacklist Element.
               label: Titel
 
             .path:
@@ -252,7 +252,22 @@ form:
               placeholder: Pfad oder RegEx
               label: Pfad
 
-        wlpages:
+            .type:
+              type: select.select
+              label: Typ
+              description: Typ für das Blacklist Element.
+              default: path
+              options:
+                  path: Path
+                  regex: Regex
+
+            .option:
+              type: input.checkbox
+              label: Pfad Optionen
+              description: Inkludiere beide '/../../' und '/../..'
+              default: 0
+
+        whitelist_pages:
           type: collection.list
           array: true
           label: Whitelist Seiten
@@ -262,7 +277,7 @@ form:
           fields:
             .title:
               type: input.text
-              description: Bezeichner für ein Whitelist Element.
+              description: Bezeichner für das Whitelist Element.
               label: Titel
 
             .path:
@@ -271,43 +286,58 @@ form:
               placeholder: Pfad oder RegEx
               label: Path
 
+            .type:
+              type: select.select
+              label: Typ
+              description: Typ für das Whitelist Element.
+              default: path
+              options:
+                  path: Path
+                  regex: Regex
+
+            .option:
+              type: input.checkbox
+              label: Pfad Optionen
+              description: Inkludiere beide '/../../' und '/../..'
+              default: 0
+
     set_cookie:
       type: container.set
       label: Cookie
       fields:
-        cname:
+        cookie.name:
           type: input.text
           label: Cookie Name
           description: Der Name des Cookies welches sich die Benutzerentscheidung merkt. Standard 'cookieconsent_status'.
           placeholder: cookieconsent_status
           default: 
-          
-        cpath:
+
+        cookie.path:
           type: input.text
           label: Cookie Pfad
           description: Die URL der das Cookie zugeordnet wird.
           placeholder: /
           default: 
 
-        cdomain:
+        cookie.domain:
           type: input.text
           label: Cookie Domain
           description: Die Domain der das Cookie zugeordnet wird. Cookie kann nur innerhalb dieser Domain gelesen werden.
           placeholder: .domain.com
           default: 
-          
-        cexpirydays:
+
+        cookie.expiry:
           type: input.text
           label: Cookie Gültigkeit
           description: Die Cookie Gültigkeit wird in Tagen festgelegt (setzen Sie diesen Wert auf -1 damit das Cookie nicht abläuft).
           placeholder: 365
           default:
-      
+
     set_law_location:
       type: container.set
       label: Standort
       fields:
-        location:
+        service.location:
           type: select.select
           label: Standort Service
           description: Der Standort Service ist standardmäßig deaktiviert. Für eine benutzerdefinierte Servicekonfiguration füllen Sie zumindest eines der zwei nachfolgenden Felder aus.
@@ -315,21 +345,21 @@ form:
           default: off
           options:
               off: Deaktiviert
-              on: Aktiviert
+              on: Aktiviert (Einfach)
               custom: Benutzerdefiniert
 
-        ltimeout:
+        service.timeout:
           type: input.text
           label: Standort Timeout
-          description:  Wenn das Service nicht in der angegeben Zeit antwortet, wird Kontakt mit dem nächsten Service aufgenommen.
+          description:  Wenn das Service nicht in der angegeben Zeit antwortet, wird Kontakt mit dem nächsten Service aufgenommen (nur für benutzerdefiniert).
           placeholder: 5000
           default:
 
-        lservice:
+        service.endpoints:
           type: collection.list
           array: true
           label: Standort Endpunkte
-          description: Erzeugen Sie ein neues Element für jeden zu verwendenden Standort Service. Diese werden bei einem Timeout nacheinander abgearbeitet. Standard Reihenfolge: [freegeoip, ipinfo, maxmind].
+          description: Erzeugen Sie ein neues Element für jeden zu verwendenden Standort Service. Diese werden bei einem Timeout nacheinander abgearbeitet. Standard Reihenfolge: 'freegeoip', 'ipinfo', 'maxmind' (nur für benutzerdefiniert).
           value: title
           ajax: true
           fields:
@@ -344,14 +374,14 @@ form:
               placeholder: Service
               label: Service Kennzeichnung
 
-        countrycode:
+        service.country_code:
           type: input.text
           label: Ländercode
           description: Man kann mit diesem Wert das Atom so konfigurieren, dass die Benutzerposition nicht automatisch ermittelt wird, sondern an Hand des definierten Ländercodes fest vorgeschrieben wird.
           placeholder: z.B.: DE
           default:
 
-        regionallaw:
+        service.law:
           type: input.checkbox
           label: Regionales Gesetz
           description: Wenn nicht ausgewählt wurde, wird das Popup nur dann angezeigt, wenn das Zielland vom Cookie Gesetz betroffen ist. 'Standort Service' MUSS aktiviert worden sein, damit sich diese Einstellung auf das Banner auswirkt.
@@ -361,40 +391,71 @@ form:
       type: container.set
       label: API
       fields:
-        ccversion:
+        api.version:
           type: input.text
           label: Cookie Consent Version
           description: Die Cookie Consent Version (nur für CDN).
           placeholder: 3.0.4
           default: 3.0.4
 
-        enablelocalcss:
-          type: input.checkbox
-          label: Aktiviere lokales CSS
-          description: Aktiviert oder deaktiviert die Verwendung einer lokalen CSS Datei, statt CDN.
+        css.priority:
+          type: input.text
+          label: CSS Priorität
+          description: Die Priorität des CSS.
+          placeholder: -10 ... 10
           default: 0
 
-        localcsspath:
+        css.option:
+          type: select.select
+          label: CSS Datei Optionen
+          description: Wählen Sie eine Option für die benutzerdefinierte CSS Datei, statt dem standardmäßigen CDN.
+          default: disabled
+          options:
+              disabled: Deaktiviert
+              local: Lokal
+              remote: Remote
+
+        css.path:
           type: input.text
-          label: Lokaler CSS Pfad
-          description: Pfad zur Cookie Consent CSS Datei auf diesem Server (relativ zum Root).
+          label: CSS Pfad
+          description: Pfad zur Cookie Consent CSS Datei auf diesem Server (relativ zu template/custom) oder auf einem anderen Server (absolut).
           placeholder: Pfad/zum/CSS
           default:
 
-        enablelocaljs:
-          type: input.checkbox
-          label: Aktiviere locales JS
-          description: Aktiviert oder deaktiviert die Verwendung einer lokalen JS Datei, statt CDN.
+        js.placement:
+          type: select.select
+          label: JS Platzierung
+          description: Platzierung des JS.
+          default: head
+          options:
+            head: Header
+            footer: Footer
+
+        js.priority:
+          type: input.text
+          label: JS Priorität
+          description: Die Priorität des JS.
+          placeholder: -10 ... 10
           default: 0
 
-        localjspath:
+        js.option:
+          type: select.select
+          label: JS Datei Optionen
+          description: Wählen Sie eine Option für die benutzerdefinierte JS Datei, statt dem standardmäßigen CDN.
+          default: disabled
+          options:
+              disabled: Deaktiviert
+              local: Lokal
+              remote: Remote
+
+        js.path:
           type: input.text
-          label: Lokaler JS Pfad
-          description: Pfad zur Cookie Consent JS Datei auf diesem Server (relativ zum Root).
+          label: JS Pfad
+          description: Pfad zur Cookie Consent JS Datei auf diesem Server (relativ zu template/custom) oder auf einem anderen Server (absolut).
           placeholder: Pfad/zum/JS
           default:
 
-        jsexecution:
+        js.execution:
           type: select.select
           label: JS Ausführung
           description: Die verwendet Ausführungsmethode für die zu ladende JS Datei.
@@ -404,3 +465,4 @@ form:
               none: Keine
               async: Asynchron
               defer: Verzögert
+              both: Beide

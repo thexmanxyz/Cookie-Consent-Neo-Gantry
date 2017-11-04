@@ -12,197 +12,237 @@
 
 {% extends '@nucleus/partials/particle.html.twig' %}
 
-{% set bannerMsg = particle.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
+{% set bannerMsg = particle.banner.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
 {% set bannerStatic = false %}
 
-{% if particle.compliance != 'info' and particle.compliance is not empty %}
-    {% set compType = particle.compliance %}
-    {% set optText = particle.opttext %}
+{% if particle.banner.compliance != 'info' and particle.banner.compliance is not empty %}
+    {% set compType = particle.banner.compliance %}
+    {% set optText = particle.banner.opt.text %}
 {% else %}
     {% set compType = '' %}
     {% set optText = '' %}
 {% endif %}
 
-{% if particle.position == 'bottom' %}
+{% if particle.banner.position == 'bottom' %}
     {% set bannerPos = '' %}
-{% elseif particle.position == 'top' %}
+{% elseif particle.banner.position == 'top' %}
     {% set bannerPos = 'top' %}
-{% elseif particle.position == 'float_bl' %}
+{% elseif particle.banner.position == 'float_bl' %}
     {% set bannerPos = 'bottom-left' %}
-{% elseif particle.position == 'float_br' %}
+{% elseif particle.banner.position == 'float_br' %}
     {% set bannerPos = 'bottom-right' %}
-{% elseif particle.position == 'float_tl' %}
+{% elseif particle.banner.position == 'float_tl' %}
     {% set bannerPos = 'top-left' %}
-{% elseif particle.position == 'float_tr' %}
+{% elseif particle.banner.position == 'float_tr' %}
     {% set bannerPos = 'top-right' %}
 {% else %}
     {% set bannerPos = '' %}
 {% endif %}
 
-{% if particle.position == 'top_p'%}
+{% if particle.banner.position == 'top_p'%}
     {% set bannerStatic = true %}
 {% endif %}
 
-{% if particle.layout == 'block' or particle.layout == 'wire' %}
+{% if particle.banner.layout == 'block' or particle.banner.layout == 'wire' %}
     {% set bannerLayout = '' %}
-{% elseif particle.layout == 'classic' %}
+{% elseif particle.banner.layout == 'classic' %}
     {% set bannerLayout = 'classic' %}
-{% elseif particle.layout == 'edgeless' %}
+{% elseif particle.banner.layout == 'edgeless' %}
     {% set bannerLayout = 'edgeless' %}
-{% elseif particle.layout == 'wire' %}
+{% elseif particle.banner.layout == 'wire' %}
     {% set bannerLayout = '' %}
 {% endif %}
 
-{% set bannerPopText = '' %}
-{% set bannerBtnText = '' %}
-{% set bannerPopLink = '' %}
+{% set popupText = '' %}
+{% set btnText = '' %}
+{% set popupLink = '' %}
 
-{% if not particle.enableccolor %}
-    {% if particle.palette == 'p1' %}
-        {% set bannerPopBg = '#000' %}
-        {% set bannerBtnBg = '#f1d600' %}
-    {% elseif particle.palette == 'p2' %}
-        {% set bannerPopBg = '#eaf7f7' %}
-        {% set bannerPopText = '#5c7291' %}
-        {% set bannerBtnBg = '#56cbdb' %}
-        {% set bannerBtnText = '#ffffff' %}
-    {% elseif particle.palette == 'p3' %}
-        {% set bannerPopBg = '#252e39' %}
-        {% set bannerBtnBg = '#14a7d0' %}
-    {% elseif particle.palette == 'p4' %}
-        {% set bannerPopBg = '#000' %}
-        {% set bannerPopText = '#0f0' %}
-        {% set bannerBtnBg = '#0f0' %}
-    {% elseif particle.palette == 'p5' %}
-        {% set bannerPopBg = '#3937a3' %}
-        {% set bannerBtnBg = '#e62576' %}
-    {% elseif particle.palette == 'p6' %}
-        {% set bannerPopBg = '#64386b' %}
-        {% set bannerPopText = '#ffcdfd' %}
-        {% set bannerBtnBg = '#f8a8ff' %}
-        {% set bannerBtnText = '#3f0045' %}
-    {% elseif particle.palette == 'p7' %}
-        {% set bannerPopBg = '#237afc' %}
-        {% set bannerBtnBg = '#fff' %}
-        {% set bannerBtnText = '#237afc' %}
-    {% elseif particle.palette == 'p8' %}
-        {% set bannerPopBg = '#aa0000' %}
-        {% set bannerPopText = '#ffdddd' %}
-        {% set bannerBtnBg = '#ff0000' %}
-    {% elseif particle.palette == 'p9' %}
-        {% set bannerPopBg = '#383b75' %}
-        {% set bannerBtnBg = '#f1d600' %}
-    {% elseif particle.palette == 'p10' %}
-        {% set bannerPopBg = '#1d8a8a' %}
-        {% set bannerBtnBg = '#62ffaa' %}
-    {% elseif particle.palette == 'p11' %}
-        {% set bannerPopBg = '#edeff5' %}
-        {% set bannerPopText = '#838391' %}
-        {% set bannerBtnBg = '#4b81e8' %}
-    {% elseif particle.palette == 'p12' %}
-        {% set bannerPopBg = '#343c66' %}
-        {% set bannerPopText = '#cfcfe8' %}
-        {% set bannerBtnBg = '#f71559' %}
-    {% elseif particle.palette == 'p13' %}
-        {% set bannerPopBg = '#216942' %}
-        {% set bannerPopText = '#b2d192' %}
-        {% set bannerBtnBg = '#afed71' %}
-    {% elseif particle.palette == 'p14' %}
-        {% set bannerPopBg = '#3c404d' %}
-        {% set bannerPopText = '#d6d6d6' %}
-        {% set bannerBtnBg = '#8bed4f' %}
-    {% elseif particle.palette == 'p15' %}
-        {% set bannerPopBg = '#eb6c44' %}
-        {% set bannerPopText = '#ffffff' %}
-        {% set bannerBtnBg = '#f5d948' %}
-    {% elseif particle.palette == 'p16' %}
-        {% set bannerPopBg = '#efefef' %}
-        {% set bannerPopText = '#404040' %}
-        {% set bannerBtnBg = '#8ec760' %}
-        {% set bannerBtnText = '#ffffff' %}
+{% if not particle.banner.custom_color.enable %}
+    {% if particle.banner.palette == 'p1' %}
+        {% set popupBg = '#000' %}
+        {% set btnBg = '#f1d600' %}
+    {% elseif particle.banner.palette == 'p2' %}
+        {% set popupBg = '#eaf7f7' %}
+        {% set popupText = '#5c7291' %}
+        {% set btnBg = '#56cbdb' %}
+        {% set btnText = '#ffffff' %}
+    {% elseif particle.banner.palette == 'p3' %}
+        {% set popupBg = '#252e39' %}
+        {% set btnBg = '#14a7d0' %}
+    {% elseif particle.banner.palette == 'p4' %}
+        {% set popupBg = '#000' %}
+        {% set popupText = '#0f0' %}
+        {% set btnBg = '#0f0' %}
+    {% elseif particle.banner.palette == 'p5' %}
+        {% set popupBg = '#3937a3' %}
+        {% set btnBg = '#e62576' %}
+    {% elseif particle.banner.palette == 'p6' %}
+        {% set popupBg = '#64386b' %}
+        {% set popupText = '#ffcdfd' %}
+        {% set btnBg = '#f8a8ff' %}
+        {% set btnText = '#3f0045' %}
+    {% elseif particle.banner.palette == 'p7' %}
+        {% set popupBg = '#237afc' %}
+        {% set btnBg = '#fff' %}
+        {% set btnText = '#237afc' %}
+    {% elseif particle.banner.palette == 'p8' %}
+        {% set popupBg = '#aa0000' %}
+        {% set popupText = '#ffdddd' %}
+        {% set btnBg = '#ff0000' %}
+    {% elseif particle.banner.palette == 'p9' %}
+        {% set popupBg = '#383b75' %}
+        {% set btnBg = '#f1d600' %}
+    {% elseif particle.banner.palette == 'p10' %}
+        {% set popupBg = '#1d8a8a' %}
+        {% set btnBg = '#62ffaa' %}
+    {% elseif particle.banner.palette == 'p11' %}
+        {% set popupBg = '#edeff5' %}
+        {% set popupText = '#838391' %}
+        {% set btnBg = '#4b81e8' %}
+    {% elseif particle.banner.palette == 'p12' %}
+        {% set popupBg = '#343c66' %}
+        {% set popupText = '#cfcfe8' %}
+        {% set btnBg = '#f71559' %}
+    {% elseif particle.banner.palette == 'p13' %}
+        {% set popupBg = '#216942' %}
+        {% set popupText = '#b2d192' %}
+        {% set btnBg = '#afed71' %}
+    {% elseif particle.banner.palette == 'p14' %}
+        {% set popupBg = '#3c404d' %}
+        {% set popupText = '#d6d6d6' %}
+        {% set btnBg = '#8bed4f' %}
+    {% elseif particle.banner.palette == 'p15' %}
+        {% set popupBg = '#eb6c44' %}
+        {% set popupText = '#ffffff' %}
+        {% set btnBg = '#f5d948' %}
+    {% elseif particle.banner.palette == 'p16' %}
+        {% set popupBg = '#efefef' %}
+        {% set popupText = '#404040' %}
+        {% set btnBg = '#8ec760' %}
+        {% set btnText = '#ffffff' %}
     {% else %}
-        {% set bannerPopBg = '#000' %}
-        {% set bannerBtnBg = '#f1d600' %}
+        {% set popupBg = '#000' %}
+        {% set btnBg = '#f1d600' %}
     {% endif %}
 {% else %}
-    {% if particle.popupbg is not empty %}
-        {% set bannerPopBg = particle.popupbg %}
+    {% if particle.banner.popup.bg is not empty %}
+        {% set popupBg = particle.banner.popup.bg %}
     {% else %}
-        {% set bannerPopBg = '#000' %}
+        {% set popupBg = '#000' %}
     {% endif %}
-    {% if particle.buttonbg is not empty %}
-        {% set bannerBtnBg = particle.buttonbg %}
+    {% if particle.banner.button.bg is not empty %}
+        {% set btnBg = particle.banner.button.bg %}
     {% else %}
-        {% set bannerBtnBg = '#f1d600' %}    
+        {% set btnBg = '#f1d600' %}    
     {% endif %}
-    {% if particle.popuptext is not empty %}
-        {% set bannerPopText = particle.popuptext %}
+    {% if particle.banner.popup.text is not empty %}
+        {% set popupText = particle.banner.popup.text %}
     {% endif %}
-    {% if particle.buttontext is not empty %}
-        {% set bannerBtnText = particle.buttontext %}
+    {% if particle.banner.button.text is not empty %}
+        {% set btnText = particle.banner.button.text %}
     {% endif %}
-    {% if particle.popuplink is not empty %}
-        {% set bannerPopLink = particle.popuplink %}
+    {% if particle.banner.popup.link is not empty %}
+        {% set popupLink = particle.banner.popup.link %}
     {% endif %}
 {% endif %}
 
-{% set linkText = particle.lmtext|default('Read more') %}
-{% set linkTarget = particle.lmtarget|default('_blank') %}
-{% set linkHref = particle.lmlink|default('https://cookiesandyou.com') %}
-{% set dismissText = particle.dmtext|default('Got it!') %}
+{% set linkText = particle.banner.learn_more.text|default('Read more') %}
+{% set linkTarget = particle.banner.learn_more.target|default('_blank') %}
+{% set linkHref = particle.banner.learn_more.link|default('https://cookiesandyou.com') %}
+{% set dismissText = particle.banner.dismiss.text|default('Got it!') %}
+{% set apiVersion = particle.api.version|default("3.0.4") %}
 
-{% set jsexecution = '' %}
-{% if particle.jsexecution != 'none' and particle.jsexecution is not empty %}
-    {% set jsexecution = particle.jsexecution ~ '="' ~ particle.jsexecution  ~ '" ' %}
+{% set scriptType = 'text/javascript' %}
+{% set styleType = 'text/css' %}
+
+{% set jsPlace = particle.js.placement|default('head') %}
+{% set jsPrior = particle.js.priority|default(0) %}
+{% set cssPrior = particle.css.priority|default(0) %}
+
+{% set jsExec = '' %}
+{% if particle.js.execution == 'defer' or particle.js.execution == 'both' %}
+    {% set jsExec = 'defer="defer"' %}
+{% endif %}
+
+{% if particle.js.execution == 'both' %}
+    {% set jsExec = jsExec ~ ' ' %}
+{% endif %}
+
+{% if particle.js.execution == 'async' or particle.js.execution == 'both' %}
+    {% set jsExec = jsExec ~ 'async="async"' %}
+{% endif %}
+
+{% if jsExec is not empty %}
+    {% set jsExec = ' ' ~ jsExec %}
+{% endif %}
+
+{% if particle.js.option == 'local' and particle.js.path is not empty %}
+    {% set hPath = particle.js.path %}
+    {% if hPath is not empty and hPath|slice(0, 1)|lower == '/' %}
+        {% set hPath = hPath|slice(1, (hPath|length - 1)) %}
+    {% endif %}
+    {% set jsPath = 'gantry-theme://' ~ hPath %}
+{% elseif particle.js.option == 'remote' and particle.js.path is not empty %}
+    {% set jsPath = particle.js.path %}
+{% else %}
+    {% set jsPath = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' ~ apiVersion ~ '/cookieconsent.min.js' %}
+{% endif %}
+
+{% if particle.css.option == 'local' and particle.css.path is not empty %}
+    {% set hPath = particle.css.path %}
+    {% if hPath is not empty and hPath|slice(0, 1)|lower == '/' %}
+        {% set hPath = hPath|slice(1, (hPath|length - 1)) %}
+    {% endif %}
+    {% set cssPath = 'gantry-theme://' ~ hPath %}
+{% elseif particle.css.option == 'remote' and particle.css.path is not empty %}
+    {% set cssPath = particle.css.path %}
+{% else %}
+    {% set cssPath = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' ~ apiVersion ~ '/cookieconsent.min.css' %}
 {% endif %}
 
 {%- block stylesheets -%}
     {%- if particle.enabled -%}
         {{- parent() -}}
-        {%- if particle.enablelocalcss and particle.localcsspath is not empty -%}
-            <link rel="stylesheet" type="text/css" href="{{particle.localcsspath}}" />
-        {%- else -%}
-            <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.css" />
-        {%- endif -%}
+        {% styles with { priority: cssPrior } %}
+            <link rel="stylesheet" type="{{styleType}}" href="{{cssPath}}" />
+        {% endstyles -%}
     {%- endif -%}
 {%- endblock -%}
 {%- block javascript_footer -%}
     {%- if particle.enabled -%}
         {{ parent() }}
-        {%- if particle.enablelocaljs and particle.localjspath is not empty -%}
-            <script {{jsexecution}}src="{{particle.localjspath}}"></script>
-        {%- else -%}
-            <script {{jsexecution}}src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/{{particle.ccversion}}/cookieconsent.min.js"></script>
-        {%- endif -%}
+        {%- scripts in jsPlace with { priority: jsPrior } -%}
+            <script type="{{scriptType}}" src="{{jsPath}}"{{jsExec}}></script>
+        {%- endscripts -%}
         <script>
             window.addEventListener("load", function(){
                 window.cookieconsent.initialise({
                     palette: {
                         popup: {
-                            background: "{{bannerPopBg|e('js')}}",
-                            {%- if bannerPopText is not empty -%}
-                                text: "{{bannerPopText|e('js')}}"
+                            background: "{{popupBg|e('js')}}",
+                            {%- if popupText is not empty -%}
+                                text: "{{popupText|e('js')}}",
                             {%- endif -%}
 
-                            {%- if bannerPopLink is not empty -%}
-                                link: "{{bannerPopLink|e('js')}}"
+                            {%- if popupLink is not empty -%}
+                                link: "{{popupLink|e('js')}}"
                             {%- endif -%}
                         },
                         button: {
-                            {%- if particle.layout == 'wire' -%}
+                            {%- if particle.banner.layout == 'wire' -%}
                                 background: "transparent",
-                                text: "{{bannerBtnBg|e('js')}}",
-                                border: "{{bannerBtnBg|e('js')}}",
+                                text: "{{btnBg|e('js')}}",
+                                border: "{{btnBg|e('js')}}",
                             {%- else -%}
-                                background: "{{bannerBtnBg|e('js')}}",
-                                {%- if bannerPopText is not empty -%}
-                                    text: "{{bannerBtnText|e('js')}}"
+                                background: "{{btnBg|e('js')}}",
+                                {%- if popupText is not empty -%}
+                                    text: "{{btnText|e('js')}}"
                                 {%- endif -%}
                             {%- endif -%}
                         }
                     },
 
-                    {%- if not particle.lmenable -%}
+                    {%- if not particle.banner.learn_more.enabled -%}
                         showLink: false,
                     {%- endif -%}
                     
@@ -218,63 +258,63 @@
                         static: true,
                     {%- endif -%}
                     
-                    {%- if particle.autoopen == 0 -%}
+                    {%- if particle.banner.auto_open == 0 -%}
                         autoOpen: false,
                     {%- endif -%}
                     
-                    {%- if particle.revokable -%}
+                    {%- if particle.banner.revokable.enabled -%}
                         revokable: true,
                     {%- endif -%}
                     
-                    {%- if particle.arevokable == 0 -%}
+                    {%- if particle.banner.revokable.animate == 0 -%}
                         animateRevokable: false,
                     {%- endif -%}
                     
-                    {%- if particle.revoketext is not empty -%}
-                        {%- set revokeText = '<div class="cc-revoke {{classes}}">' ~ particle.revoketext ~ '</div>' -%}
+                    {%- if particle.banner.revoke.text is not empty -%}
+                        {%- set revokeText = '<div class="cc-revoke {{classes}}">' ~ particle.banner.revoke.text ~ '</div>' -%}
                         revokeBtn: "{{revokeText|e('js')}}",
                     {%- endif -%}
                     
-                    {%- if particle.cname is not empty or particle.cpath is not empty or particle.cdomain is not empty or particle.cexpirydays is not empty -%}  
+                    {%- if particle.cookie.name is not empty or particle.cookie.path is not empty or particle.cookie.domain is not empty or particle.cookie.expiry is not empty -%}  
                         cookie: {
-                            {%- if particle.cname is not empty -%}
-                                name: "{{particle.cname|e('js')}}",
+                            {%- if particle.cookie.name is not empty -%}
+                                name: "{{particle.cookie.name|e('js')}}",
                             {%- endif -%}
-                            {%- if particle.cpath is not empty -%}
-                                path: "{{particle.cpath|e('js')}}",
+                            {%- if particle.cookie.path is not empty -%}
+                                path: "{{particle.cookie.path|e('js')}}",
                             {%- endif -%}
-                            {%- if particle.cdomain is not empty -%}
-                                domain: "{{particle.cdomain|e('js')}}",
+                            {%- if particle.cookie.domain is not empty -%}
+                                domain: "{{particle.cookie.domain|e('js')}}",
                             {%- endif -%}
-                            {%- if particle.cexpirydays is not empty -%}
-                                expiryDays: {{particle.cexpirydays}}
+                            {%- if particle.cookie.expiry is not empty -%}
+                                expiryDays: {{particle.cookie.expiry}}
                             {%- endif -%}
                         },
                     {%- endif -%}
                             
-                    {%- if particle.location == 'on' -%}
+                    {%- if particle.service.location == 'on' -%}
                         location: true,
-                    {%- elseif particle.location == 'custom' -%}
-                        {%- if particle.ltimeout is not empty or particle.lservice|length > 0 -%}
+                    {%- elseif particle.service.location == 'custom' -%}
+                        {%- if particle.service.timeout is not empty or particle.service.endpoints|length > 0 -%}
                             location: {
-                                {%- if particle.lservice|length > 0 -%}
-                                    services: {{ _self.renderJSArray(particle.lservice, 'id') }},
+                                {%- if particle.service.endpoints|length > 0 -%}
+                                    services: {{ _self.renderJSArray(particle.service.endpoints, 'id') }},
                                 {%- endif -%}
-                                {%- if particle.ltimeout is not empty -%}
-                                    timeout: {{particle.ltimeout}}
+                                {%- if particle.service.timeout is not empty -%}
+                                    timeout: {{particle.service.timeout}}
                                 {%- endif -%}
                             },
                         {%- endif -%}
                     {%- endif -%}
                             
-                    {%- if particle.regionallaw == 0 or particle.countrycode is not empty -%}
+                    {%- if particle.service.law == 0 or particle.service.country_code is not empty -%}
                         law: {
-                            {%- if particle.regionallaw == 0 -%}
+                            {%- if particle.service.law == 0 -%}
                                 regionalLaw: false,
                             {%- endif -%}
 
-                            {%- if particle.countrycode is not empty -%}
-                                countryCode: "{{particle.countrycode|e('js')}}"
+                            {%- if particle.service.country_code is not empty -%}
+                                countryCode: "{{particle.service.country_code|e('js')}}"
                             {%- endif -%}
                         },
                     {%- endif -%}
@@ -285,14 +325,14 @@
                         dismiss: "{{dismissText|e('js')}}",
 
                         {%- if optText is not empty -%}
-                            {%- if particle.compliance == 'opt-out' -%}
+                            {%- if particle.banner.compliance == 'opt-out' -%}
                                 deny: "{{optText|e('js')}}",
-                            {%- elseif particle.compliance == 'opt-in' -%}
+                            {%- elseif particle.banner.compliance == 'opt-in' -%}
                                 allow: "{{optText|e('js')}}",
                             {%- endif -%}
                         {%- endif -%}
                         
-                        {%- if particle.lmenable -%}
+                        {%- if particle.banner.learn_more.enabled -%}
                             href: "{{linkHref|raw}}",
                         {%- endif -%}
                     },
@@ -301,25 +341,25 @@
                         type: "{{compType}}",
                     {%- endif -%}
 
-                    {%- if particle.dmonscroll is not empty -%}
-                        dismissOnScroll: {{particle.dmonscroll}},
+                    {%- if particle.banner.on_scroll.dismiss is not empty -%}
+                        dismissOnScroll: {{particle.banner.on_scroll.dismiss}},
                     {%- endif -%}
 
-                    {%- if particle.dmontimeout is not empty -%}
-                        dismissOnTimeout: {{particle.dmontimeout}},
+                    {%- if particle.banner.timeout.dismiss is not empty -%}
+                        dismissOnTimeout: {{particle.banner.timeout.dismiss}},
                     {%- endif -%}
 
-                    {%- if particle.blpages|length > 0 -%}
-                        blacklistPage: {{ _self.renderJSArray(particle.blpages, 'path') }},
+                    {%- if particle.blacklist_pages|length > 0 -%}
+                        blacklistPage: {{ _self.renderJSArray(particle.blacklist_pages, 'path') }},
                     {%- endif -%}
                     
-                    {%- if particle.wlpages|length > 0 -%}
-                        whitelistPage: {{ _self.renderJSArray(particle.wlpages, 'path') }},
+                    {%- if particle.whitelist_pages|length > 0 -%}
+                        whitelistPage: {{ _self.renderJSArray(particle.whitelist_pages, 'path') }},
                     {%- endif -%}
 
                     {%- set msgLink = '<span id="cookieconsent:desc" class="cc-message">' -%}
                     {%- set msgLink = msgLink ~ '{{message}}' -%}
-                    {%- if particle.lmenable -%}
+                    {%- if particle.banner.learn_more.enabled -%}
                         {%- set msgLink = msgLink ~ ' <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="' -%}
                         {%- set msgLink = msgLink ~ linkHref|raw ~ '"' -%}
                         {%- if linkTarget != 'none' -%}
@@ -338,9 +378,24 @@
 {%- macro renderJSArray(array, attr) -%}
     {%- set arrStr = "[" -%}
     {%- for item in array -%}
-        {%- if item[attr] is not empty -%}
-            {%- set arrStr = arrStr ~ '"' ~ item[attr]|e('js') ~ '",' -%}
+        {%- set pageItem = item[attr] -%}
+        {%- if attr == 'path' and item['type'] == 'path' -%}
+            {%- if pageItem|slice(0, 1)|lower != '/' -%}
+                {%- set pageItem = '/' ~ pageItem -%}
+            {%- endif -%}
+            {%- if item['option'] == 1 -%}
+                {%- set hPageItem = pageItem -%}
+                {%- if hPageItem|slice((hPageItem|length-1), 1)|lower != '/' -%}
+                    {%- set hPageItem = hPageItem ~ '/' -%}
+                {%- elseif hPageItem|length == 1 -%}
+                    {%- set hPageItem = '' -%}
+                {%- else -%}
+                    {%- set hPageItem = hPageItem|slice(0, (hPageItem|length-1)) -%}
+                {%- endif -%}
+                {%- set arrStr = arrStr ~ '"' ~ hPageItem|e('js') ~ '",' -%}
+            {%- endif -%}
         {%- endif -%}
+        {%- set arrStr = arrStr ~ '"' ~ pageItem|e('js') ~ '",' -%}
     {%- endfor -%}
     {%- set arrStr = arrStr|slice(0,arrStr|length-1) ~ "]" -%}
     {{- arrStr|raw -}}
