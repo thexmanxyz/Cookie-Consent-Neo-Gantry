@@ -140,7 +140,7 @@ None
 ## Credits
 Thanks to [Insites](https://insites.com/) for the Cookie Consent API and the Gantry 5 Framework team for providing a modern templating framework.
 
-Thanks @ [mariantanase](https://github.com/mariantanase) for the Italian back- and frontend translation
+Thanks @ [mariantanase](https://github.com/mariantanase) for the Italian back- and frontend translation.
 
 ## by [thex](https://github.com/thexmanxyz)
 Copyright (c) 2017, free to use in personal and commercial software as per the [license](/LICENSE.md).
