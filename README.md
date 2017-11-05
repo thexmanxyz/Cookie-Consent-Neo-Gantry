@@ -35,6 +35,7 @@ ___
 1. Download the **Default or Legacy Package** of the Cookie Consent Neo Atom. If you are using Gantry **<5.3.2** please use the **Legacy Package** for compatibility reasons.
 2. Extract the files.
 3. Copy the `.html.twig` and the `.yaml` file to your particle folder. The target folder varies depending on the used system.
+   
    * **Wordpress:** `/wp-content/themes/{gantry_theme}/custom/particles`
    * **Joomla:** `/templates/{gantry_theme}/custom/particles`
    * **Grav:** `/user/data/gantry5/themes/{gantry_theme}/particles`
