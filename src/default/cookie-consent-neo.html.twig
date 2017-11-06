@@ -203,9 +203,9 @@
 {%- block stylesheets -%}
     {%- if particle.enabled -%}
         {{- parent() -}}
-        {% styles with { priority: cssPrior } %}
+        {%- styles with { priority: cssPrior } -%}
             <link rel="stylesheet" type="{{styleType}}" href="{{url(cssPath)}}" />
-        {% endstyles -%}
+        {%- endstyles -%}
     {%- endif -%}
 {%- endblock -%}
 {%- block javascript_footer -%}
