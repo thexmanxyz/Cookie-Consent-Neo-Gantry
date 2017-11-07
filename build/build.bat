@@ -12,15 +12,15 @@ REM #                                                     #
 REM #######################################################
 
 REM --- Script Variables ---
-set remove_folders=0
-set log_files=1
+set remove_folders=1
+set log_files=0
 
 REM --- Packaging Variables ---
 set langs_upper=EN, IT, DE
 set default_lang=EN
 
 set prj_id=ccn
-set prj_rev=v1.4.1
+set prj_rev=v1.4.0
 set prj_name=cookie-consent-neo
 set prj_fullname=Cookie Consent Neo - Atom
 
