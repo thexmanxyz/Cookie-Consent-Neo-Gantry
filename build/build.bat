@@ -12,15 +12,15 @@ REM #                                                     #
 REM #######################################################
 
 REM --- Script Variables ---
-set remove_folders=1
-set log_files=0
+set remove_folders=0
+set log_files=1
 
 REM --- Packaging Variables ---
 set langs_upper=EN, IT, DE
 set default_lang=EN
 
 set prj_id=ccn
-set prj_rev=v1.4.0
+set prj_rev=v1.4.1
 set prj_name=cookie-consent-neo
 set prj_fullname=Cookie Consent Neo - Atom
 
@@ -48,9 +48,13 @@ set folder_release=release
 set folder_releases=releases
 set folder_def=default
 set folder_leg=legacy
+set folder_js=js
+set folder_scss=scss
 set folder_jsfix=jsfix
 set folder_helium=%pkg_j3%_%pkg_helium%
 set folder_hydro=%pkg_j3%_%pkg_hydro%
+set folder_src_js=src\%folder_js%
+set folder_src_scss=src\%folder_scss%
 set folder_src_jsfix=src\%folder_jsfix%
 set folder_release_dest=%folder_root%\%folder_releases%\%prj_rev%
 
@@ -116,15 +120,15 @@ REM --- Parameters: %~1 = destination folder particle, %~2 = archive name, %~3 =
 
 		set "lang=%%l"
 		set folder_out=%~1_!lang!
-		set folder_out_jsfix=!folder_out!\%folder_jsfix%
 		set package_name=%prj_id%.%pkg_part_only%.%~2!lang!.%prj_rev%
-		
+
 		IF NOT EXIST !folder_out! ( mkdir !folder_out! )
-		IF NOT EXIST !folder_out_jsfix! ( mkdir !folder_out_jsfix! )
-		
+
 		(for %%f in (%part_def_files%) do ( call :copy_general_files "%folder_root%\%%f" "!folder_out!"	))
 		(for %%e in (%file_ext%) do ( call :copy_particle_files "%%e" "!lang!" "%~3" "!folder_out!" ))
-		call :copy_folder_content_ow "%folder_root%\%folder_src_jsfix%" "!folder_out_jsfix!"
+		call :copy_include_sub_folder "%folder_src_js%" "%folder_js%"
+		call :copy_include_sub_folder "%folder_src_scss%" "%folder_scss%"
+		call :copy_include_sub_folder "%folder_src_jsfix%" "%folder_jsfix%"
 		call :create_archives "!package_name!" "!folder_out!" "1" "1"
 
 		IF %remove_folders% == 1 ( rmdir "!folder_out!" /S /Q )
@@ -149,9 +153,11 @@ REM --- Parameters: %~1 = destination folder plugin, %~2 = template name
 
 		IF NOT EXIST !folder_out! ( mkdir !folder_out! )
 		IF NOT EXIST !folder_out_sub! ( mkdir !folder_out_sub! )
-		
+
 		(for %%e in (%file_ext%) do ( call :copy_particle_files "%%e" "!lang!" "%folder_src_def%" "!folder_out_sub!" ))	
 		(for %%f in (%plugin_def_files%) do ( call :copy_general_files "!folder_platform!\%%f" "!folder_out!" ))
+		call :copy_include_sub_folder "%folder_src_js%" "%folder_js%"
+		call :copy_include_sub_folder "%folder_src_scss%" "%folder_scss%"
 		call :copy_plugin_files "!lang!" "!folder_platform!" "%~2" "!folder_out!"
 		call :create_archives "!package_name!" "!folder_out!" "1" "0"
 
@@ -206,6 +212,16 @@ REM --- Parameters: %~1 = language, %~2 = platform folder, %~3 = template name, 
 	) ELSE (
 		IF "%log_files%" == "1" ( echo !temp_trans_path!.xml )
 		copy !temp_trans_path!.xml %~4 >Nul
+	)
+goto :EOF
+
+REM --- Copy and Include a subfolder in the package ---
+REM --- Parameters: %~1 = src folder path, %~2 = target folder path
+:copy_include_sub_folder
+	IF EXIST %folder_root%\%~1 (
+		set folder_out_js=!folder_out!\%~2
+		IF NOT EXIST !folder_out_js! ( mkdir !folder_out_js! )
+		call :copy_folder_content_ow "%folder_root%\%~1" "!folder_out_js!"
 	)
 goto :EOF
 
