@@ -209,9 +209,11 @@ REM --- Parameters: %~1 = language, %~2 = platform folder, %~3 = template name, 
 	IF "%~1" == "%default_lang%" (
 		IF "%log_files%" == "1" ( echo !temp_path!.xml )
 		copy !temp_path!.xml %~4 >Nul
+		ren %~4\%prj_name%.xml %prj_name%-%~3.xml >Nul
 	) ELSE (
 		IF "%log_files%" == "1" ( echo !temp_trans_path!.xml )
 		copy !temp_trans_path!.xml %~4 >Nul
+		ren %~4\%prj_name%.xml %prj_name%-%~3.xml >Nul
 	)
 goto :EOF
 
