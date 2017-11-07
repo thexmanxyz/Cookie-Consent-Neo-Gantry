@@ -37,15 +37,15 @@ ___
 3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/{gantry_theme}/custom/particles`. Please check the list below to determine where the template folder for your CMS is located.
 
 ## CMS Template Folder
-Please be aware that the template folder path varies in dependence of the used CMS. Here is a list of the folders for the different platforms.
+Please be aware that the template folder path varies in dependence of the used CMS. Here is a list of the folders for the different platforms:
 
-### Wordpress:
+### Wordpress
 `/wp-content/themes/{gantry_theme}`
 
-### Joomla:
+### Joomla
 `/templates/{gantry_theme}`
 
-### Grav:
+### Grav
 `/user/data/gantry5/themes`
 
 ## Configuration
