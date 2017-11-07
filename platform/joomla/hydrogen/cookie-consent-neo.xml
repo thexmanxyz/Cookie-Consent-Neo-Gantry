@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Cookie Consent Neo - Gantry Atom (Hydrogen)</name>
-    <version>1.4.1</version>
+    <version>1.4.2</version>
     <creationDate>07.11.2017</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
