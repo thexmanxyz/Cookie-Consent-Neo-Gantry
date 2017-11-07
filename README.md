@@ -118,7 +118,7 @@ Insight of the *Cookie Consent Neo - Gantry Atom* configuration:
 
 ![6](/screenshots/backend_api.png)
 
-Examples of some of the different Cookie Consent layouts / positions:
+Examples for some of the different Cookie Consent layouts and styles:
 
 **Frontend (1)** - *[Floating](/screenshots/frontend_1.png)*
 
