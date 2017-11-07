@@ -84,7 +84,7 @@ ___
   * Deferred
 
 ## Showroom
-Insight of Cookie Consent Neo - Gantry Atom configuration:
+Insight of the Cookie Consent Neo - Gantry Atom configuration:
 
 **Backend (1)** - *[Labeling](/screenshots/backend_labeling.png)*
 
@@ -110,7 +110,7 @@ Insight of Cookie Consent Neo - Gantry Atom configuration:
 
 ![6](/screenshots/backend_api.png)
 
-Examples for different Cookie Consent layouts / positions:
+Examples of some of the different Cookie Consent layouts / positions:
 
 **Frontend (1)** - *[Floating](/screenshots/frontend_1.png)*
 
