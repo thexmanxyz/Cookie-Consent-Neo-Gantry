@@ -34,17 +34,25 @@ ___
 ## Manual Installation
 1. Download the **Default or Legacy Package** of the Cookie Consent Neo Atom. If you are using Gantry **<5.3.2** please use the **Legacy Package** for compatibility reasons.
 2. Extract the files.
-3. Copy the `.html.twig` and the `.yaml` file to your particle folder. The target folder varies depending on the used system.
-   
-   * **Wordpress:** `/wp-content/themes/{gantry_theme}/custom/particles`
-   * **Joomla:** `/templates/{gantry_theme}/custom/particles`
-   * **Grav:** `/user/data/gantry5/themes/{gantry_theme}/particles`
-   
- ## Configuration
- 1. Go to your Gantry templating backend (e.g. Extensions/Templates).
- 2. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
- 3. Configure the appearance according to your favor.
- 4. [Optional] The download package contains a modified version of the Cookie Consent JS file which fixes the timeout and scrolling bug [#170](https://github.com/insites/cookieconsent/issues/170).
+3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/{gantry_theme}/custom/particles`. Please check the list below to find out where you find the correct template folder for your CMS.
+
+## CMS Template Folder
+Please be aware that the template folder varies in dependence of the used CMS.
+
+### Wordpress:
+`/wp-content/themes/{gantry_theme}`
+
+### Joomla:
+`/templates/{gantry_theme}`
+
+### Grav:
+`/user/data/gantry5/themes`
+
+## Configuration
+1. Go to your Gantry templating backend (e.g. Extensions/Templates).
+2. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
+3. Configure the appearance according to your favor.
+4. [Optional] The download package contains a modified version of the Cookie Consent JS file which fixes the timeout and scrolling bug [#170](https://github.com/insites/cookieconsent/issues/170).
 
 ## Supported API Parameters and Atom Options
 * Banner Message Text
