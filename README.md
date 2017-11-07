@@ -29,7 +29,7 @@ ___
 
 ## Automatic Installation (Joomla only)
 1. Download the Plugin of the Cookie Consent Neo Atom for **Hydrogen or Helium**.
-2. Install over the Joomla Plugin System.
+2. Install it over the Joomla Plugin System.
 
 ## Manual Installation
 1. Download the **Default or Legacy Package** of the Cookie Consent Neo Atom. If you are using Gantry **<5.3.2** please use the **Legacy Package** for compatibility reasons.
