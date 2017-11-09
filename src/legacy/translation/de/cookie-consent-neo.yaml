@@ -14,10 +14,6 @@ name: Cookie Consent Neo
 description: Configure Cookie Consent Neo Atom.
 type: atom
 
-#configuration:
-#  caching:
-#    type: static
-
 form:
   fields:
     _info:
