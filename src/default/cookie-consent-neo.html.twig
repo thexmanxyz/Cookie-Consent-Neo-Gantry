@@ -200,20 +200,13 @@
     {% set cssPath = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' ~ apiVersion ~ '/cookieconsent.min.css' %}
 {% endif %}
 
-{%- block stylesheets -%}
-    {%- if particle.enabled -%}
-        {{- parent() -}}
-        {%- styles with { priority: cssPrior } -%}
-            <link rel="stylesheet" type="{{styleType}}" href="{{url(cssPath)}}" />
-        {%- endstyles -%}
-    {%- endif -%}
-{%- endblock -%}
-{%- block javascript_footer -%}
-    {%- if particle.enabled -%}
-        {{ parent() }}
-        {%- scripts in jsPlace with { priority: jsPrior } -%}
-            <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExec}}></script>
-        {%- endscripts -%}
+{%- block particle -%}
+    {%- styles with { priority: cssPrior } -%}
+        <link rel="stylesheet" type="{{styleType}}" href="{{url(cssPath)}}" />
+    {%- endstyles -%}
+
+    {%- scripts in jsPlace with { priority: jsPrior } -%}
+        <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExec}}></script>
         <script>
             window.addEventListener("load", function(){
                 window.cookieconsent.initialise({
@@ -245,36 +238,36 @@
                     {%- if not particle.banner.learn_more.enabled -%}
                         showLink: false,
                     {%- endif -%}
-                    
+
                     {%- if bannerPos is not empty -%}
                         position: "{{bannerPos|e('js')}}",
                     {%- endif -%}
-                    
+
                     {%- if bannerLayout is not empty -%}
                         theme: "{{bannerLayout|e('js')}}",
                     {%- endif -%}
-                    
+
                     {%- if bannerStatic == true -%}
                         static: true,
                     {%- endif -%}
-                    
+
                     {%- if particle.banner.auto_open == 0 -%}
                         autoOpen: false,
                     {%- endif -%}
-                    
+
                     {%- if particle.banner.revokable.enabled -%}
                         revokable: true,
                     {%- endif -%}
-                    
+
                     {%- if particle.banner.revokable.animate == 0 -%}
                         animateRevokable: false,
                     {%- endif -%}
-                    
+
                     {%- if particle.banner.revoke.text is not empty -%}
                         {%- set revokeText = '<div class="cc-revoke {{classes}}">' ~ particle.banner.revoke.text ~ '</div>' -%}
                         revokeBtn: "{{revokeText|e('js')}}",
                     {%- endif -%}
-                    
+
                     {%- if particle.cookie.name is not empty or particle.cookie.path is not empty or particle.cookie.domain is not empty or particle.cookie.expiry is not empty -%}  
                         cookie: {
                             {%- if particle.cookie.name is not empty -%}
@@ -291,7 +284,7 @@
                             {%- endif -%}
                         },
                     {%- endif -%}
-                            
+
                     {%- if particle.service.location == 'on' -%}
                         location: true,
                     {%- elseif particle.service.location == 'custom' -%}
@@ -306,7 +299,7 @@
                             },
                         {%- endif -%}
                     {%- endif -%}
-                            
+
                     {%- if particle.service.law == 0 or particle.service.country_code is not empty -%}
                         law: {
                             {%- if particle.service.law == 0 -%}
@@ -331,7 +324,7 @@
                                 allow: "{{optText|e('js')}}",
                             {%- endif -%}
                         {%- endif -%}
-                        
+
                         {%- if particle.banner.learn_more.enabled -%}
                             href: "{{url(linkHref)|raw}}",
                         {%- endif -%}
@@ -352,7 +345,7 @@
                     {%- if particle.blacklist_pages|length > 0 -%}
                         blacklistPage: {{ _self.renderJSArray(particle.blacklist_pages, 'path') }},
                     {%- endif -%}
-                    
+
                     {%- if particle.whitelist_pages|length > 0 -%}
                         whitelistPage: {{ _self.renderJSArray(particle.whitelist_pages, 'path') }},
                     {%- endif -%}
@@ -368,13 +361,14 @@
                         {%- set msgLink = msgLink ~ '>{{link}}</a>' -%}
                     {%- endif -%}   
                     {%- set msgLink = msgLink ~ '</span>' -%}
-                    
+
                     elements: {
                         messagelink: "{{msgLink|e('js')}}"
                     }})});
         </script>
-    {%- endif -%}
+    {%- endscripts -%}
 {%- endblock -%}
+
 {%- macro renderJSArray(array, attr) -%}
     {%- set arrStr = "[" -%}
     {%- for item in array -%}
