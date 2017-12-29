@@ -146,7 +146,7 @@ None
 [Gantry 5 Framework](http://gantry.org/)
 
 ## Credits
-Thanks to [Insites](https://insites.com/) for the Cookie Consent API and the Gantry 5 team for providing a modern templating framework.
+Thanks to [Insites](https://insites.com/) for the Cookie Consent API and the Gantry team for providing a modern templating framework.
 
 Thanks to [mariantanase](https://github.com/mariantanase) for the Italian back- and frontend translation.
 
