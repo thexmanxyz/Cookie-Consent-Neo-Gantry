@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Cookie Consent Neo - Gantry Atom (Helium)</name>
-    <version>1.4.2</version>
-    <creationDate>07.11.2017</creationDate>
+    <version>1.4.3</version>
+    <creationDate>29.12.2017</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
     <authorUrl></authorUrl>
@@ -12,7 +12,7 @@
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 		<h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
 		<span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-		<p><b>NOTE</b>:&nbsp;This atom is installed for the Gantry Helium.<br />If you want to install the atom on a different Gantry template, you must manually copy the two files <code>cookie-consent-neo.yaml</code> and <code>cookie-consent-neo.html.twig</code> in <code>/templates/[TEMPLATE]/custom/particles</code>.</p></div>]]>
+		<p><b>NOTE</b>:&nbsp;This atom is installed for the Gantry Helium.<br />If you want to install the atom on a different Gantry template, you must manually copy the two files <code>cookie-consent-neo.yaml</code> and <code>cookie-consent-neo.html.twig</code> to <code>/templates/[TEMPLATE]/custom/particles</code>.</p></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="templates/g5_helium/custom/particles">
