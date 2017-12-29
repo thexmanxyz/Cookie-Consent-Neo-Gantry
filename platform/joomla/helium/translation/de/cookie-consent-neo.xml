@@ -10,9 +10,9 @@
     <license>MIT - see LICENSE.pdf</license>
     <description>
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-		<h3>Cookie Consent Neo - Atom for Gantry 5 Framework</h3>
+		<h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
 		<span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-		<p><b>INFO</b>:&nbsp;Dieses Atom wurde für G5 Helium installiert.<br />Wenn Sie das Atom für ein anderes Template installieren möchten, so müssen Sie die zwei folgenden Dateien <code>cookie-consent-neo.yaml</code> und <code>cookie-consent-neo.html.twig</code> in den Ordner <code>/templates/[TEMPLATE]/custom/particles</code> kopieren.</p></div>]]>
+		<p><b>INFO</b>:&nbsp;Dieses Atom wurde für Gantry Helium installiert.<br />Wenn Sie das Atom für ein anderes Gantry Template installieren möchten, so müssen Sie die zwei folgenden Dateien <code>cookie-consent-neo.yaml</code> und <code>cookie-consent-neo.html.twig</code> in den Ordner <code>/templates/[TEMPLATE]/custom/particles</code> kopieren.</p></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="templates/g5_helium/custom/particles">
