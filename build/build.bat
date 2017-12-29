@@ -217,13 +217,13 @@ REM --- Parameters: %~1 = language, %~2 = platform folder, %~3 = template name, 
 	)
 goto :EOF
 
-REM --- Copy and Include a subfolder in the package ---
+REM --- Copy and Include a sub folder in the package ---
 REM --- Parameters: %~1 = src folder path, %~2 = target folder path
 :copy_include_sub_folder
 	IF EXIST %folder_root%\%~1 (
-		set folder_out_js=!folder_out!\%~2
-		IF NOT EXIST !folder_out_js! ( mkdir !folder_out_js! )
-		call :copy_folder_content_ow "%folder_root%\%~1" "!folder_out_js!"
+		set folder_out_inc=!folder_out!\%~2
+		IF NOT EXIST !folder_out_inc! ( mkdir !folder_out_inc! )
+		call :copy_folder_content_ow "%folder_root%\%~1" "!folder_out_inc!"
 	)
 goto :EOF
 
