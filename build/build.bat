@@ -110,7 +110,7 @@ IF %remove_folders% == 1 (
 	rmdir "%folder_release%" /S /Q
 )
 call :ColorizeText 0a "%msg_finished%"
-goto:EOF
+goto: EOF
 
 REM --- Create Particle Only Package(s) for different languages ---
 REM --- Parameters: %~1 = destination folder particle, %~2 = archive name, %~3 = yaml base path
@@ -267,4 +267,4 @@ echo off
 findstr /v /a:%1 /R "^$" "%~2" nul
 del "%~2" > nul 2>&1
 echo.
-goto :eof
+goto :EOF
