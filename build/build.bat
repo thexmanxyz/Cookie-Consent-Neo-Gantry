@@ -20,7 +20,7 @@ set langs_upper=EN, IT, DE
 set default_lang=EN
 
 set prj_id=ccn
-set prj_rev=v1.4.3
+set prj_rev=v1.4.4
 set prj_name=cookie-consent-neo
 set prj_fullname=Cookie Consent Neo - Atom
 
