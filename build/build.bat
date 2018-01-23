@@ -20,7 +20,7 @@ set langs_upper=EN, IT, DE
 set default_lang=EN
 
 set prj_id=ccn
-set prj_rev=v1.4.4
+set prj_rev=v1.4.5
 set prj_name=cookie-consent-neo
 set prj_fullname=Cookie Consent Neo - Atom
 
@@ -50,12 +50,10 @@ set folder_def=default
 set folder_leg=legacy
 set folder_js=js
 set folder_scss=scss
-set folder_jsfix=jsfix
 set folder_helium=%pkg_j3%_%pkg_helium%
 set folder_hydro=%pkg_j3%_%pkg_hydro%
 set folder_src_js=src\%folder_js%
 set folder_src_scss=src\%folder_scss%
-set folder_src_jsfix=src\%folder_jsfix%
 set folder_release_dest=%folder_root%\%folder_releases%\%prj_rev%
 
 REM --- Message Variables ---
@@ -128,7 +126,6 @@ REM --- Parameters: %~1 = destination folder particle, %~2 = archive name, %~3 =
 		(for %%e in (%file_ext%) do ( call :copy_particle_files "%%e" "!lang!" "%~3" "!folder_out!" ))
 		call :copy_include_sub_folder "%folder_src_js%" "%folder_js%"
 		call :copy_include_sub_folder "%folder_src_scss%" "%folder_scss%"
-		call :copy_include_sub_folder "%folder_src_jsfix%" "%folder_jsfix%"
 		call :create_archives "!package_name!" "!folder_out!" "1" "1"
 
 		IF %remove_folders% == 1 ( rmdir "!folder_out!" /S /Q )

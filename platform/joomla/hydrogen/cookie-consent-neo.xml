@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Cookie Consent Neo - Gantry Atom (Hydrogen)</name>
-    <version>1.4.4</version>
-    <creationDate>08.01.2018</creationDate>
+    <version>1.4.5</version>
+    <creationDate>23.01.2018</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
     <authorUrl></authorUrl>
@@ -18,6 +18,10 @@
         <files folder="particles" target="templates/g5_hydrogen/custom/particles">
 			<filename>cookie-consent-neo.html.twig</filename>
 			<filename>cookie-consent-neo.yaml</filename>
+		</files>
+        <files folder="js" target="templates/g5_hydrogen/custom/js">
+			<filename>cookieconsent.3.0.4.min.js</filename>
+			<filename>cookieconsent.3.0.4_mod.min.js</filename>
 		</files>
     </fileset>
 </extension>
