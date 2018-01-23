@@ -35,6 +35,7 @@ ___
 1. Download the **Default or Legacy Package** of the *Cookie Consent Neo Atom*. If you are using Gantry **<5.3.2** please use the **Legacy Package** for compatibility reasons.
 2. Extract the files.
 3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/[GANTRY_THEME]/custom/particles`. Please check the list below to determine where the template folder for your CMS is located.
+4. [Optional] Copy the `.js` file(s) to the folder `/[GANTRY_THEME]/custom/js`. Create it if it does not exist.
 
 ## CMS Template Folder
 Please be aware that the template folder path varies in dependence of the used CMS. Here is a list of the folders for the different platforms:
