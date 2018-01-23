@@ -53,7 +53,7 @@ Please be aware that the template folder path varies in dependence of the used C
 1. Go to your Gantry templating backend (e.g. Extensions/Templates).
 2. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
 3. Configure the appearance according to your favor.
-4. [Optional] The download package contains a modified version of the Cookie Consent JS file which fixes the timeout and scrolling bug described here [#170](https://github.com/insites/cookieconsent/issues/170). You can copy the file to your template folder and embed it over the particle backend configuration.
+4. [Optional] The download package contains a modified version of the Cookie Consent JS file which fixes the timeout and scrolling bug described here [#170](https://github.com/insites/cookieconsent/issues/170). You can copy the file to your template folder and embed it over the particle backend configuration (manual installation only).
 
 ## Supported API Parameters and Atom Options
 * Banner Message Text
