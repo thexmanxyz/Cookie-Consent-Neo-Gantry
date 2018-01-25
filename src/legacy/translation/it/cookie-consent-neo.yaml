@@ -12,7 +12,7 @@
 #######################################################
 
 name: Cookie Consent Neo
-description: Configure Cookie Consent Neo Atom.
+description: Configurazione Atomo Cookie Consent Neo.
 type: atom
 
 form:

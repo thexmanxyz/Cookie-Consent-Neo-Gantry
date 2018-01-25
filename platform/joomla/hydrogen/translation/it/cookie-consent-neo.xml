@@ -12,7 +12,7 @@
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
 		<h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
 		<span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-		<p><b>NOTA</b>:&nbsp;La atomo viene installata nel template Gantry Hydrogen.<br />Se si desidera installare su un template Gantry diverso, bisogna copiare manualmente i due file <code>cookie-consent-neo.yaml</code> e <code>cookie-consent-neo.html.twig</code> in <code>/templates/[NOME-TEMPLATE]/custom/particles</code>.</p></div>]]>
+		<p><b>NOTA</b>:&nbsp;La atomo viene installata nel template Gantry Hydrogen.<br />Se si desidera installare su un template Gantry diverso, bisogna copiare manualmente i due file <code>cookie-consent-neo.yaml</code> e <code>cookie-consent-neo.html.twig</code> in <code>/templates/[NOME-TEMPLATE]/custom/particles</code>.<br>I file Javascript sono opzionali.</p></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="templates/g5_hydrogen/custom/particles">
