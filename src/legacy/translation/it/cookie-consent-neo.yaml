@@ -415,7 +415,7 @@ form:
         css.path:
           type: input.text
           label: Percorso CSS
-          description: Percorso al file CSS della piattaforma Google o su questo server (relativo al template/custom) o su un server diverso (assoluto).
+          description: Percorso al file CSS di Cookie Consent o su questo server (relativo al template/custom) o su un server diverso (assoluto).
           placeholder: percorso/al/CSS
           default:
 
@@ -448,7 +448,7 @@ form:
         js.path:
           type: input.text
           label: Percorso JS
-          description: Percorso al file JS della piattaforma Google o su questo server (relativo al template/custom) o su un server diverso (assoluto).
+          description: Percorso al file JS di Cookie Consent o su questo server (relativo al template/custom) o su un server diverso (assoluto).
           placeholder: percorso/al/JS
           default:
 
