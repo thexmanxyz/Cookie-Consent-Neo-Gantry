@@ -24,7 +24,7 @@ form:
     enabled:
       type: input.checkbox
       label: Enabled
-      description: Globally enable the Cookie Consent Neo particle.
+      description: Globally enable the Cookie Consent Neo Atom.
       default: true
 
     tabs:

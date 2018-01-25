@@ -1,6 +1,6 @@
 #######################################################
 #                                                     #
-#   Cookie Consent Neo - Atom for Gantry            #
+#   Cookie Consent Neo - Atom for Gantry              #
 #                                                     #
 #   Purpose: This project adds the Cookie Consent     #
 #            Javascript API functionality to the      #
@@ -25,7 +25,7 @@ form:
     enabled:
       type: input.checkbox
       label: Abilitato
-      description: Abilita globalmente le particelle di Neo Consenso Cookie.
+      description: Abilita globalmente le Atomo di Neo Consenso Cookie.
       default: true
 
     tabs:
