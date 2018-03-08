@@ -60,6 +60,13 @@ form:
                   description: L'URL assegnato al link 'Ulteriori informazioni'.
                   placeholder: http://example.com/cookiepolicy
 
+                banner.learn_more.title:
+                  type: input.text
+                  label: Il title Ulteriori Informazioni
+                  description: L'title assegnato al link 'Ulteriori informazioni'.
+                  placeholder: Ulteriori informazioni sui cookie
+                  default: Ulteriori informazioni sui cookie
+
                 banner.learn_more.target:
                   type: select.select
                   label: Ulteriori informazioni Target

@@ -147,6 +147,7 @@
 {% endif %}
 
 {% set linkText = particle.banner.learn_more.text|default('Read more') %}
+{% set linkTitle = particle.banner.learn_more.title|default('Learn more about cookies') %}
 {% set linkTarget = particle.banner.learn_more.target|default('_blank') %}
 {% set linkHref = particle.banner.learn_more.link|default('https://cookiesandyou.com') %}
 {% set dismissText = particle.banner.dismiss.text|default('Got it!') %}
@@ -353,7 +354,8 @@
                     {%- set msgLink = '<span id="cookieconsent:desc" class="cc-message">' -%}
                     {%- set msgLink = msgLink ~ '{{message}}' -%}
                     {%- if particle.banner.learn_more.enabled -%}
-                        {%- set msgLink = msgLink ~ ' <a aria-label="learn more about cookies" tabindex="0" class="cc-link" href="' -%}
+                        {%- set relAttrb = (linkTarget == '_blank') ? relAttrb ~ 'noopener noreferrer ' : '' -%}
+                        {%- set msgLink = msgLink ~ ' <a aria-label="' ~ linkTitle ~ '" title="' ~ linkTitle ~ '" role=button tabindex="0" rel="' ~ relAttrb ~ 'nofollow" class="cc-link" href="' -%}
                         {%- set msgLink = msgLink ~ url(linkHref)|raw ~ '"' -%}
                         {%- if linkTarget != 'none' -%}
                             {%- set msgLink = msgLink ~ ' target="' ~ linkTarget ~ '"' -%}

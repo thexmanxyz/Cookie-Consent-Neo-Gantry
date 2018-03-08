@@ -59,6 +59,13 @@ form:
                   description: The URL assigned to the 'Learn more' link.
                   placeholder: http://example.com/cookiepolicy
 
+                banner.learn_more.title:
+                  type: input.text
+                  label: Learn More Title
+                  description: The title assigned to the 'Learn more' link.
+                  placeholder: Learn more about cookies
+                  default: Learn more about cookies
+
                 banner.learn_more.target:
                   type: select.select
                   label: Learn More Target

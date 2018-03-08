@@ -57,6 +57,13 @@ form:
           description: Die URL die dem 'Mehr darüber' link zugewiesen wird.
           placeholder: http://example.com/cookiepolicy
 
+        banner.learn_more.title:
+          type: input.text
+          label: Mehr darüber Title
+          description: Der Title der dem 'Mehr darüber' link zugewiesen wird.
+          placeholder: Lernen Sie mehr über Cookies
+          default: Lernen Sie mehr über Cookies
+
         banner.learn_more.target:
           type: select.select
           label: Mehr darüber Target
