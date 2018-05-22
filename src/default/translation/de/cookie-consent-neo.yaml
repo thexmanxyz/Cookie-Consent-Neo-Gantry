@@ -33,12 +33,6 @@ form:
         tab_labeling:
             label: Beschriftung
             fields:
-                banner.message:
-                  type: textarea.textarea
-                  label: Nachrichtentext
-                  description: Der Text der auf dem Banner angezeigt wird.
-                  placeholder: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
-                  default: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
 
                 banner.learn_more.enabled:
                   type: input.checkbox
@@ -46,25 +40,11 @@ form:
                   description: Aktiviert oder deaktiviert den 'Mehr darüber' Link.
                   default: 1
 
-                banner.learn_more.text:
-                  type: input.text
-                  label: Mehr darüber Text
-                  description: Der Text für den 'Mehr darüber' Link.
-                  placeholder: Mehr darüber
-                  default: Mehr darüber
-
                 banner.learn_more.link:
                   type: input.text
                   label: Mehr darüber Link
                   description: Die URL die dem 'Mehr darüber' link zugewiesen wird.
                   placeholder: http://example.com/cookiepolicy
-
-                banner.learn_more.title:
-                  type: input.text
-                  label: Mehr darüber Title
-                  description: Der Title der dem 'Mehr darüber' link zugewiesen wird.
-                  placeholder: Lernen Sie mehr über Cookies
-                  default: Lernen Sie mehr über Cookies
 
                 banner.learn_more.target:
                   type: select.select
@@ -79,20 +59,6 @@ form:
                       _parent: Parent
                       _top: Top
 
-                banner.dismiss.text:
-                  type: input.text
-                  label: Verwerfen Button Text
-                  description: Der Text für den Verwerfen Button.
-                  placeholder: Verstanden!
-                  default: Verstanden!
-
-                banner.opt.text:
-                  type: input.text
-                  label: Opt-in / Opt-out Text
-                  description: Der Text für entweder den Opt-in oder Opt-out Button, je nach Auswahl.
-                  placeholder: Erlaube Cookies / Ablehnen
-                  default:
-
                 banner.compliance:
                   type: select.select
                   label: Plugin Modus
@@ -104,12 +70,80 @@ form:
                       opt-in: Opt-in
                       opt-out: Opt-out
 
-                banner.revoke.text:
-                  type: input.text
-                  label: Widerruf Button Text
-                  description: Der Text für den Widerruf Button.
-                  placeholder: Cookie Policy
-                  default:
+                banner.labeling:
+                  type: collection.list
+                  array: true
+                  label: Banner Beschriftung
+                  description: Erzeugen Sie für jede Sprache ein neues Element, wenn Sie unterschiedliche Beschriftung benötigen.
+                  value: title
+                  ajax: true
+                  fields:
+                    .title:
+                      type: input.text
+                      description: Bezeichner für das Beschriftungselement.
+                      label: Title
+
+                    .lang_codes:
+                      type: collection.list
+                      array: true
+                      label: Sprachcode(s)
+                      description: Die Sprachcode(s) für die die Beschriftungseinstellungen gelten.
+                      value: title
+                      ajax: true
+                      fields:
+                        .title:
+                          type: input.text
+                          description: Bezeichner für das Sprachcode Element.
+                          label: Title
+
+                        .code:
+                          type: input.text
+                          label: Sprachcode
+                          description: Der Sprachcode für die Beschriftung.
+                          placeholder: en-GB
+                          default: en-GB
+
+                    .message:
+                      type: textarea.textarea
+                      label: Nachrichtentext
+                      description: Der Text der auf dem Banner angezeigt wird.
+                      placeholder: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
+                      default: Diese Website verwendet Cookies, um das bestmögliche Benutzererlebnis zu garantieren.
+
+                    .learn_more.text:
+                      type: input.text
+                      label: Mehr darüber Text
+                      description: Der Text für den 'Mehr darüber' Link.
+                      placeholder: Mehr darüber
+                      default: Mehr darüber
+
+                    .learn_more.title:
+                      type: input.text
+                      label: Mehr darüber Title
+                      description: Der Title der dem 'Mehr darüber' link zugewiesen wird.
+                      placeholder: Lernen Sie mehr über Cookies
+                      default: Lernen Sie mehr über Cookies
+
+                    .dismiss.text:
+                      type: input.text
+                      label: Verwerfen Button Text
+                      description: Der Text für den Verwerfen Button.
+                      placeholder: Verstanden!
+                      default: Verstanden!
+
+                    .opt.text:
+                      type: input.text
+                      label: Opt-in / Opt-out Text
+                      description: Der Text für entweder den Opt-in oder Opt-out Button, je nach Auswahl.
+                      placeholder: Erlaube Cookies / Ablehnen
+                      default:
+
+                    .revoke.text:
+                      type: input.text
+                      label: Widerruf Button Text
+                      description: Der Text für den Widerruf Button.
+                      placeholder: Cookie Policy
+                      default:
 
         tab_appearance:
             label: Aussehen

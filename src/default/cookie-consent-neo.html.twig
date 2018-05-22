@@ -12,12 +12,23 @@
 
 {% extends '@nucleus/partials/particle.html.twig' %}
 
-{% set bannerMsg = particle.banner.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
+{% set langCode = gantry.page.language %}
+{% set labeling = particle.banner.labeling|first %}
+
+{% for lItem in particle.banner.labeling %}
+    {% for cItem in lItem.lang_codes %}
+        {% if cItem.code == langCode or cItem.title == langCode %}
+            {% set labeling = lItem %}
+        {% endif%}
+    {% endfor %}
+{% endfor %}
+
+{% set bannerMsg = labeling.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
 {% set bannerStatic = false %}
 
 {% if particle.banner.compliance != 'info' and particle.banner.compliance is not empty %}
     {% set compType = particle.banner.compliance %}
-    {% set optText = particle.banner.opt.text %}
+    {% set optText = labeling.opt.text %}
 {% else %}
     {% set compType = '' %}
     {% set optText = '' %}
@@ -146,11 +157,11 @@
     {% endif %}
 {% endif %}
 
-{% set linkText = particle.banner.learn_more.text|default('Read more') %}
-{% set linkTitle = particle.banner.learn_more.title|default('Learn more about cookies') %}
+{% set linkText = labeling.learn_more.text|default('Read more') %}
+{% set linkTitle = labeling.learn_more.title|default('Learn more about cookies') %}
 {% set linkTarget = particle.banner.learn_more.target|default('_blank') %}
 {% set linkHref = particle.banner.learn_more.link|default('https://cookiesandyou.com') %}
-{% set dismissText = particle.banner.dismiss.text|default('Got it!') %}
+{% set dismissText = labeling.dismiss.text|default('Got it!') %}
 {% set apiVersion = particle.api.version|default("3.0.4") %}
 
 {% set scriptType = 'text/javascript' %}
@@ -264,8 +275,8 @@
                         animateRevokable: false,
                     {%- endif -%}
 
-                    {%- if particle.banner.revoke.text is not empty -%}
-                        {%- set revokeText = '<div class="cc-revoke {{classes}}">' ~ particle.banner.revoke.text ~ '</div>' -%}
+                    {%- if labeling.revoke.text is not empty -%}
+                        {%- set revokeText = '<div class="cc-revoke {{classes}}">' ~ labeling.revoke.text ~ '</div>' -%}
                         revokeBtn: "{{revokeText|e('js')}}",
                     {%- endif -%}
 
