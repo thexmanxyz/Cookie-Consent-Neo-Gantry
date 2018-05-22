@@ -99,11 +99,11 @@ Insight of the *Cookie Consent Neo - Gantry Atom* configuration:
 
 **Backend (1a)** - *[Labeling a)](/screenshots/backend_labeling_a.png)*
 
-![1](/screenshots/backend_labeling.png)
+![1](/screenshots/backend_labeling_a.png)
 
 **Backend (1b)** - *[Labeling b)](/screenshots/backend_labeling_b.png)*
 
-![1](/screenshots/backend_labeling.png)
+![1](/screenshots/backend_labeling_b.png)
 
 **Backend (2)** - *[Appearance](/screenshots/backend_appearance.png)*
 
