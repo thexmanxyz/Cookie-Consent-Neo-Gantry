@@ -10,18 +10,18 @@
     <license>MIT - see LICENSE.pdf</license>
     <description>
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-		<h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
-		<span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-		<p><b>NOTE</b>:&nbsp;This atom is installed for the Gantry Helium.<br />If you want to install the atom on a different Gantry template, you must manually copy the two files <code>cookie-consent-neo.yaml</code> and <code>cookie-consent-neo.html.twig</code> to <code>/templates/[TEMPLATE]/custom/particles</code>.<br>The Javascript files are optional.</p></div>]]>
+        <h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
+        <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
+        <p><b>NOTE</b>:&nbsp;This atom is installed for the Gantry Helium.<br />If you want to install the atom on a different Gantry template, you must manually copy the two files <code>cookie-consent-neo.yaml</code> and <code>cookie-consent-neo.html.twig</code> to <code>/templates/[TEMPLATE]/custom/particles</code>.<br>The Javascript files are optional.</p></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="templates/g5_helium/custom/particles">
-			<filename>cookie-consent-neo.html.twig</filename>
-			<filename>cookie-consent-neo.yaml</filename>
-		</files>
-	    <files folder="js" target="templates/g5_helium/custom/js">
-			<filename>cookieconsent.3.0.4.min.js</filename>
-			<filename>cookieconsent.3.0.4_mod.min.js</filename>
-		</files>
+            <filename>cookie-consent-neo.html.twig</filename>
+            <filename>cookie-consent-neo.yaml</filename>
+        </files>
+        <files folder="js" target="templates/g5_helium/custom/js">
+            <filename>cookieconsent.3.0.4.min.js</filename>
+            <filename>cookieconsent.3.0.4_mod.min.js</filename>
+        </files>
     </fileset>
 </extension>
