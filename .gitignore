@@ -20,3 +20,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# ignore all base build file
+base-build.bat
