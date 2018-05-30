@@ -103,41 +103,41 @@ Insight of the *Cookie Consent Neo - Gantry Atom* configuration:
 
 **Backend (1b)** - *[Labeling b)](/screenshots/backend_labeling_b.png)*
 
-![1](/screenshots/backend_labeling_b.png)
+![2](/screenshots/backend_labeling_b.png)
 
 **Backend (2)** - *[Appearance](/screenshots/backend_appearance.png)*
 
-![2](/screenshots/backend_appearance.png)
+![3](/screenshots/backend_appearance.png)
 
 **Backend (3)** - *[Behaviour](/screenshots/backend_behaviour.png)*
 
-![3](/screenshots/backend_behaviour.png)
+![4](/screenshots/backend_behaviour.png)
 
 **Backend (4)** - *[Cookie](/screenshots/backend_cookie.png)*
 
-![4](/screenshots/backend_cookie.png)
+![5](/screenshots/backend_cookie.png)
 
 **Backend (5)** - *[Location](/screenshots/backend_location.png)*
 
-![5](/screenshots/backend_location.png)
+![6](/screenshots/backend_location.png)
 
 **Backend (6)** - *[API](/screenshots/backend_api.png)*
 
-![6](/screenshots/backend_api.png)
+![7](/screenshots/backend_api.png)
 
 Examples for some of the different Cookie Consent layouts and styles:
 
 **Frontend (1)** - *[Floating](/screenshots/frontend_1.png)*
 
-![7](/screenshots/frontend_1.png)
+![8](/screenshots/frontend_1.png)
 
 **Frontend (2)** - *[Wire](/screenshots/frontend_2.png)*
 
-![8](/screenshots/frontend_2.png)
+![9](/screenshots/frontend_2.png)
 
 **Frontend (3)** - *[Banner](/screenshots/frontend_3.png)*
 
-![9](/screenshots/frontend_3.png)
+![10](/screenshots/frontend_3.png)
 
 ## Future Tasks
 * better coverage of the Cookie Consent API parameters
