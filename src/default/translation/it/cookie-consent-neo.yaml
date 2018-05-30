@@ -12,7 +12,7 @@
 #######################################################
 
 name: Cookie Consent Neo
-description: Configurazione Atomo Cookie Consent Neo.
+description: Rendering di un banner Cookie Consent.
 type: atom
 
 form:
