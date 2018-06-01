@@ -454,19 +454,20 @@ form:
                 css.option:
                   type: select.select
                   label: localizzazione file CSS
-                  description: Selezionare un'opzione per il file CSS personalizzato, invece della posizione CDN predefinita.
+                  description: Selezionare un'opzione per il file CSS personalizzato, invece della posizione CDN predefinita. Locale = 'templates/G_TEMPLATE/custom/css', Global = 'media/gantry5/engines/nucleus/css', Custome = ogni percorso relativo o assoluto
                   default: disabled
                   options:
                       disabled: Disabile (CDN)
-                      local: Locale
-                      remote: Remote
+                      local: Locale (Template)
+                      global: Global (Gantry)
+                      custom: Costume
 
                 css.path:
                   type: input.text
                   label: Percorso CSS
                   description: Percorso al file CSS di Cookie Consent o su questo server (relativo al template/custom) o su un server diverso (assoluto).
                   placeholder: percorso/al/CSS
-                  default:
+                  default: cookieconsent.3.0.6.min.css
 
                 js.placement:
                   type: select.select
@@ -487,19 +488,20 @@ form:
                 js.option:
                   type: select.select
                   label: localizzazione file JS
-                  description: Selezionare un'opzione per il file JS personalizzato, invece della posizione CDN predefinita.
+                  description: Selezionare un'opzione per il file JS personalizzato, invece della posizione CDN predefinita. Locale = 'templates/G_TEMPLATE/custom/js', Global = 'media/gantry5/engines/nucleus/js', Custome = ogni percorso relativo o assoluto
                   default: disabled
                   options:
                       disabled: Disabile (CDN)
-                      local: Locale
-                      remote: Remote
+                      local: Locale (Template)
+                      global: Global (Gantry)
+                      custom: Costume
 
                 js.path:
                   type: input.text
                   label: Percorso JS
                   description: Percorso al file JS di Cookie Consent o su questo server (relativo al template/custom) o su un server diverso (assoluto).
                   placeholder: percorso/al/JS
-                  default:
+                  default: cookieconsent.3.0.6_mod.min.js
 
                 js.execution:
                   type: select.select

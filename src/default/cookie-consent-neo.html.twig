@@ -195,29 +195,9 @@
     {% set jsExec = ' ' ~ jsExec %}
 {% endif %}
 
-{% if particle.js.option == 'local' and particle.js.path is not empty %}
-    {% set hPath = particle.js.path %}
-    {% if hPath is not empty and hPath|slice(0, 1)|lower == '/' %}
-        {% set hPath = hPath|slice(1, (hPath|length - 1)) %}
-    {% endif %}
-    {% set jsPath = 'gantry-theme://' ~ hPath %}
-{% elseif particle.js.option == 'remote' and particle.js.path is not empty %}
-    {% set jsPath = particle.js.path %}
-{% else %}
-    {% set jsPath = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' ~ apiVersion ~ '/cookieconsent.min.js' %}
-{% endif %}
-
-{% if particle.css.option == 'local' and particle.css.path is not empty %}
-    {% set hPath = particle.css.path %}
-    {% if hPath is not empty and hPath|slice(0, 1)|lower == '/' %}
-        {% set hPath = hPath|slice(1, (hPath|length - 1)) %}
-    {% endif %}
-    {% set cssPath = 'gantry-theme://' ~ hPath %}
-{% elseif particle.css.option == 'remote' and particle.css.path is not empty %}
-    {% set cssPath = particle.css.path %}
-{% else %}
-    {% set cssPath = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/' ~ apiVersion ~ '/cookieconsent.min.css' %}
-{% endif %}
+{% set cdnRepo = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2' %}
+{% set jsPath = _self.getResourceFilePath(particle.js, cdnRepo, 'cookieconsent.min.js', 'js') %}
+{% set cssPath = _self.getResourceFilePath(particle.css, cdnRepo, 'cookieconsent.min.css', 'css') %}
 
 {%- block particle -%}
     {%- styles with { priority: cssPrior } -%}
@@ -413,4 +393,28 @@
     {%- endfor -%}
     {%- set arrStr = arrStr|slice(0,arrStr|length-1) ~ "]" -%}
     {{- arrStr|raw -}}
+{%- endmacro -%}
+
+{%- macro getResourceFilePath(element, cdnUrl, cdnFile, type) -%}
+    {%- set path = empty -%}
+    {%- if element.path is not empty -%}
+        {%- if element.option == 'local' or element.option == 'global' -%}
+            {%- set hPath = element.path -%}
+            {%- if hPath is not empty and hPath|slice(0, 1)|lower == '/' -%}
+                {%- set hPath = hPath|slice(1, (hPath|length - 1)) -%}
+            {%- endif -%}
+            {%- set hPath = type ~ '/' ~ hPath -%}
+            {%- if element.option == 'local' -%}
+                {%- set path = 'gantry-theme://' ~ hPath -%}
+            {%- else -%}
+                {%- set path = 'media/gantry5/engines/nucleus/' ~ hPath -%}
+            {%- endif -%}
+        {%- elseif element.option == 'custom' -%}
+            {%- set path = element.path -%}
+        {%- endif -%}
+    {%- endif -%}
+    {%- if path is empty -%}
+        {%- set path = cdnUrl ~ '/' ~ apiVersion ~ '/' ~ cdnFile -%}
+    {%- endif -%}
+    {{- path|raw -}}
 {%- endmacro -%}

@@ -453,19 +453,20 @@ form:
                 css.option:
                   type: select.select
                   label: CSS File Location
-                  description: Select an option for the custom CSS file, instead of the default CDN location.
+                  description: Select an option for the custom CSS file, instead of the default CDN location. Local = 'templates/G_TEMPLATE/custom/css', Global = 'media/gantry5/engines/nucleus/css', Custom = any relative or absolute path
                   default: disabled
                   options:
                       disabled: Disabled (CDN)
-                      local: Local
-                      remote: Remote
+                      local: Local (Template)
+                      global: Global (Gantry)
+                      custom: Custom
 
                 css.path:
                   type: input.text
                   label: CSS Path
                   description: Path to the Cookie Consent CSS file either on this server (relative from template/custom) or on a different server (absolute).
                   placeholder: path/to/CSS
-                  default:
+                  default: cookieconsent.3.0.6.min.css
 
                 js.placement:
                   type: select.select
@@ -486,19 +487,20 @@ form:
                 js.option:
                   type: select.select
                   label: JS File Location
-                  description: Select an option for the custom JS file, instead of the default CDN location.
+                  description: Select an option for the custom JS file, instead of the default CDN location. Local = 'templates/G_TEMPLATE/custom/js', Global = 'media/gantry5/engines/nucleus/js', Custom = any relative or absolute path
                   default: disabled
                   options:
                       disabled: Disabled (CDN)
-                      local: Local
-                      remote: Remote
+                      local: Local (Template)
+                      global: Global (Gantry)
+                      custom: Custom
 
                 js.path:
                   type: input.text
                   label: JS Path
                   description: Path to the Cookie Consent JS file either on this server (relative from template/custom) or on a different server (absolute).
                   placeholder: path/to/JS
-                  default:
+                  default: cookieconsent.3.0.6_mod.min.js
 
                 js.execution:
                   type: select.select

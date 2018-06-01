@@ -453,19 +453,20 @@ form:
                 css.option:
                   type: select.select
                   label: CSS Datei Standort
-                  description: Wählen Sie eine Option für die benutzerdefinierte CSS Datei, statt dem standardmäßigen CDN.
+                  description: Wählen Sie eine Option für die benutzerdefinierte CSS Datei, statt dem standardmäßigen CDN. Lokal = 'templates/G_TEMPLATE/custom/css', Global = 'media/gantry5/engines/nucleus/css', Benutzerdefiniert = jeder relative oder absolute Pfad
                   default: disabled
                   options:
                       disabled: Deaktiviert (CDN)
-                      local: Lokal
-                      remote: Remote
+                      local: Lokal (Template)
+                      global: Global (Gantry)
+                      custom: Benutzerdefiniert
 
                 css.path:
                   type: input.text
                   label: CSS Pfad
                   description: Pfad zur Cookie Consent CSS Datei auf diesem Server (relativ zu template/custom) oder auf einem anderen Server (absolut).
                   placeholder: Pfad/zum/CSS
-                  default:
+                  default: cookieconsent.3.0.6.min.css
 
                 js.placement:
                   type: select.select
@@ -486,19 +487,20 @@ form:
                 js.option:
                   type: select.select
                   label: JS Datei Standort
-                  description: Wählen Sie eine Option für die benutzerdefinierte JS Datei, statt dem standardmäßigen CDN.
+                  description: Wählen Sie eine Option für die benutzerdefinierte JS Datei, statt dem standardmäßigen CDN. Lokal = 'templates/G_TEMPLATE/custom/js', Global = 'media/gantry5/engines/nucleus/js', Benutzerdefiniert = jeder relative oder absolute Pfad
                   default: disabled
                   options:
                       disabled: Deaktiviert (CDN)
-                      local: Lokal
-                      remote: Remote
+                      local: Lokal (Template)
+                      global: Global (Gantry)
+                      custom: Benutzerdefiniert
 
                 js.path:
                   type: input.text
                   label: JS Pfad
                   description: Pfad zur Cookie Consent JS Datei auf diesem Server (relativ zu template/custom) oder auf einem anderen Server (absolut).
                   placeholder: Pfad/zum/JS
-                  default:
+                  default: cookieconsent.3.0.6_mod.min.js
 
                 js.execution:
                   type: select.select
