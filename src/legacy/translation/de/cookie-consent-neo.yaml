@@ -188,8 +188,8 @@ form:
 
         banner.palette:
           type: select.select
-          label: Banner Farbpalette
-          description: Die Farbpalette des Banners und der darauf platzierten Elemente.
+          label: Banner Farbkombination
+          description: Die Farbkombination des Banners und der darauf platzierten Elemente.
           placeholder: 'Select...'
           default: p1
           options:

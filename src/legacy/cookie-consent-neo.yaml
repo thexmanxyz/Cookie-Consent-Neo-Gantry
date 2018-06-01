@@ -187,8 +187,8 @@ form:
 
         banner.palette:
           type: select.select
-          label: Banner Palette
-          description: The palette for the banner and its contained elements.
+          label: Banner Preset
+          description: The preset for the banner and its contained elements.
           placeholder: 'Select...'
           default: p1
           options:
