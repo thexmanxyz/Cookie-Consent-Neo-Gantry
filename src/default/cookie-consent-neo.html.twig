@@ -13,15 +13,22 @@
 {% extends '@nucleus/partials/particle.html.twig' %}
 
 {% set langCode = gantry.page.language %}
-{% set labeling = particle.banner.labeling|first %}
+{% set labeling = empty %}
 
 {% for lItem in particle.banner.labeling %}
+    {% if lItem.main == 1 and labeling is empty %}
+        {% set labeling = lItem %}
+    {% endif %}
     {% for cItem in lItem.lang_codes %}
         {% if cItem.code == langCode or cItem.title == langCode or cItem.code|lower == langCode|lower or cItem.title|lower == langCode|lower %}
             {% set labeling = lItem %}
         {% endif%}
     {% endfor %}
 {% endfor %}
+
+{% if labeling is empty %}
+    {% set labeling = particle.banner.labeling|first %}
+{% endif %}
 
 {% set bannerMsg = labeling.message|default('This website uses cookies to ensure you get the best experience on our website.') %}
 {% set bannerStatic = false %}

@@ -87,6 +87,12 @@ form:
               description: Bezeichner für das Beschriftungselement.
               label: Title
 
+            .main:
+              type: input.checkbox
+              label: Standard
+              description: Aktivieren Sie diese Option, um die gewählte Sprache als Standardsprache (Fallback) zu setzen. Ansonsten wird die erste Sprache aus der Liste verwendet.
+              default: 0
+
             .lang_codes:
               type: collection.list
               array: true

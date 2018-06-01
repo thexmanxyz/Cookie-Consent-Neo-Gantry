@@ -87,6 +87,12 @@ form:
               description: Nome della voce della lista didascalia.
               label: Title
 
+            .main:
+              type: input.checkbox
+              label: Predefinito
+              description: Abilita se questa dovrebbe essere la lingua di fallback predefinita. Altrimenti verrà selezionata la prima lingua.
+              default: 0
+
             .lang_codes:
               type: collection.list
               array: true

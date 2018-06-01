@@ -88,6 +88,12 @@ form:
                       description: Name of the label item.
                       label: Title
 
+                    .main:
+                      type: input.checkbox
+                      label: Default
+                      description: Enable if this should be the default fallback language. Otherwise the first language will be selected.
+                      default: 0
+
                     .lang_codes:
                       type: collection.list
                       array: true
