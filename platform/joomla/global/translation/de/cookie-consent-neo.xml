@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
-    <name>Cookie Consent Neo - Gantry Atom (Helium)</name>
+    <name>Cookie Consent Neo - Gantry Atom (Global)</name>
     <version>1.5.1</version>
     <creationDate>01.06.2018</creationDate>
     <author>Andreas Kar</author>
@@ -12,19 +12,19 @@
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
         <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-        <p><b>NOTA</b>:&nbsp;La atomo viene installata per Gantry Helium.<br />Se si desidera installare su un template Gantry diverso, bisogna posizionare i file come segue.</p>
+        <p><b>INFO</b>:&nbsp;Dieses Atom wurde für Gantry installiert.<br />Wenn Sie das Atom für ein anderes Gantry Template installieren möchten, dann müssen die Dateien wie folgt platziert werden:</p>
 		<ul><li><code>*.yaml</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.twig</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.js</code> =&gt; <code>/templates/[TEMPLATE]/custom/js</code></li><li><code>*.css</code> =&gt; <code>/templates/[TEMPLATE]/custom/css</code></li></ul></div>]]>
     </description>
     <fileset>
-        <files folder="particles" target="templates/g5_helium/custom/particles">
+        <files folder="particles" target="media/gantry5/engines/nucleus/particles">
             <filename>cookie-consent-neo.html.twig</filename>
             <filename>cookie-consent-neo.yaml</filename>
         </files>
-        <files folder="js" target="templates/g5_helium/custom/js">
+        <files folder="js" target="media/gantry5/engines/nucleus/js">
             <filename>cookieconsent.3.0.6.min.js</filename>
             <filename>cookieconsent.3.0.6_mod.min.js</filename>
         </files>
-        <files folder="css" target="templates/g5_helium/custom/css">
+        <files folder="css" target="media/gantry5/engines/nucleus/css">
             <filename>cookieconsent.3.0.6.min.css</filename>
         </files>
     </fileset>
