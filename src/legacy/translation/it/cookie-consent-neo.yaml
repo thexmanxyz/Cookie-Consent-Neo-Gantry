@@ -69,6 +69,11 @@ form:
               opt-in: Opt-in
               opt-out: Opt-out
 
+        banner.info:
+          type: separator.note
+          class: alert alert-info
+          content: Per favore aggiungi un oggetto. Se vuoi cambiare la lingua o il testo.
+
         banner.labeling:
           type: collection.list
           array: true
@@ -248,7 +253,7 @@ form:
         banner.revokable.enabled:
           type: input.checkbox
           label: Revocabile
-          description: Se selezionata, il pulsante di revoca viene visualizzato ogni volta. 
+          description: Se selezionata, il pulsante di revoca viene visualizzato ogni volta. Rotto in CC API 3.0.3 - 3.0.6 (#170).
           default: 0
 
         banner.revokable.animate:
@@ -260,14 +265,14 @@ form:
         banner.on_scroll.dismiss:
           type: input.text
           label: Rifiuta su Scorrimento
-          description: Valore del campo di scorrimento, 'falso' o vuoto per disabilitare. Rotto in CC API 3.0.3 e 3.0.4 (#170).
+          description: Valore del campo di scorrimento, 'falso' o vuoto per disabilitare. Rotto in CC API 3.0.3 - 3.0.6 (#170).
           placeholder: boolean, empty or value
           default: false
 
         banner.timeout.dismiss:
           type: input.text
           label: Rifiuto sul timeout
-          description: Valore del tempo in millisecondi per il termine di chiusura automatica. 'false' o vuoto per disabilitare. Rotto in CC API 3.0.3 e 3.0.4 (#170).
+          description: Valore del tempo in millisecondi per il termine di chiusura automatica. 'false' o vuoto per disabilitare. Rotto in CC API 3.0.3 - 3.0.6 (#170).
           placeholder: boolean, empty or value
           default: false
 
@@ -433,8 +438,8 @@ form:
           type: input.text
           label: Versione Cookie Consent
           description: Versione Cookie Consent (solo per CDN).
-          placeholder: 3.0.4
-          default: 3.0.4
+          placeholder: 3.0.6
+          default: 3.0.6
 
         css.priority:
           type: input.text
@@ -445,11 +450,11 @@ form:
 
         css.option:
           type: select.select
-          label: Opzione file CSS
+          label: localizzazione file CSS
           description: Selezionare un'opzione per il file CSS personalizzato, invece della posizione CDN predefinita.
           default: disabled
           options:
-              disabled: Disabile
+              disabled: Disabile (CDN)
               local: Locale
               remote: Remote
 
@@ -478,7 +483,7 @@ form:
 
         js.option:
           type: select.select
-          label: Opzione file JS
+          label: localizzazione file JS
           description: Selezionare un'opzione per il file JS personalizzato, invece della posizione CDN predefinita.
           default: disabled
           options:

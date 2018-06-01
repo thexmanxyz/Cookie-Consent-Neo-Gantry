@@ -70,6 +70,11 @@ form:
                       opt-in: Opt-in
                       opt-out: Opt-out
 
+                banner.info:
+                  type: separator.note
+                  class: alert alert-info
+                  content: Please add an element if you want to change the banner labeling or the language.
+
                 banner.labeling:
                   type: collection.list
                   array: true
@@ -247,7 +252,7 @@ form:
                 banner.revokable.enabled:
                   type: input.checkbox
                   label: Revokable
-                  description: If checked, revoke button is displayed every time. 
+                  description: If checked, revoke button is displayed every time. Broken in CC API 3.0.3 - 3.0.6 (#177).
                   default: 0
 
                 banner.revokable.animate:
@@ -259,14 +264,14 @@ form:
                 banner.on_scroll.dismiss:
                   type: input.text
                   label: Dismiss on Scroll
-                  description: Value for scroll range, 'false' or empty to disable. Broken in CC API 3.0.3 and 3.0.4 (#170).
+                  description: Value for scroll range, 'false' or empty to disable. Broken in CC API 3.0.3 - 3.0.6 (#170).
                   placeholder: boolean, empty or value
                   default: false
 
                 banner.timeout.dismiss:
                   type: input.text
                   label: Dismiss on Timeout
-                  description: Time value in milliseconds to auto dismiss. 'false' or empty to disable. Broken in CC API 3.0.3 and 3.0.4 (#170).
+                  description: Time value in milliseconds to auto dismiss. 'false' or empty to disable. Broken in CC API 3.0.3 - 3.0.6 (#170).
                   placeholder: boolean, empty or value
                   default: false
 
@@ -429,8 +434,8 @@ form:
                   type: input.text
                   label: Cookie Consent Version
                   description: The Cookie Consent Version (only for CDN).
-                  placeholder: 3.0.4
-                  default: 3.0.4
+                  placeholder: 3.0.6
+                  default: 3.0.6
 
                 css.priority:
                   type: input.text
@@ -441,11 +446,11 @@ form:
 
                 css.option:
                   type: select.select
-                  label: CSS File Option
+                  label: CSS File Location
                   description: Select an option for the custom CSS file, instead of the default CDN location.
                   default: disabled
                   options:
-                      disabled: Disabled
+                      disabled: Disabled (CDN)
                       local: Local
                       remote: Remote
 
@@ -474,11 +479,11 @@ form:
 
                 js.option:
                   type: select.select
-                  label: JS File Option
+                  label: JS File Location
                   description: Select an option for the custom JS file, instead of the default CDN location.
                   default: disabled
                   options:
-                      disabled: Disabled
+                      disabled: Disabled (CDN)
                       local: Local
                       remote: Remote
 

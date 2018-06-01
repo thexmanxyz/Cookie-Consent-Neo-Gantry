@@ -70,6 +70,11 @@ form:
                       opt-in: Opt-in
                       opt-out: Opt-out
 
+                banner.info:
+                  type: separator.note
+                  class: alert alert-info
+                  content: Wenn Sie die Beschriftungen oder die Sprache ändern wollen, dann fügen Sie bitte zumindest ein Element hinzu.
+
                 banner.labeling:
                   type: collection.list
                   array: true
@@ -247,7 +252,7 @@ form:
                 banner.revokable.enabled:
                   type: input.checkbox
                   label: Widerruf
-                  description: Wenn ausgewählt, wird der Widerruf Button jedes mal angezeigt. 
+                  description: Wenn ausgewählt, wird der Widerruf Button jedes mal angezeigt. Fehlerhaft in CC API 3.0.3 - 3.0.6 (#177).
                   default: 0
 
                 banner.revokable.animate:
@@ -259,14 +264,14 @@ form:
                 banner.on_scroll.dismiss:
                   type: input.text
                   label: Beim Scrollen schließen
-                  description: Wert für die Scrolldistanz und das automatische Schließen, 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 und 3.0.4 (#170).
+                  description: Wert für die Scrolldistanz und das automatische Schließen, 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 - 3.0.6 (#170).
                   placeholder: boolean, leer oder Wert
                   default: false
 
                 banner.timeout.dismiss:
                   type: input.text
                   label: Nach Timeout schließen
-                  description: Zeitwert in Millisekunden für das automatische Schließen. 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 und 3.0.4 (#170).
+                  description: Zeitwert in Millisekunden für das automatische Schließen. 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 - 3.0.6 (#170).
                   placeholder: boolean, leer oder Wert
                   default: false
 
@@ -429,8 +434,8 @@ form:
                   type: input.text
                   label: Cookie Consent Version
                   description: Die Cookie Consent Version (nur für CDN).
-                  placeholder: 3.0.4
-                  default: 3.0.4
+                  placeholder: 3.0.6
+                  default: 3.0.6
 
                 css.priority:
                   type: input.text
@@ -441,11 +446,11 @@ form:
 
                 css.option:
                   type: select.select
-                  label: CSS Datei Optionen
+                  label: CSS Datei Standort
                   description: Wählen Sie eine Option für die benutzerdefinierte CSS Datei, statt dem standardmäßigen CDN.
                   default: disabled
                   options:
-                      disabled: Deaktiviert
+                      disabled: Deaktiviert (CDN)
                       local: Lokal
                       remote: Remote
 
@@ -474,11 +479,11 @@ form:
 
                 js.option:
                   type: select.select
-                  label: JS Datei Optionen
+                  label: JS Datei Standort
                   description: Wählen Sie eine Option für die benutzerdefinierte JS Datei, statt dem standardmäßigen CDN.
                   default: disabled
                   options:
-                      disabled: Deaktiviert
+                      disabled: Deaktiviert (CDN)
                       local: Lokal
                       remote: Remote
 

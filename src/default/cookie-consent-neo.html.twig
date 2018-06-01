@@ -17,7 +17,7 @@
 
 {% for lItem in particle.banner.labeling %}
     {% for cItem in lItem.lang_codes %}
-        {% if cItem.code == langCode or cItem.title == langCode %}
+        {% if cItem.code == langCode or cItem.title == langCode or cItem.code|lower == langCode|lower or cItem.title|lower == langCode|lower %}
             {% set labeling = lItem %}
         {% endif%}
     {% endfor %}
@@ -28,7 +28,7 @@
 
 {% if particle.banner.compliance != 'info' and particle.banner.compliance is not empty %}
     {% set compType = particle.banner.compliance %}
-    {% set optText = labeling.opt.text %}
+    {% set optText = labeling.opt.text|default('Allow Cookies / Decline') %}
 {% else %}
     {% set compType = '' %}
     {% set optText = '' %}
@@ -162,7 +162,7 @@
 {% set linkTarget = particle.banner.learn_more.target|default('_blank') %}
 {% set linkHref = particle.banner.learn_more.link|default('https://cookiesandyou.com') %}
 {% set dismissText = labeling.dismiss.text|default('Got it!') %}
-{% set apiVersion = particle.api.version|default("3.0.4") %}
+{% set apiVersion = particle.api.version|default("3.0.6") %}
 
 {% set scriptType = 'text/javascript' %}
 {% set styleType = 'text/css' %}
