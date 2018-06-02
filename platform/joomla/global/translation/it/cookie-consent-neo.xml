@@ -12,7 +12,7 @@
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
         <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-        <p><b>NOTA</b>:&nbsp;La atomo viene installata per Gantry.<br />Se si desidera installare su un template Gantry diverso, bisogna posizionare i file come segue.</p>
+        <p><b>NOTA</b>:&nbsp;La atomo viene installata per Gantry.<br />Se si desidera installare su un template Gantry diverso, bisogna posizionare i file come segue:</p>
 		<ul><li><code>*.yaml</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.twig</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.js</code> =&gt; <code>/templates/[TEMPLATE]/custom/js</code></li><li><code>*.css</code> =&gt; <code>/templates/[TEMPLATE]/custom/css</code></li></ul></div>]]>
     </description>
     <fileset>
