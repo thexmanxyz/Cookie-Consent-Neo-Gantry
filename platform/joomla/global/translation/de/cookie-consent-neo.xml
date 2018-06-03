@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Cookie Consent Neo - Gantry Atom (Global)</name>
-    <version>1.5.1</version>
-    <creationDate>01.06.2018</creationDate>
+    <version>1.5.2</version>
+    <creationDate>03.06.2018</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
     <authorUrl></authorUrl>
