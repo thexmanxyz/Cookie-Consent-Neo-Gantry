@@ -169,7 +169,7 @@
 {% set linkTarget = particle.banner.learn_more.target|default('_blank') %}
 {% set linkHref = particle.banner.learn_more.link|default('https://cookiesandyou.com') %}
 {% set dismissText = labeling.dismiss.text|default('Got it!') %}
-{% set apiVersion = particle.api.version|default("3.0.6") %}
+{% set apiRev = particle.api.version|default("3.0.6") %}
 
 {% set scriptType = 'text/javascript' %}
 {% set styleType = 'text/css' %}
@@ -178,26 +178,29 @@
 {% set jsPrior = particle.js.priority|default(0) %}
 {% set cssPrior = particle.css.priority|default(0) %}
 
-{% set jsExec = '' %}
-{% if particle.js.execution == 'defer' or particle.js.execution == 'both' %}
-    {% set jsExec = 'defer="defer"' %}
+{% set jsExec = particle.js.execution|default("both") %}
+{% set jsExecAttr = '' %}
+{% if jsExec == 'defer' or jsExec == 'both' %}
+    {% set jsExecAttr = 'defer="defer"' %}
 {% endif %}
 
-{% if particle.js.execution == 'both' %}
-    {% set jsExec = jsExec ~ ' ' %}
+{% if jsExec == 'both' %}
+    {% set jsExecAttr = jsExecAttr ~ ' ' %}
 {% endif %}
 
-{% if particle.js.execution == 'async' or particle.js.execution == 'both' %}
-    {% set jsExec = jsExec ~ 'async="async"' %}
+{% if jsExec == 'async' or jsExec == 'both' %}
+    {% set jsExecAttr = jsExecAttr ~ 'async="async"' %}
 {% endif %}
 
-{% if jsExec is not empty %}
-    {% set jsExec = ' ' ~ jsExec %}
+{% if jsExecAttr is not empty %}
+    {% set jsExecAttr = ' ' ~ jsExecAttr %}
 {% endif %}
 
 {% set cdnRepo = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2' %}
-{% set jsPath = _self.getResourceFilePath(particle.js, cdnRepo, 'cookieconsent.min.js', 'js') %}
-{% set cssPath = _self.getResourceFilePath(particle.css, cdnRepo, 'cookieconsent.min.css', 'css') %}
+{% set jsPath = _self.getResourceFilePath(particle.js, cdnRepo, apiRev, 
+    'cookieconsent.min', 'cookieconsent.3.0.6_mod.min', 'js') %}
+{% set cssPath = _self.getResourceFilePath(particle.css, cdnRepo, apiRev, 
+    'cookieconsent.min', 'cookieconsent.3.0.6.min', 'css') %}
 
 {%- block particle -%}
     {%- styles with { priority: cssPrior } -%}
@@ -205,7 +208,7 @@
     {%- endstyles -%}
 
     {%- scripts in jsPlace with { priority: jsPrior } -%}
-        <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExec}}></script>
+        <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExecAttr}}></script>
         <script>
             window.addEventListener("load", function(){
                 window.cookieconsent.initialise({
@@ -395,26 +398,26 @@
     {{- arrStr|raw -}}
 {%- endmacro -%}
 
-{%- macro getResourceFilePath(element, cdnUrl, cdnFile, type) -%}
+{%- macro getResourceFilePath(element, cdnUrl, api, cdnFile, locFile, type) -%}
+    {%- set elPath = element.path|default(locFile ~ "." ~ type) -%}
+    {%- set elOpt = element.option|default("disabled") -%}
     {%- set path = empty -%}
-    {%- if element.path is not empty -%}
-        {%- if element.option == 'local' or element.option == 'global' -%}
-            {%- set hPath = element.path -%}
-            {%- if hPath is not empty and hPath|slice(0, 1)|lower == '/' -%}
-                {%- set hPath = hPath|slice(1, (hPath|length - 1)) -%}
-            {%- endif -%}
-            {%- set hPath = type ~ '/' ~ hPath -%}
-            {%- if element.option == 'local' -%}
-                {%- set path = 'gantry-theme://' ~ hPath -%}
-            {%- else -%}
-                {%- set path = 'media/gantry5/engines/nucleus/' ~ hPath -%}
-            {%- endif -%}
-        {%- elseif element.option == 'custom' -%}
-            {%- set path = element.path -%}
+    {%- if elOpt == 'local' or elOpt == 'global' -%}
+        {%- set hPath = elPath -%}
+        {%- if hPath is not empty and hPath|slice(0, 1)|lower == '/' -%}
+            {%- set hPath = hPath|slice(1, (hPath|length - 1)) -%}
         {%- endif -%}
+        {%- set hPath = type ~ '/' ~ hPath -%}
+        {%- if elOpt == 'local' -%}
+            {%- set path = 'gantry-theme://' ~ hPath -%}
+        {%- else -%}
+            {%- set path = 'media/gantry5/engines/nucleus/' ~ hPath -%}
+        {%- endif -%}
+    {%- elseif elOpt == 'custom' -%}
+        {%- set path = elPath -%}
     {%- endif -%}
     {%- if path is empty -%}
-        {%- set path = cdnUrl ~ '/' ~ apiVersion ~ '/' ~ cdnFile -%}
+        {%- set path = cdnUrl ~ '/' ~ api ~ '/' ~ cdnFile ~ "." ~ type -%}
     {%- endif -%}
     {{- path|raw -}}
 {%- endmacro -%}

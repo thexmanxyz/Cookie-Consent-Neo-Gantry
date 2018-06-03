@@ -507,7 +507,7 @@ form:
                   label: JS Execution
                   description: The used execution method for the loaded JS.
                   placeholder: 'Select...'
-                  default: none
+                  default: both
                   options:
                       none: None
                       async: Asynchronous

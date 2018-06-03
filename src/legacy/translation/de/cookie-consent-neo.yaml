@@ -511,7 +511,7 @@ form:
           label: JS Ausführung
           description: Die verwendet Ausführungsmethode für die zu ladende JS Datei.
           placeholder: 'Auswahl...'
-          default: none
+          default: both
           options:
               none: Keine
               async: Asynchron
