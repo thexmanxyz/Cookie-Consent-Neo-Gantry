@@ -453,10 +453,15 @@ form:
           placeholder: -10 ... 10
           default: 0
 
+        css.info:
+          type: separator.note
+          class: alert alert-info
+          content: Please be aware of the path and location setting. For <code>Local</code> and <code>Global</code> you only need to specify the filename.
+
         css.option:
           type: select.select
           label: CSS File Location
-          description: Select an option for the custom CSS file, instead of the default CDN location. Local = 'templates/G_TEMPLATE/custom/css', Global = 'media/gantry5/engines/nucleus/css', Custom = any relative or absolute path
+          description: Select an option for the custom CSS file, instead of the default CDN location.<br><br>Local (Template)<br><code>templates/G_TEMPLATE/custom/css</code><br><br>Global (Gantry)<br><code>media/gantry5/engines/nucleus/css</code><br><br>Custom<br><code>any relative or absolute path</code>
           default: disabled
           options:
               disabled: Disabled (CDN)
@@ -467,8 +472,8 @@ form:
         css.path:
           type: input.text
           label: CSS Path
-          description: Path to the Cookie Consent CSS file either on this server (relative from template/custom) or on a different server (absolute).
-          placeholder: path/to/CSS
+          description: Filename of the CSS file or path on this server (relative from location) or on a different server (absolute).
+          placeholder: path/to/CSS or filename
           default: cookieconsent.3.0.6.min.css
 
         js.placement:
@@ -487,10 +492,15 @@ form:
           placeholder: -10 ... 10
           default: 0
 
+        js.info:
+          type: separator.note
+          class: alert alert-info
+          content: Please be aware of the path and location setting. For <code>Local</code> and <code>Global</code> you only need to specify the filename.
+
         js.option:
           type: select.select
           label: JS File Location
-          description: Select an option for the custom JS file, instead of the default CDN location. Local = 'templates/G_TEMPLATE/custom/js', Global = 'media/gantry5/engines/nucleus/js', Custom = any relative or absolute path
+          description: Select an option for the custom JS file, instead of the default CDN location.<br><br>Local (Template)<br><code>templates/G_TEMPLATE/custom/js</code><br><br>Global (Gantry)<br><code>media/gantry5/engines/nucleus/js</code><br><br>Custom<br><code>any relative or absolute path</code>
           default: disabled
           options:
               disabled: Disabled (CDN)
@@ -501,8 +511,8 @@ form:
         js.path:
           type: input.text
           label: JS Path
-          description: Path to the Cookie Consent JS file either on this server (relative from template/custom) or on a different server (absolute).
-          placeholder: path/to/JS
+          description: Filename of the JS file or path on this server (relative from location) or on a different server (absolute).
+          placeholder: path/to/JS or filename
           default: cookieconsent.3.0.6_mod.min.js
 
         js.execution:

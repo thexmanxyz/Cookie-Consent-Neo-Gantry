@@ -454,10 +454,15 @@ form:
           placeholder: -10 ... 10
           default: 0
 
+        css.info:
+          type: separator.note
+          class: alert alert-info
+          content: Si prega di notare il percorso del file e le impostazioni di posizione. Per <code>Locale</code> e <code>Global</code> si prega di specificare solo il nome del file.
+
         css.option:
           type: select.select
           label: localizzazione file CSS
-          description: Selezionare un'opzione per il file CSS personalizzato, invece della posizione CDN predefinita. Locale = 'templates/G_TEMPLATE/custom/css', Global = 'media/gantry5/engines/nucleus/css', Custome = ogni percorso relativo o assoluto
+          description: Selezionare un'opzione per il file CSS personalizzato, invece della posizione CDN predefinita.<br><br>Locale (Template)<br><code>templates/G_TEMPLATE/custom/css</code><br><br>Global (Gantry)<br><code>media/gantry5/engines/nucleus/css</code><br><br>Costume<br><code>ogni percorso relativo o assoluto</code>
           default: disabled
           options:
               disabled: Disabile (CDN)
@@ -468,8 +473,8 @@ form:
         css.path:
           type: input.text
           label: Percorso CSS
-          description: Percorso al file CSS di Cookie Consent o su questo server (relativo al template/custom) o su un server diverso (assoluto).
-          placeholder: percorso/al/CSS
+          description: Filename o percorso del file CSS o su questo server (relativo al localizzazione) o su un server diverso (assoluto).
+          placeholder: percorso/al/CSS o nome del file
           default: cookieconsent.3.0.6.min.css
 
         js.placement:
@@ -488,10 +493,15 @@ form:
           placeholder: -10 ... 10
           default: 0
 
+        js.info:
+          type: separator.note
+          class: alert alert-info
+          content: Si prega di notare il percorso del file e le impostazioni di posizione. Per <code>Locale</code> e <code>Global</code> si prega di specificare solo il nome del file.
+
         js.option:
           type: select.select
           label: localizzazione file JS
-          description: Selezionare un'opzione per il file JS personalizzato, invece della posizione CDN predefinita. Locale = 'templates/G_TEMPLATE/custom/js', Global = 'media/gantry5/engines/nucleus/js', Custome = ogni percorso relativo o assoluto
+          description: Selezionare un'opzione per il file JS personalizzato, invece della posizione CDN predefinita.<br><br>Locale (Template)<br><code>templates/G_TEMPLATE/custom/js</code><br><br>Global (Gantry)<br><code>media/gantry5/engines/nucleus/js</code><br><br>Costume<br><code>ogni percorso relativo o assoluto</code>
           default: disabled
           options:
               disabled: Disabile
@@ -502,8 +512,8 @@ form:
         js.path:
           type: input.text
           label: Percorso JS
-          description: Percorso al file JS di Cookie Consent o su questo server (relativo al template/custom) o su un server diverso (assoluto).
-          placeholder: percorso/al/JS
+          description: Filename o percorso del file JS o su questo server (relativo al localizzazione) o su un server diverso (assoluto).
+          placeholder: percorso/al/JS o nome del file
           default: cookieconsent.3.0.6_mod.min.js
 
         js.execution:

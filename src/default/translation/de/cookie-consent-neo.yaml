@@ -450,10 +450,15 @@ form:
                   placeholder: -10 ... 10
                   default: 0
 
+                css.info:
+                  type: separator.note
+                  class: alert alert-info
+                  content: Bitte beachten Sie die Pfad und Standort Einstellungen. Für <code>Lokal</code> und <code>Global</code> geben Sie bitte ausschließlich den Dateinamen an.
+
                 css.option:
                   type: select.select
                   label: CSS Datei Standort
-                  description: Wählen Sie eine Option für die benutzerdefinierte CSS Datei, statt dem standardmäßigen CDN. Lokal = 'templates/G_TEMPLATE/custom/css', Global = 'media/gantry5/engines/nucleus/css', Benutzerdefiniert = jeder relative oder absolute Pfad
+                  description: Wählen Sie eine Option für die benutzerdefinierte CSS Datei, statt dem standardmäßigen CDN.<br><br>Lokal (Template)<br><code>templates/G_TEMPLATE/custom/css</code><br><br>Global (Gantry)<br><code>media/gantry5/engines/nucleus/css</code><br><br>Benutzerdefiniert<br><code>jeder relative oder absolute Pfad</code>
                   default: disabled
                   options:
                       disabled: Deaktiviert (CDN)
@@ -464,8 +469,8 @@ form:
                 css.path:
                   type: input.text
                   label: CSS Pfad
-                  description: Pfad zur Cookie Consent CSS Datei auf diesem Server (relativ zu template/custom) oder auf einem anderen Server (absolut).
-                  placeholder: Pfad/zum/CSS
+                  description: Dateiname der CSS Datei oder Pfad auf diesem Server (relativ zum Standort) bzw. auf einem anderen Server (absolut).
+                  placeholder: Pfad/zum/CSS oder Dateiname
                   default: cookieconsent.3.0.6.min.css
 
                 js.placement:
@@ -484,10 +489,15 @@ form:
                   placeholder: -10 ... 10
                   default: 0
 
+                js.info:
+                  type: separator.note
+                  class: alert alert-info
+                  content: Bitte beachten Sie die Pfad und Standort Einstellungen. Für <code>Lokal</code> und <code>Global</code> geben Sie bitte ausschließlich den Dateinamen an.
+
                 js.option:
                   type: select.select
                   label: JS Datei Standort
-                  description: Wählen Sie eine Option für die benutzerdefinierte JS Datei, statt dem standardmäßigen CDN. Lokal = 'templates/G_TEMPLATE/custom/js', Global = 'media/gantry5/engines/nucleus/js', Benutzerdefiniert = jeder relative oder absolute Pfad
+                  description: Wählen Sie eine Option für die benutzerdefinierte JS Datei, statt dem standardmäßigen CDN.<br><br>Lokal (Template)<br><code>templates/G_TEMPLATE/custom/js</code><br><br>Global (Gantry)<br><code>media/gantry5/engines/nucleus/js</code><br><br>Benutzerdefiniert<br><code>jeder relative oder absolute Pfad</code>
                   default: disabled
                   options:
                       disabled: Deaktiviert (CDN)
@@ -498,8 +508,8 @@ form:
                 js.path:
                   type: input.text
                   label: JS Pfad
-                  description: Pfad zur Cookie Consent JS Datei auf diesem Server (relativ zu template/custom) oder auf einem anderen Server (absolut).
-                  placeholder: Pfad/zum/JS
+                  description: Dateiname der JS Datei oder Pfad auf diesem Server (relativ zum Standort) bzw. auf einem anderen Server (absolut).
+                  placeholder: Pfad/zum/JS oder Dateiname
                   default: cookieconsent.3.0.6_mod.min.js
 
                 js.execution:
