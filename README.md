@@ -60,7 +60,7 @@ Please be aware that the template folder path varies in dependence of the used C
 3. Configure the appearance according to your favor.
 4. [Optional] The download package contains a modified version of the Cookie Consent JS file. You can copy the file to your template folder and embed it over the particle backend configuration. If you chose automatic installation the file is already there. It contains fixes for:
    * the dismiss timeout and dismiss scrolling bug described here [#170](https://github.com/insites/cookieconsent/issues/170)
-   * the toggle remove button does not show up accordingly - `revokable: true` [#177](https://github.com/insites/cookieconsent/issues/177), [#244](https://github.com/insites/cookieconsent/issues/244) and [#261](https://github.com/insites/cookieconsent/pull/261)
+   * the toggle remove button does not show up accordingly - `revokable: true` - [#177](https://github.com/insites/cookieconsent/issues/177), [#244](https://github.com/insites/cookieconsent/issues/244) and [#261](https://github.com/insites/cookieconsent/pull/261)
    * the floating behavior on mobile devices [#277](https://github.com/insites/cookieconsent/issues/277)
 
 ## Supported API Parameters and Atom Options
