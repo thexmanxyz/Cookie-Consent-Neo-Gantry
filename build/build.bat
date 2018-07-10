@@ -17,7 +17,7 @@ set scr_log_files=0
 
 REM --- Project Variables ---
 set prj_id=ccn
-set prj_rev=v1.5.3
+set prj_rev=v1.5.4
 set prj_name=cookie-consent-neo
 set prj_fullname=Cookie Consent Neo - Atom
 set prj_title_hr=-----------------------------

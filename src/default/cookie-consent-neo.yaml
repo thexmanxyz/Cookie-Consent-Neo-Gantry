@@ -267,6 +267,13 @@ form:
                   description: If checked, the revokable button will transition in and out.
                   default: 1
 
+                banner.delay:
+                  type: input.text
+                  label: Delay on Start
+                  description: Value for the display delay of the banner in milliseconds.
+                  placeholder: delay in milliseconds
+                  default: 0
+
                 banner.on_scroll.dismiss:
                   type: input.text
                   label: Dismiss on Scroll

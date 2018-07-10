@@ -268,6 +268,13 @@ form:
           description: Se selezionata, il pulsante revocabile passerà da e verso l'interno e l'esterno.
           default: 1
 
+        banner.delay:
+          type: input.text
+          label: Ritarda all'avvio
+          description: Valore per il ritardo di visualizzazione del banner in millisecondi.
+          placeholder: ritardo in millisecondi
+          default: 0
+
         banner.on_scroll.dismiss:
           type: input.text
           label: Rifiuta su Scorrimento

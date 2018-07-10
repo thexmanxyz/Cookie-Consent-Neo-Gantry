@@ -164,6 +164,7 @@
     {% endif %}
 {% endif %}
 
+{% set startDelay = particle.banner.delay|default(0) %}
 {% set linkText = labeling.learn_more.text|default('Read more') %}
 {% set linkTitle = labeling.learn_more.title|default('Learn more about cookies') %}
 {% set linkTarget = particle.banner.learn_more.target|default('_blank') %}
@@ -211,7 +212,7 @@
         <script type="{{scriptType}}" src="{{url(jsPath)}}"{{jsExecAttr}}></script>
         <script>
             window.addEventListener("load", function(){
-                window.cookieconsent.initialise({
+                setTimeout(function(){ window.cookieconsent.initialise({
                     palette: {
                         popup: {
                             background: "{{popupBg|e('js')}}",
@@ -367,7 +368,8 @@
 
                     elements: {
                         messagelink: "{{msgLink|e('js')}}"
-                    }})});
+
+                    }})}, {{startDelay}})});
         </script>
     {%- endscripts -%}
 {%- endblock -%}

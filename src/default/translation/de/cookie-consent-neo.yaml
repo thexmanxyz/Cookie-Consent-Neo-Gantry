@@ -267,6 +267,13 @@ form:
                   description: Wenn ausgewählt, wird der Widerruf Button beim Hover mit einem Übergang animiert.
                   default: 1
 
+                banner.delay:
+                  type: input.text
+                  label: Start verzögern
+                  description: Wert für die Darstellungsverzögerung des Banners in Millisekunden.
+                  placeholder: Verzögerung in Millsekunden
+                  default: 0
+
                 banner.on_scroll.dismiss:
                   type: input.text
                   label: Beim Scrollen schließen
