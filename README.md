@@ -162,9 +162,9 @@ None
 [Gantry Framework](http://gantry.org/)
 
 ## Credits
-Thanks to the Gantry team for providing a modern templating framework.
+Thanks to the [Gantry](https://github.com/gantry) team for providing a modern templating framework.
 
-Thanks to [Insites](https://insites.com/) for the Cookie Consent API and the Gantry team for providing a modern templating framework.
+Thanks to [Insites](https://insites.com/) for the Cookie Consent API.
 
 Thanks to [mariantanase](https://github.com/mariantanase) for the Italian back- and frontend translation.
 
