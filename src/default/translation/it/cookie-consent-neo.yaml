@@ -438,7 +438,7 @@ form:
                 service.law:
                   type: input.checkbox
                   label: Legge Regionale
-                  description: Se deselezionato, il popup viene abilitato solo se il paese dispone della legge sui cookie. Il "Servizio di localizzazione" DEVE essere attivato.
+                  description: Se selezionato, viene caricato il comportamento predefinito della posizione (revocabile, rifiuta). Il "Servizio di localizzazione" DEVE essere attivato.
                   default: 1
 
         tab_api:

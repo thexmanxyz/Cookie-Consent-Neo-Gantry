@@ -440,7 +440,7 @@ form:
         service.law:
           type: input.checkbox
           label: Regionales Gesetz
-          description: Wenn nicht ausgewählt wurde, wird das Popup nur dann angezeigt, wenn das Zielland vom Cookie Gesetz betroffen ist. 'Standort Service' MUSS aktiviert worden sein, damit sich diese Einstellung auf das Banner auswirkt.
+          description: Wenn ausgewählt, wird das Verhalten des Banners auf das Standardverhalten des Landes gesetzt (Schließen, Widerruf). 'Standort Service' MUSS aktiviert worden sein, damit sich diese Einstellung auf das Banner auswirkt.
           default: 1
 
     set_api:

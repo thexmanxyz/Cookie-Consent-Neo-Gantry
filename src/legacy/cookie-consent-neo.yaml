@@ -439,7 +439,7 @@ form:
         service.law:
           type: input.checkbox
           label: Regional Law
-          description: If unchecked, then the popup is only enabled if the country has the cookie law. 'Location Service' MUST be enabled to take effect.
+          description: If checked, then default behavior of the location is loaded (revokable, dismiss). 'Location Service' MUST be enabled to take effect.
           default: 1
 
     set_api:
