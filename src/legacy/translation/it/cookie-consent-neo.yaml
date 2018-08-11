@@ -259,7 +259,7 @@ form:
         banner.revokable.enabled:
           type: input.checkbox
           label: Revocabile
-          description: Se selezionata, il pulsante di revoca viene visualizzato ogni volta. Rotto in CC API 3.0.3 - 3.0.6 (#170).
+          description: Se selezionata, il pulsante di revoca viene visualizzato ogni volta.
           default: 0
 
         banner.revokable.animate:
@@ -278,14 +278,14 @@ form:
         banner.on_scroll.dismiss:
           type: input.text
           label: Rifiuta su Scorrimento
-          description: Valore del campo di scorrimento, 'falso' o vuoto per disabilitare. Rotto in CC API 3.0.3 - 3.0.6 (#170).
+          description: Valore del campo di scorrimento, 'falso' o vuoto per disabilitare.
           placeholder: boolean, empty or value
           default: false
 
         banner.timeout.dismiss:
           type: input.text
           label: Rifiuto sul timeout
-          description: Valore del tempo in millisecondi per il termine di chiusura automatica. 'false' o vuoto per disabilitare. Rotto in CC API 3.0.3 - 3.0.6 (#170).
+          description: Valore del tempo in millisecondi per il termine di chiusura automatica. 'false' o vuoto per disabilitare.
           placeholder: boolean, empty or value
           default: false
 
@@ -451,8 +451,8 @@ form:
           type: input.text
           label: Versione Cookie Consent
           description: Versione Cookie Consent (solo per CDN).
-          placeholder: 3.0.6
-          default: 3.0.6
+          placeholder: 3.1.0
+          default: 3.1.0
 
         css.priority:
           type: input.text
@@ -482,7 +482,7 @@ form:
           label: Percorso CSS
           description: Filename o percorso del file CSS o su questo server (relativo al localizzazione) o su un server diverso (assoluto).
           placeholder: percorso/al/CSS o nome del file
-          default: cookieconsent.3.0.6.min.css
+          default: cookieconsent.3.1.0.min.css
 
         js.placement:
           type: select.select
@@ -521,7 +521,7 @@ form:
           label: Percorso JS
           description: Filename o percorso del file JS o su questo server (relativo al localizzazione) o su un server diverso (assoluto).
           placeholder: percorso/al/JS o nome del file
-          default: cookieconsent.3.0.6_mod.min.js
+          default: cookieconsent.3.1.0_mod.min.js
 
         js.execution:
           type: select.select

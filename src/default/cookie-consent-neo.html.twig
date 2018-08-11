@@ -170,7 +170,7 @@
 {% set linkTarget = particle.banner.learn_more.target|default('_blank') %}
 {% set linkHref = particle.banner.learn_more.link|default('https://cookiesandyou.com') %}
 {% set dismissText = labeling.dismiss.text|default('Got it!') %}
-{% set apiRev = particle.api.version|default("3.0.6") %}
+{% set apiRev = particle.api.version|default("3.1.0") %}
 
 {% set scriptType = 'text/javascript' %}
 {% set styleType = 'text/css' %}
@@ -199,9 +199,9 @@
 
 {% set cdnRepo = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2' %}
 {% set jsPath = _self.getResourceFilePath(particle.js, cdnRepo, apiRev, 
-    'cookieconsent.min', 'cookieconsent.3.0.6_mod.min', 'js') %}
+    'cookieconsent.min', 'cookieconsent.3.1.0_mod.min', 'js') %}
 {% set cssPath = _self.getResourceFilePath(particle.css, cdnRepo, apiRev, 
-    'cookieconsent.min', 'cookieconsent.3.0.6.min', 'css') %}
+    'cookieconsent.min', 'cookieconsent.3.1.0.min', 'css') %}
 
 {%- block particle -%}
     {%- styles with { priority: cssPrior } -%}

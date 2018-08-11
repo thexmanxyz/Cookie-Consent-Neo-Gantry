@@ -258,7 +258,7 @@ form:
                 banner.revokable.enabled:
                   type: input.checkbox
                   label: Widerruf
-                  description: Wenn ausgewählt, wird der Widerruf Button jedes mal angezeigt. Fehlerhaft in CC API 3.0.3 - 3.0.6 (#177).
+                  description: Wenn ausgewählt, wird der Widerruf Button jedes mal angezeigt.
                   default: 0
 
                 banner.revokable.animate:
@@ -277,14 +277,14 @@ form:
                 banner.on_scroll.dismiss:
                   type: input.text
                   label: Beim Scrollen schließen
-                  description: Wert für die Scrolldistanz und das automatische Schließen, 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 - 3.0.6 (#170).
+                  description: Wert für die Scrolldistanz und das automatische Schließen, 'false' oder leer lassen für die Deaktivierung.
                   placeholder: boolean, leer oder Wert
                   default: false
 
                 banner.timeout.dismiss:
                   type: input.text
                   label: Nach Timeout schließen
-                  description: Zeitwert in Millisekunden für das automatische Schließen. 'false' oder leer lassen für die Deaktivierung. Fehlerhaft in CC API 3.0.3 - 3.0.6 (#170).
+                  description: Zeitwert in Millisekunden für das automatische Schließen. 'false' oder leer lassen für die Deaktivierung.
                   placeholder: boolean, leer oder Wert
                   default: false
 
@@ -447,8 +447,8 @@ form:
                   type: input.text
                   label: Cookie Consent Version
                   description: Die Cookie Consent Version (nur für CDN).
-                  placeholder: 3.0.6
-                  default: 3.0.6
+                  placeholder: 3.1.0
+                  default: 3.1.0
 
                 css.priority:
                   type: input.text
@@ -478,7 +478,7 @@ form:
                   label: CSS Pfad
                   description: Dateiname der CSS Datei oder Pfad auf diesem Server (relativ zum Standort) bzw. auf einem anderen Server (absolut).
                   placeholder: Pfad/zum/CSS oder Dateiname
-                  default: cookieconsent.3.0.6.min.css
+                  default: cookieconsent.3.1.0.min.css
 
                 js.placement:
                   type: select.select
@@ -517,7 +517,7 @@ form:
                   label: JS Pfad
                   description: Dateiname der JS Datei oder Pfad auf diesem Server (relativ zum Standort) bzw. auf einem anderen Server (absolut).
                   placeholder: Pfad/zum/JS oder Dateiname
-                  default: cookieconsent.3.0.6_mod.min.js
+                  default: cookieconsent.3.1.0_mod.min.js
 
                 js.execution:
                   type: select.select
