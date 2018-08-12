@@ -10,7 +10,7 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 * Cookie Consent API 3.x.x
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for the Gantry themes - Helium and Hydrogen. The latest Atom version is **v1.5.6**.
+Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Atom version is **v1.5.6**.
 
 **Attention:** When migrating from **v1.4.7** or below to **v1.5.0** or higher the existing settings of the atom will be reset.
 ___
