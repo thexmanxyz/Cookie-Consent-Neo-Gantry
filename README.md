@@ -31,7 +31,7 @@ ___
 ___
 
 ## Automatic Installation (Joomla only)
-1. Download the Plugin of the *Cookie Consent Neo Atom* for **Hydrogen or Helium**.
+1. Download the Plugin of the *Cookie Consent Neo Atom* for **Hydrogen, Helium or Global** installation.
 2. Install it over the Joomla Plugin System.
 
 *If you install the plugin globally be aware that the resource location changes to `/media/gantry5/engines/nucleus`*
