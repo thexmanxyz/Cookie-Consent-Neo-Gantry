@@ -12,7 +12,7 @@
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
         <h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
         <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
-        <p><b>NOTE</b>:&nbsp;This Atom was installed for Gantry.<br />If you want to install the Atom for a different Gantry template, you must place the files as follows:</p>
+        <p><b>NOTE</b>:&nbsp;This Atom was installed for Gantry.<br />If you want to install the Atom for a specific Gantry template, you must place the files as follows:</p>
 		<ul><li><code>*.yaml</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.twig</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.js</code> =&gt; <code>/templates/[TEMPLATE]/custom/js</code></li><li><code>*.css</code> =&gt; <code>/templates/[TEMPLATE]/custom/css</code></li></ul></div>]]>
     </description>
     <fileset>
