@@ -176,26 +176,10 @@
 {% set styleType = 'text/css' %}
 
 {% set jsPlace = particle.js.placement|default('head') %}
+{% set jsExec = particle.js.execution|default("both") %}
+{% set jsExecAttr = _self.getJSExecution(jsExec) %}
 {% set jsPrior = particle.js.priority|default(0) %}
 {% set cssPrior = particle.css.priority|default(0) %}
-
-{% set jsExec = particle.js.execution|default("both") %}
-{% set jsExecAttr = '' %}
-{% if jsExec == 'defer' or jsExec == 'both' %}
-    {% set jsExecAttr = 'defer="defer"' %}
-{% endif %}
-
-{% if jsExec == 'both' %}
-    {% set jsExecAttr = jsExecAttr ~ ' ' %}
-{% endif %}
-
-{% if jsExec == 'async' or jsExec == 'both' %}
-    {% set jsExecAttr = jsExecAttr ~ 'async="async"' %}
-{% endif %}
-
-{% if jsExecAttr is not empty %}
-    {% set jsExecAttr = ' ' ~ jsExecAttr %}
-{% endif %}
 
 {% set cdnRepo = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2' %}
 {% set jsPath = _self.getResourceFilePath(particle.js, cdnRepo, apiRev, 
@@ -423,3 +407,21 @@
     {%- endif -%}
     {{- path|raw -}}
 {%- endmacro -%}
+
+{%- macro getJSExecution(type) -%}
+    {%- set attribute = '' -%}
+    {%- if type == 'defer' or type == 'both' -%}
+        {%- set attribute = 'defer="defer"' -%}
+    {%- endif -%}
+    {%- if type == 'both' -%}
+        {%- set attribute = jsExecAttr ~ ' ' -%}
+    {%- endif -%}
+    {%- if type == 'async' or type == 'both' -%}
+        {%- set attribute = jsExecAttr ~ 'async="async"' -%}
+    {%- endif -%}
+    {%- if type is not empty -%}
+        {%- set attribute = ' ' ~ jsExecAttr -%}
+    {%- endif -%}
+    {{- attribute|raw -}}
+{%- endmacro -%}
+    
