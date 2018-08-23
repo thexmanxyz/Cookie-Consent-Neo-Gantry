@@ -414,13 +414,13 @@
         {%- set attribute = 'defer="defer"' -%}
     {%- endif -%}
     {%- if type == 'both' -%}
-        {%- set attribute = jsExecAttr ~ ' ' -%}
+        {%- set attribute = attribute ~ ' ' -%}
     {%- endif -%}
     {%- if type == 'async' or type == 'both' -%}
-        {%- set attribute = jsExecAttr ~ 'async="async"' -%}
+        {%- set attribute = attribute ~ 'async="async"' -%}
     {%- endif -%}
     {%- if type is not empty -%}
-        {%- set attribute = ' ' ~ jsExecAttr -%}
+        {%- set attribute = ' ' ~ attribute -%}
     {%- endif -%}
     {{- attribute|raw -}}
 {%- endmacro -%}
