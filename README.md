@@ -1,5 +1,5 @@
 # Cookie Consent Neo - Atom for Gantry
-This project contains a Gantry Atom and adds the [Cookie Consent Javascript API](https://github.com/insites/cookieconsent) functionality to the Gantry templating framework. **Cookie Consent Neo** encapsulates the parameterization of the Cookie Consent service within a Gantry Atom. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMSs are supported:
+This project contains a Gantry Atom and adds the [Cookie Consent Javascript API](https://github.com/insites/cookieconsent) functionality to the Gantry templating framework. **Cookie Consent Neo** encapsulates the parameterization of the Cookie Consent banner within a Gantry Atom. Furthermore, it provides an easy, user friendly and GUI assisted configuration and integration. In the current revision the following CMSs are supported:
 * Joomla
 * Wordpress
 * Grav
@@ -170,5 +170,5 @@ Thanks to [Insites](https://insites.com/) for the Cookie Consent API.
 
 Thanks to [mariantanase](https://github.com/mariantanase) for the Italian back- and frontend translation.
 
-## by [thex](https://github.com/thexmanxyz)
+## by [thex](https://github.com/thexmanxyz) | [gantryparticles](https://gantryparticles.com)
 Copyright (c) 2018, free to use in personal and commercial software as per the [license](/LICENSE.md).
