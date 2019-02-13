@@ -7,6 +7,8 @@
 {#            Gantry templating framework.             #}
 {#                                                     #}
 {#   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #}
+{#   Repository: https://git.io/fA9XT                  #}
+{#   Homepage: https://gantryprojects.com              #}
 {#                                                     #}
 {#######################################################}
 
@@ -35,10 +37,8 @@
 
 {% if particle.banner.compliance != 'info' and particle.banner.compliance is not empty %}
     {% set compType = particle.banner.compliance %}
-    {% set optText = labeling.opt.text|default('Allow Cookies / Decline') %}
-{% else %}
-    {% set compType = '' %}
-    {% set optText = '' %}
+    {% set allowText = labeling.opt.in.text|default('Allow Cookies') %}
+    {% set denyText = labeling.opt.out.text|default('Deny Cookies') %} 
 {% endif %}
 
 {% if particle.banner.position == 'bottom' %}
@@ -53,8 +53,6 @@
     {% set bannerPos = 'top-left' %}
 {% elseif particle.banner.position == 'float_tr' %}
     {% set bannerPos = 'top-right' %}
-{% else %}
-    {% set bannerPos = '' %}
 {% endif %}
 
 {% if particle.banner.position == 'top_p'%}
@@ -67,13 +65,7 @@
     {% set bannerLayout = 'classic' %}
 {% elseif particle.banner.layout == 'edgeless' %}
     {% set bannerLayout = 'edgeless' %}
-{% elseif particle.banner.layout == 'wire' %}
-    {% set bannerLayout = '' %}
 {% endif %}
-
-{% set popupText = '' %}
-{% set btnText = '' %}
-{% set popupLink = '' %}
 
 {% if not particle.banner.custom_color.enable %}
     {% if particle.banner.palette == 'p1' %}
@@ -304,12 +296,10 @@
                         link: "{{linkText|e('js')}}",
                         dismiss: "{{dismissText|e('js')}}",
 
-                        {%- if optText is not empty -%}
-                            {%- if particle.banner.compliance == 'opt-out' -%}
-                                deny: "{{optText|e('js')}}",
-                            {%- elseif particle.banner.compliance == 'opt-in' -%}
-                                allow: "{{optText|e('js')}}",
-                            {%- endif -%}
+                        {%- if particle.banner.compliance == 'opt-out' and denyText is not empty -%}
+                            deny: "{{denyText|e('js')}}",
+                        {%- elseif particle.banner.compliance == 'opt-in' and allowText is not empty -%}
+                            allow: "{{allowText|e('js')}}",
                         {%- endif -%}
 
                         {%- if particle.banner.learn_more.enabled -%}

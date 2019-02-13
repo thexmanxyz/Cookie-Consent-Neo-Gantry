@@ -8,6 +8,8 @@
 #                                                     #
 #   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #
 #           Marian Tanase <marian@tanase.it>          #
+#   Repository: https://git.io/fA9XT                  #
+#   Homepage: https://gantryprojects.com              #
 #                                                     #
 #######################################################
 
@@ -141,11 +143,18 @@ form:
               placeholder: Ho capito!
               default: Ho capito!
 
-            .opt.text:
+            .opt.in.text:
               type: input.text
-              label: Testo Opt-in / Opt-out
-              description: Il testo per il pulsante Opt-in o Opt-out, in base alla selezione.
-              placeholder: Permetti Cookies / Rifiuta
+              label: Testo Opt-in
+              description: Il testo per il pulsante Opt-in.
+              placeholder: Permetti Cookies
+              default:
+
+            .opt.out.text:
+              type: input.text
+              label: Testo Opt-out
+              description: Il testo per il pulsante Opt-out.
+              placeholder: Rifiuta Cookies
               default:
 
             .revoke.text:
@@ -270,7 +279,7 @@ form:
 
         banner.delay:
           type: input.text
-          label: Ritarda all'avvio
+          label: Ritardo nel caricamento
           description: Valore per il ritardo di visualizzazione del banner in millisecondi.
           placeholder: ritardo in millisecondi
           default: 0

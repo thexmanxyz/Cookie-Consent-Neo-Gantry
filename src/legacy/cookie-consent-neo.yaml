@@ -7,6 +7,8 @@
 #            Gantry templating framework.             #
 #                                                     #
 #   Author: Andreas Kar (thex) <andreas.kar@gmx.at>   #
+#   Repository: https://git.io/fA9XT                  #
+#   Homepage: https://gantryprojects.com              #
 #                                                     #
 #######################################################
 
@@ -140,11 +142,18 @@ form:
               placeholder: Got it!
               default: Got it!
 
-            .opt.text:
+            .opt.in.text:
               type: input.text
-              label: Opt-in / Opt-out Text
-              description: The text for either the Opt-in or Opt-out button, depending on selection.
-              placeholder: Allow Cookies / Decline
+              label: Opt-in Text
+              description: The text for the Opt-in button.
+              placeholder: Allow Cookies
+              default:
+
+            .opt.out.text:
+              type: input.text
+              label: Opt-out Text
+              description: The text for the Opt-out button.
+              placeholder: Deny Cookies
               default:
 
             .revoke.text:
@@ -269,7 +278,7 @@ form:
 
         banner.delay:
           type: input.text
-          label: Delay on Start
+          label: Delay on load
           description: Value for the display delay of the banner in milliseconds.
           placeholder: delay in milliseconds
           default: 0
