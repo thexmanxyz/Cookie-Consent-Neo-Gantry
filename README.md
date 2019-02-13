@@ -6,11 +6,11 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 
 ## Prerequisites
 * CMS (Joomla, Wordpress, Grav)
-* Gantry Templating Framework and Theme
+* Gantry templating framework and theme
 * Cookie Consent API 3.x.x
 
 ## Download
-Choose the correct download for your target platform. Joomla Plugin System supported for all Gantry themes globally and locally for Helium or Hydrogen. The latest Atom version is **v1.5.7**.
+Choose the correct download for your target platform. The Joomla plugin system is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Atom version is **v1.5.7**.
 
 **Attention:** When migrating from **v1.4.7** or below to **v1.5.0** or higher the existing settings of the atom will be reset.
 ___
@@ -31,16 +31,17 @@ ___
 ___
 
 ## Automatic Installation (Joomla only)
-1. Download the Plugin of the *Cookie Consent Neo Atom* for **Hydrogen, Helium or Global** installation.
-2. Install it over the Joomla Plugin System.
+1. Download the plugin of the *Cookie Consent Neo Atom* for **Hydrogen, Helium or Global** installation.
+2. Install it over the Joomla plugin system.
 
 *If you install the plugin globally be aware that the resource location changes to `/media/gantry5/engines/nucleus`*
 
 ## Manual Installation
 1. Download the **Default or Legacy Package** of the *Cookie Consent Neo Atom*. If you are using Gantry **<5.3.2** please use the **Legacy Package** for compatibility reasons.
 2. Extract the files.
-3. Copy the `.html.twig` and the `.yaml` file to your particle folder `/[GANTRY_THEME]/custom/particles`. Please check the list below to determine where the template folder for your CMS is located.
-4. [Optional] Copy the `.js` file(s) to the folder `/[GANTRY_THEME]/custom/js`. Create it if it does not exist.
+3. Copy the `.html.twig` and the `.yaml` file to your Particle folder `/[GANTRY_THEME]/custom/particles`. Please check the [listing](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry#cms-template-folder) below to determine where the template folder for your CMS is located.
+4. [Optional] Copy the `.js` file(s) to the folder `/[GANTRY_THEME]/custom/js`. Create the folder if it does not exist.
+5. [Optional] Copy the `.css` file(s) to the folder `/[GANTRY_THEME]/custom/css`. Create the folder if it does not exist.
 
 ## CMS Template Folder
 Please be aware that the template folder path varies in dependence of the used CMS. Here is a list of the folders for the different platforms:
@@ -58,10 +59,12 @@ Please be aware that the template folder path varies in dependence of the used C
 1. Go to your Gantry templating backend (e.g. Extensions/Templates).
 2. Switch to **Page Settings** and add the new appearing Atom called **Cookie Consent Neo** either globally to your site (**base outline**), to a specific template or page by dragging it to the designated section.
 3. Configure the appearance according to your favor.
-4. [Optional] The download package contains a modified version of the Cookie Consent JS file. You can copy the file to your template folder and embed it over the particle backend configuration. If you chose automatic installation the file is already there. It contains fixes for:
+4. [Optional] The download package contains a modified version of the Cookie Consent JS file. You can embed it over the backend configuration. If you chose automatic installation the file is already there. It contains fixes for:
    * the floating behavior on mobile devices [#277](https://github.com/insites/cookieconsent/issues/277)
+   * the opt-in / opt-out button markup [#464](https://github.com/insites/cookieconsent/issues/464) / [#468](https://github.com/insites/cookieconsent/pull/468)
+5. [Optional] The download package contains the original version of the Cookie Consent CSS file. You can embed it over the backend configuration if you do not want to use the default CDN. If you chose automatic installation the file is already there.
 
-## Supported API Parameters and Atom Options
+## Supported Parameters and Atom Options
 * Banner Message Text
 * Enable / Disable 'Learn More' link
 * URL for the 'Learn More' link
@@ -147,9 +150,10 @@ Examples for some of the different Cookie Consent layouts and styles:
 ![10](/screenshots/frontend_3.png)
 
 ## Future Tasks
-* better coverage of the Cookie Consent API parameters
-* maintain API changes
-* more themes
+- [ ] better coverage of the Cookie Consent API parameters
+- [ ] maintain API changes
+- [ ] add more palettes
+- [ ] add more languages
 
 ## Known Issues
 None
