@@ -13,9 +13,9 @@
         <h3>Cookie Consent Neo - Atom for Gantry Framework</h3>
         <span aria-hidden="true" class="icon-user"></span>&nbsp;<em>Andreas Kar (andreas.kar@gmx.at)</em>
         <p><b>NOTE</b>:&nbsp;This Atom was installed for Gantry.<br />If you want to install the Atom for a specific Gantry template, you must place the files as follows:</p>
-		<ul><li><code>*.yaml</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.twig</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.js</code> =&gt; <code>/templates/[TEMPLATE]/custom/js</code></li><li><code>*.css</code> =&gt; <code>/templates/[TEMPLATE]/custom/css</code></li></ul>
-		<div>Repository: <a href="https://git.io/fA9XT" title="Github Repository" target="_blank">https://git.io/fA9XT</a></div>
-		<div>Website: <a href="https://gantryprojects.com" title="Gantry Projects Website" target="_blank">https://gantryprojects.com</a></div></div>]]>
+        <ul><li><code>*.yaml</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.twig</code> =&gt; <code>/templates/[TEMPLATE]/custom/particles</code></li><li><code>*.js</code> =&gt; <code>/templates/[TEMPLATE]/custom/js</code></li><li><code>*.css</code> =&gt; <code>/templates/[TEMPLATE]/custom/css</code></li></ul>
+        <div>Repository: <a href="https://git.io/fA9XT" title="Github Repository" target="_blank">https://git.io/fA9XT</a></div>
+        <div>Website: <a href="https://gantryprojects.com" title="Gantry Projects Website" target="_blank">https://gantryprojects.com</a></div></div>]]>
     </description>
     <fileset>
         <files folder="particles" target="media/gantry5/engines/nucleus/particles">
