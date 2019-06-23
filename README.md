@@ -97,6 +97,7 @@ Please be aware that the template folder path varies in dependence of the used C
 * Multi language support
   * Internationalization by language code
 * Adaptable Cookie Consent API version
+* JS priority and placement (head or footer)
 * JS and CSS configuration
   * Remote, Local and Default
   * Priority and Position (head or footer)
