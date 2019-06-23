@@ -459,6 +459,13 @@ form:
                   placeholder: 3.1.0
                   default: 3.1.0
 
+                cdn.base_url:
+                  type: input.text
+                  label: CDN Basis URL
+                  description: Die Basis URL für den Cookie Consent CDN Server.
+                  placeholder: https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2
+                  default: https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2
+
                 css.priority:
                   type: input.text
                   label: CSS Priorität

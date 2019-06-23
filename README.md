@@ -10,24 +10,24 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 * Cookie Consent API 3.x.x
 
 ## Download
-Choose the correct download for your target platform. The Joomla plugin system is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Atom version is **v1.5.7**.
+Choose the correct download for your target platform. The Joomla plugin system is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Atom version is **v1.5.8**.
 
 **Attention:** When migrating from **v1.4.7** or below to **v1.5.0** or higher the existing settings of the atom will be reset.
 ___
 **Default Atom:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.atom.only.EN.v1.5.7.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.atom.only.IT.v1.5.7.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.atom.only.DE.v1.5.7.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.atom.only.EN.v1.5.8.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.atom.only.IT.v1.5.8.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.atom.only.DE.v1.5.8.zip)
 
 **Legacy Atom - Gantry <5.3.2:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.atom.only.legacy.EN.v1.5.7.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.atom.only.legacy.IT.v1.5.7.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.atom.only.legacy.DE.v1.5.7.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.atom.only.legacy.EN.v1.5.8.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.atom.only.legacy.IT.v1.5.8.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.atom.only.legacy.DE.v1.5.8.zip)
 
 **Joomla Plugin - All Templates (Global):**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.global.EN.v1.5.7.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.global.IT.v1.5.7.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.global.DE.v1.5.7.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.global.EN.v1.5.8.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.global.IT.v1.5.8.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.global.DE.v1.5.8.zip)
 
 **Joomla Plugin - Hydrogen:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.hydrogen.EN.v1.5.7.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.hydrogen.IT.v1.5.7.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.hydrogen.DE.v1.5.7.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.hydrogen.EN.v1.5.8.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.hydrogen.IT.v1.5.8.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.hydrogen.DE.v1.5.8.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.helium.EN.v1.5.7.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.helium.IT.v1.5.7.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.7/ccn.j3.helium.DE.v1.5.7.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.helium.EN.v1.5.8.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.helium.IT.v1.5.8.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.8/ccn.j3.helium.DE.v1.5.8.zip)
 ___
 
 ## Automatic Installation (Joomla only)
@@ -65,42 +65,42 @@ Please be aware that the template folder path varies in dependence of the used C
 5. [Optional] The download package contains the original version of the Cookie Consent CSS file. You can embed it over the backend configuration if you do not want to use the default CDN. If you chose automatic installation the file is already there.
 
 ## Supported Parameters and Atom Options
-* Banner Message Text
+* Banner message text
 * Enable / Disable 'Learn More' link
 * URL for the 'Learn More' link
 * Target for the 'Learn More' link
-* Dismiss Button Text
-* Revoke Button Text
-* Banner Position
-* Banner Layout
-* Banner Palette (sixteen default styles, taken from [Cookie Consent](https://cookieconsent.insites.com/download/))
-* Custom Popup/Banner Palette
-  * Background Color
-  * Text Color
-  * Link Color
-* Custom Button Palette
-  * Background Color
-  * Text Color
+* Dismiss button text
+* Revoke button text
+* Banner position
+* Banner layout
+* Banner palette (sixteen default styles, taken from [Cookie Consent](https://cookieconsent.insites.com/download/))
+* Custom popup/banner palette
+  * Background color
+  * Text color
+  * Link color
+* Custom button palette
+  * Background color
+  * Text color
 * Compliance Mode supported
 * Revokable supported
-* Rendering Delay
+* Rendering relay
 * Scrolling and Timeout supported
 * White-/Blacklisting
 * Cookie Configuration
   * Server and Path
-  * Cookie Name
+  * Cookie name
   * Expiry
 * Location Configuration
-  * Service Endpoints
-  * Service Timeout
-  * Country Code
-* Multi Language Support
-  * Internationalization by Language Code
-* Adaptable Cookie Consent API Version
-* JS and CSS Configuration
+  * Service endpoints
+  * Service timeout
+  * Country code
+* Multi language support
+  * Internationalization by language code
+* Adaptable Cookie Consent API version
+* JS and CSS configuration
   * Remote, Local and Default
   * Priority and Position (head or footer)
-* JS Execution
+* JS execution
   * Asynchronous
   * Deferred
 

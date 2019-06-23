@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="file" method="upgrade" version="3.0">
     <name>Cookie Consent Neo - Gantry Atom (Hydrogen)</name>
-    <version>1.5.7</version>
-    <creationDate>17.08.2018</creationDate>
+    <version>1.5.8</version>
+    <creationDate>23.06.2019</creationDate>
     <author>Andreas Kar</author>
     <authorEmail>andreas.kar@gmx.at</authorEmail>
     <authorUrl>https://gantryprojects.com</authorUrl>
-    <copyright>© 2018 Andreas Kar</copyright>
+    <copyright>© 2019 Andreas Kar</copyright>
     <license>MIT - see LICENSE.pdf</license>
     <description>
         <![CDATA[<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>

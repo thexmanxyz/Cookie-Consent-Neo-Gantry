@@ -173,7 +173,7 @@
 {% set jsPrior = particle.js.priority|default(0) %}
 {% set cssPrior = particle.css.priority|default(0) %}
 
-{% set cdnRepo = 'http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2' %}
+{% set cdnRepo = particle.cdn.base_url|default('https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2') %}
 {% set jsPath = _self.getResourceFilePath(particle.js, cdnRepo, apiRev, 
     'cookieconsent.min', 'cookieconsent.3.1.0_mod.min', 'js') %}
 {% set cssPath = _self.getResourceFilePath(particle.css, cdnRepo, apiRev, 
