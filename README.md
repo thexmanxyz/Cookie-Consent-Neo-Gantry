@@ -81,16 +81,16 @@ Please be aware that the template folder path varies in dependence of the used C
 * Custom button palette
   * Background color
   * Text color
-* Compliance Mode supported
+* Compliance mode supported
 * Revokable supported
 * Rendering relay
-* Scrolling and Timeout supported
+* Scrolling and timeout supported
 * White-/Blacklisting
-* Cookie Configuration
+* Cookie configuration
   * Server and Path
   * Cookie name
   * Expiry
-* Location Configuration
+* Location configuration
   * Service endpoints
   * Service timeout
   * Country code
@@ -100,7 +100,6 @@ Please be aware that the template folder path varies in dependence of the used C
 * JS priority and placement (head or footer)
 * JS and CSS configuration
   * Remote, Local and Default
-  * Priority and Position (head or footer)
 * JS execution
   * Asynchronous
   * Deferred
