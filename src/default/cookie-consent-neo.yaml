@@ -37,7 +37,7 @@ form:
             fields:
 
                 banner.learn_more.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Enable Learn More
                   description: Enable or disable the 'Learn more' link.
                   default: 1
@@ -91,7 +91,7 @@ form:
                       label: Title
 
                     .main:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Default
                       description: Enable if this should be the default fallback language. Otherwise the first language will be selected.
                       default: 0
@@ -220,7 +220,7 @@ form:
                       p16: gray-green
 
                 banner.custom_color.enable:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Enable Custom Colors
                   description: Enable or disable the custom color palette.
                   default: 0
@@ -259,19 +259,19 @@ form:
             label: Behaviour
             fields:
                 banner.auto_open:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Auto Open
                   description: Enable or disable the auto open of the banner.
                   default: 1
 
                 banner.revokable.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Revokable
                   description: If checked, revoke button is displayed every time.
                   default: 0
 
                 banner.revokable.animate:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Animate Revokable
                   description: If checked, the revokable button will transition in and out.
                   default: 1
@@ -326,7 +326,7 @@ form:
                           regex: Regex
 
                     .option:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Path Option
                       description: Include both '/../../' and '/../..'
                       default: 0
@@ -360,7 +360,7 @@ form:
                           regex: Regex
 
                     .option:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Path Option
                       description: Include both '/../../' and '/../..'
                       default: 0
@@ -444,7 +444,7 @@ form:
                   default:
 
                 service.law:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Regional Law
                   description: If checked, then default behavior of the location is loaded (revokable, dismiss). 'Location Service' MUST be enabled to take effect.
                   default: 1

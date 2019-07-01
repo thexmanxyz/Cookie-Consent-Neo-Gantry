@@ -38,7 +38,7 @@ form:
             fields:
 
                 banner.learn_more.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Abilita Ulteriori Informazioni
                   description: Abilita o disabilita il collegamento 'Ulteriori Informazioni'.
                   default: 1
@@ -92,7 +92,7 @@ form:
                       label: Title
 
                     .main:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Predefinito
                       description: Abilita se questa dovrebbe essere la lingua di fallback predefinita. Altrimenti verrà selezionata la prima lingua.
                       default: 0
@@ -221,7 +221,7 @@ form:
                       p16: gray-green
 
                 banner.custom_color.enable:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Abilita Colori Personalizzati
                   description: Abilita o disabilita combinazione personalizzata di colori.
                   default: 0
@@ -260,19 +260,19 @@ form:
             label: Comportamento
             fields:
                 banner.auto_open:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Apertura Automatica
                   description: Abilita o disabilita l'apertura automatica del banner.
                   default: 1
 
                 banner.revokable.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Revocabile
                   description: Se selezionata, il pulsante di revoca viene visualizzato ogni volta.
                   default: 0
 
                 banner.revokable.animate:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Animazione Revocabile
                   description: Se selezionata, il pulsante revocabile passerà da e verso l'interno e l'esterno.
                   default: 1
@@ -327,7 +327,7 @@ form:
                           regex: Regex
 
                     .option:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Opzioni Percorso
                       description: Includi '/../../' e '/../..'
                       default: 0
@@ -361,7 +361,7 @@ form:
                           regex: Regex
 
                     .option:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Opzioni Percorso
                       description: Includi '/../../' e '/../..'
                       default: 0
@@ -445,7 +445,7 @@ form:
                   default:
 
                 service.law:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Legge Regionale
                   description: Se selezionato, viene caricato il comportamento predefinito della posizione (revocabile, rifiuta). Il "Servizio di localizzazione" DEVE essere attivato.
                   default: 1

@@ -37,7 +37,7 @@ form:
             fields:
 
                 banner.learn_more.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviere Mehr darüber
                   description: Aktiviert oder deaktiviert den 'Mehr darüber' Link.
                   default: 1
@@ -91,7 +91,7 @@ form:
                       label: Title
 
                     .main:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Standard
                       description: Aktivieren Sie diese Option, um die gewählte Sprache als Standardsprache (Fallback) zu setzen. Ansonsten wird die erste Sprache aus der Liste verwendet.
                       default: 0
@@ -220,7 +220,7 @@ form:
                       p16: Grau-Grün
 
                 banner.custom_color.enable:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Aktiviere Farbauswahl
                   description: Aktiviert oder deaktiviert die benutzerdefinierte Auswahl der Farbpalette.
                   default: 0
@@ -259,19 +259,19 @@ form:
             label: Verhalten
             fields:
                 banner.auto_open:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Automatisch öffnen
                   description: Aktiviert oder deaktiviert das automatische Öffnen des Banners.
                   default: 1
 
                 banner.revokable.enabled:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Widerruf
                   description: Wenn ausgewählt, wird der Widerruf Button jedes mal angezeigt.
                   default: 0
 
                 banner.revokable.animate:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Animiere Widerruf
                   description: Wenn ausgewählt, wird der Widerruf Button beim Hover mit einem Übergang animiert.
                   default: 1
@@ -326,7 +326,7 @@ form:
                           regex: Regex
 
                     .option:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Pfad Optionen
                       description: Inkludiere beide '/../../' und '/../..'
                       default: 0
@@ -360,7 +360,7 @@ form:
                           regex: Regex
 
                     .option:
-                      type: input.checkbox
+                      type: enable.enable
                       label: Pfad Optionen
                       description: Inkludiere beide '/../../' und '/../..'
                       default: 0
@@ -444,7 +444,7 @@ form:
                   default:
 
                 service.law:
-                  type: input.checkbox
+                  type: enable.enable
                   label: Regionales Gesetz
                   description: Wenn ausgewählt, wird das Verhalten des Banners auf das Standardverhalten des Landes gesetzt (Schließen, Widerruf). 'Standort Service' MUSS aktiviert worden sein, damit sich diese Einstellung auf das Banner auswirkt.
                   default: 1
