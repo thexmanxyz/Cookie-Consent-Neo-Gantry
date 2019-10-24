@@ -171,4 +171,4 @@ Thanks to [Insites](https://insites.com/) for the Cookie Consent API.
 Thanks to [mariantanase](https://github.com/mariantanase) for the Italian back- and frontend translation.
 
 ## by [thex](https://github.com/thexmanxyz) | [gantryparticles](https://gantryparticles.com)
-Copyright (c) 2018, free to use in personal and commercial software as per the [license](/LICENSE.md).
+Copyright (c) 2018, free to use in personal and commercial software as per the [license](/LICENSE).
