@@ -10,24 +10,24 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 * Cookie Consent API 3.x.x
 
 ## Download
-Choose the correct download for your target platform. The Joomla plugin system is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Atom version is **v1.5.9**.
+Choose the correct download for your target platform. The Joomla plugin system is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Atom version is **v1.5.10**.
 
 **Attention:** When migrating from **v1.4.7** or below to **v1.5.0** or higher the existing settings of the atom will be reset.
 ___
 **Default Atom:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.atom.only.EN.v1.5.9.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.atom.only.IT.v1.5.9.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.atom.only.DE.v1.5.9.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.EN.v1.5.10.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.IT.v1.5.10.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.DE.v1.5.10.zip)
 
 **Legacy Atom - Gantry <5.3.2:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.atom.only.legacy.EN.v1.5.9.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.atom.only.legacy.IT.v1.5.9.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.atom.only.legacy.DE.v1.5.9.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.legacy.EN.v1.5.10.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.legacy.IT.v1.5.10.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.legacy.DE.v1.5.10.zip)
 
 **Joomla Plugin - All Templates (Global):**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.global.EN.v1.5.9.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.global.IT.v1.5.9.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.global.DE.v1.5.9.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.global.EN.v1.5.10.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.global.IT.v1.5.10.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.global.DE.v1.5.10.zip)
 
 **Joomla Plugin - Hydrogen:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.hydrogen.EN.v1.5.9.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.hydrogen.IT.v1.5.9.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.hydrogen.DE.v1.5.9.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.hydrogen.EN.v1.5.10.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.hydrogen.IT.v1.5.10.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.hydrogen.DE.v1.5.10.zip)
 
 **Joomla Plugin - Helium:**
-[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.helium.EN.v1.5.9.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.helium.IT.v1.5.9.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.9/ccn.j3.helium.DE.v1.5.9.zip)
+[English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.helium.EN.v1.5.10.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.helium.IT.v1.5.10.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.j3.helium.DE.v1.5.10.zip)
 ___
 
 ## Automatic Installation (Joomla only)
