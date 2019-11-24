@@ -295,11 +295,14 @@
                         message: "{{bannerMsg|e('js')}}",
                         link: "{{linkText|e('js')}}",
                         dismiss: "{{dismissText|e('js')}}",
-
-                        {%- if particle.banner.compliance == 'opt-out' and denyText is not empty -%}
-                            deny: "{{denyText|e('js')}}",
-                        {%- elseif particle.banner.compliance == 'opt-in' and allowText is not empty -%}
-                            allow: "{{allowText|e('js')}}",
+                        
+                        {%- if particle.banner.compliance == 'opt-out' or particle.banner.compliance == 'opt-in' -%}
+                            {%- if denyText is not empty -%}
+                                deny: "{{denyText|e('js')}}",
+                            {%- endif -%}                                
+                            {%- if allowText is not empty -%}
+                                allow: "{{allowText|e('js')}}",
+                            {%- endif -%}
                         {%- endif -%}
 
                         {%- if particle.banner.learn_more.enabled -%}
