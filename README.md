@@ -12,7 +12,7 @@ This project contains a Gantry Atom and adds the [Cookie Consent Javascript API]
 ## Download
 Choose the correct download for your target platform. The Joomla plugin system is supported for all Gantry themes globally or locally for the templates Helium and Hydrogen. The latest Atom version is **v1.5.10**.
 
-**Attention:** When migrating from **v1.4.7** or below to **v1.5.0** or higher the existing settings of the atom will be reset.
+**Attention:** When migrating from **v1.4.7** or below to **v1.5.0** or higher the existing settings of the Atom will be reset.
 ___
 **Default Atom:**
 [English](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.EN.v1.5.10.zip) / [Italian](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.IT.v1.5.10.zip) / [German](https://github.com/thexmanxyz/Cookie-Consent-Neo-Gantry/releases/download/v1.5.10/ccn.atom.only.DE.v1.5.10.zip)
